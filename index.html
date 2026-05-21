@@ -58,11 +58,20 @@
           "datePublished": "2026",
           "genre": ["Business", "Creative Economy", "AI", "Wealth Building"],
           "keywords": "AI, creative economy, programmable IP, autonomous agents, generational wealth, Suede Labs",
+          "identifier": [{
+            "@type": "PropertyValue",
+            "propertyID": "ASIN",
+            "value": "B0GD5FX6N6"
+          }],
           "workExample": {
             "@type": "Book",
-            "url": "https://suede-ai.github.io/book.html",
+            "url": "https://www.amazon.com/dp/B0GD5FX6N6",
             "bookFormat": "https://schema.org/EBook",
-            "inLanguage": "en"
+            "inLanguage": "en",
+            "potentialAction": {
+              "@type": "ReadAction",
+              "target": ["https://www.amazon.com/dp/B0GD5FX6N6", "https://suede-ai.github.io/book.html"]
+            }
           }
         },
         {
@@ -73,12 +82,14 @@
           "jobTitle": "Founder & CEO, Suede Labs",
           "url": "https://github.com/JasonColapietro",
           "sameAs": [
+            "https://suedeai.ai",
             "https://suedelabs.com",
             "https://suedeai.org",
             "https://x.com/Johnnysuede",
             "https://x.com/AISUEDE",
             "https://www.linkedin.com/in/jasoncolapietro",
-            "https://github.com/JasonColapietro"
+            "https://github.com/JasonColapietro",
+            "https://github.com/Suede-AI"
           ]
         },
         {
@@ -116,6 +127,21 @@
             border-bottom: 4px solid #2c3e50;
             padding-bottom: 50px;
             margin-bottom: 60px;
+        }
+        .top-nav {
+            text-align: right;
+            margin-bottom: 24px;
+            font-size: 0.95em;
+        }
+        .top-nav a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dashed #999;
+        }
+        .top-nav a:hover {
+            color: #667eea;
+            border-bottom-color: #667eea;
         }
         h1 {
             font-size: 4em;
@@ -160,6 +186,31 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
+        .cta-primary {
+            background: #ff9900;
+            color: #111;
+        }
+        .cta-primary:hover {
+            background: #e88800;
+            color: #111;
+        }
+        .cta-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 18px 38px;
+        }
+        .cta-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 30px;
+            align-items: center;
+        }
         .parts {
             margin: 60px 0;
         }
@@ -203,6 +254,7 @@
 </head>
 <body>
     <div class="container">
+        <nav class="top-nav"><a href="https://suedeai.ai" target="_blank" rel="noopener">suedeai.ai &rarr;</a></nav>
         <header>
             <h1>Stake Your Claim</h1>
             <p class="subtitle">Speeches, Discussions & Hard Truths on Turning the AI Onslaught into a Real Asset, Autonomous Agents, and Building Generational Wealth as a Creative</p>
@@ -212,7 +264,10 @@
         <section>
             <p class="intro">This book is a compiled collection of speeches, podcast appearances, panel discussions, and keynote addresses delivered between 2024 and early 2026. Each piece addresses a specific aspect of the structural shift happening in the creative economy as AI transforms how creative work is made, distributed, and monetized.</p>
             
-            <p class="intro"><a href="book.html" class="cta">Read the Full Book</a></p>
+            <p class="intro cta-row">
+                <a href="https://www.amazon.com/dp/B0GD5FX6N6" class="cta cta-primary" target="_blank" rel="noopener">Buy on Amazon Kindle</a>
+                <a href="book.html" class="cta cta-secondary">Read the Full Book</a>
+            </p>
             
             <p class="intro">The creative economy is in transition. The transition is creating enormous volatility in who captures value from creative work. During transitions, the advantage belongs to the people who recognize the structural shift early and act while others are still debating whether it is real.</p>
 
@@ -251,12 +306,13 @@
         <footer>
             <p>&copy; 2026 Jason "Johnny Suede" Colapietro</p>
             <p style="margin-top: 15px;">
-                <a href="https://suedelabs.com" target="_blank">Suede Labs</a> | 
-                <a href="https://x.com/Johnnysuede" target="_blank">@Johnnysuede</a> | 
-                <a href="https://x.com/AISUEDE" target="_blank">@AISUEDE</a> | 
-                <a href="https://www.linkedin.com/in/jasoncolapietro" target="_blank">LinkedIn</a>
+                <a href="https://suedeai.ai" target="_blank" rel="noopener">suedeai.ai</a> |
+                <a href="https://suedelabs.com" target="_blank" rel="noopener">Suede Labs</a> |
+                <a href="https://x.com/Johnnysuede" target="_blank" rel="noopener">@Johnnysuede</a> |
+                <a href="https://x.com/AISUEDE" target="_blank" rel="noopener">@AISUEDE</a> |
+                <a href="https://www.linkedin.com/in/jasoncolapietro" target="_blank" rel="noopener">LinkedIn</a>
             </p>
-            <p style="margin-top: 15px;">Available now &mdash; click &ldquo;Read the Full Book&rdquo; above.</p>
+            <p style="margin-top: 15px;">Available now on <a href="https://www.amazon.com/dp/B0GD5FX6N6" target="_blank" rel="noopener">Amazon Kindle</a> (ASIN B0GD5FX6N6).</p>
         </footer>
     </div>
 </body>
