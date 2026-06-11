@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Stake Your Claim - Expanded Edition. The full book by Jason 'Johnny Suede' Colapietro: speeches, discussions and hard truths on building generational wealth as a creative in the AI era."/>
+<meta name="description" content="Read Stake Your Claim — the full expanded edition by Jason 'Johnny Suede' Colapietro. Every chapter on AI, programmable IP, autonomous agents, and creative generational wealth, available free online."/>
 <meta name="author" content="Jason 'Johnny Suede' Colapietro"/>
 <meta name="keywords" content="Stake Your Claim, Jason Colapietro, Johnny Suede, Suede Labs, creative economy, AI, programmable IP, creator ownership, generational wealth, book"/>
-<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#0d0d0d"/>
 <title>Stake Your Claim — Expanded Edition</title>
 
@@ -17,6 +17,7 @@
 <link rel="icon" type="image/png" href="/favicon.png"/>
 
 <!-- Open Graph -->
+<meta property="og:locale" content="en_US"/>
 <meta property="og:type" content="book"/>
 <meta property="og:site_name" content="Stake Your Claim"/>
 <meta property="og:title" content="Stake Your Claim — Expanded Edition"/>
@@ -37,23 +38,66 @@
 <meta name="twitter:description" content="The full book by Jason 'Johnny Suede' Colapietro: speeches, discussions and hard truths on building generational wealth as a creative in the AI era."/>
 <meta name="twitter:image" content="https://suede-ai.github.io/book-og-image.png"/>
 
-<!-- JSON-LD: Book pointing back to root -->
+<!-- JSON-LD: Book + Person + WebPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Stake Your Claim",
-  "alternateName": "Stake Your Claim — Expanded Edition",
-  "bookFormat": "https://schema.org/EBook",
-  "inLanguage": "en",
-  "url": "https://suede-ai.github.io/book.html",
-  "isPartOf": "https://suede-ai.github.io/",
-  "author": {
-    "@type": "Person",
-    "name": "Jason Colapietro",
-    "alternateName": "Johnny Suede",
-    "url": "https://github.com/JasonColapietro"
-  }
+  "@graph": [
+    {
+      "@type": "Book",
+      "@id": "https://suede-ai.github.io/#book",
+      "name": "Stake Your Claim",
+      "alternateName": "Stake Your Claim — Expanded Edition",
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/book.html",
+      "isPartOf": { "@id": "https://suede-ai.github.io/#website" },
+      "description": "A compiled collection of speeches, podcast appearances, panel discussions, and keynote addresses delivered between 2024 and early 2026 on the structural shift in the creative economy — programmable IP, autonomous agents, and building generational wealth as a creative.",
+      "author": { "@id": "https://suede-ai.github.io/#jason" },
+      "publisher": { "@id": "https://suede-ai.github.io/#jason" },
+      "copyrightYear": "2026",
+      "copyrightHolder": { "@id": "https://suede-ai.github.io/#jason" },
+      "datePublished": "2026-01-01",
+      "genre": ["Business", "Creative Economy", "AI", "Wealth Building"],
+      "keywords": "AI, creative economy, programmable IP, autonomous agents, generational wealth, Suede Labs, creator ownership"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://suede-ai.github.io/#jason",
+      "name": "Jason Colapietro",
+      "alternateName": "Johnny Suede",
+      "jobTitle": "Founder & CEO, Suede Labs",
+      "url": "https://github.com/JasonColapietro",
+      "sameAs": [
+        "https://suedelabs.com",
+        "https://suedeai.org",
+        "https://x.com/Johnnysuede",
+        "https://x.com/AISUEDE",
+        "https://www.linkedin.com/in/jasoncolapietro",
+        "https://github.com/JasonColapietro"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://suede-ai.github.io/#website",
+      "url": "https://suede-ai.github.io/",
+      "name": "Stake Your Claim",
+      "description": "Official landing for Stake Your Claim by Jason 'Johnny Suede' Colapietro.",
+      "publisher": { "@id": "https://suede-ai.github.io/#jason" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://suede-ai.github.io/book.html#webpage",
+      "url": "https://suede-ai.github.io/book.html",
+      "name": "Stake Your Claim — Expanded Edition",
+      "description": "Read the full expanded edition of Stake Your Claim by Jason 'Johnny Suede' Colapietro, free online.",
+      "isPartOf": { "@id": "https://suede-ai.github.io/#website" },
+      "about": { "@id": "https://suede-ai.github.io/#book" },
+      "inLanguage": "en",
+      "dateModified": "2026-06-11"
+    }
+  ]
 }
 </script>
 <style>
