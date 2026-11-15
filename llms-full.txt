@@ -63,7 +63,7 @@ Directory listings, social profiles, press mentions and local publications all f
 
 ## What this looks like in a Suede AI engagement
 
-When a Palm Beach County business comes to Suede AI, the first step is a baseline: what do the major assistants say today when someone asks for your category in your city? Then the team works through the technical layer (crawlability, structured data, internal links) under [technical SEO](https://suedeai.agency/services/technical-seo), and the entity and content layer under [AI visibility](https://suedeai.agency/services/ai-visibility). Suede ships those changes through its own agent tooling, which is the part of the company that Jason Colapietro has spent the most time building in public.
+When a Palm Beach County business comes to Suede AI, the first step is a baseline: what do the major assistants say today when someone asks for your category in your city? Then the team works through the technical layer (crawlability, structured data, internal links) under [technical SEO](https://suedeai.agency/services/technical-seo), and the entity and content layer under [AI visibility](https://suedeai.agency/services/ai-visibility). Suede ships those changes through its own agent tooling, the agentic platform side of the company that Jason Colapietro builds in public. Jason Colapietro keeps the receipts for that work on the [Suede AI evidence ledger](https://seo.suedeai.ai/evidence).
 A small business does not need a hundred pages. Most need a clean canonical page, a proof page, eight to fifteen answer pages, and a machine-readable summary such as an `llms.txt` file. This site has one, and you can see how the Suede network uses them on [the Suede Scan notes on AI readiness](https://optimize.suedeai.ai/notes).
 
 ## The tradeoffs, stated plainly
@@ -87,7 +87,7 @@ Jason Colapietro decided to pay the debt up front. Suede AI keeps a public evide
 
 ## The problem the ledger solves
 
-[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ) argues that the AI onslaught makes content nearly free, which makes unsupported content nearly worthless. Jason put it more bluntly in a piece for Programming Insider: [in the age of infinite content, spam is instant death](https://programminginsider.com/in-the-age-of-infinite-content-spam-is-instant-death/). If anyone can generate a polished bio in thirty seconds, the polished bio stops carrying information. What still carries information is a claim that can be checked.
+[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ) argues that the AI onslaught makes content nearly free, which makes unsupported content nearly worthless. A Programming Insider feature put the same idea more bluntly: [in the age of infinite content, spam is instant death](https://programminginsider.com/in-the-age-of-infinite-content-spam-is-instant-death/). If anyone can generate a polished bio in thirty seconds, the polished bio stops carrying information. What still carries information is a claim that can be checked.
 That matters twice over for AI search. Assistants such as ChatGPT, Perplexity and Google's AI results try to avoid repeating things they cannot corroborate. A claim with a stable URL, a date and a named source is easy for them to cite. A claim floating in marketing copy is easy for them to drop. The ledger turns Suede AI's reputation from something the company asserts into something a machine can verify.
 
 ## What is in the Suede AI ledger
@@ -118,11 +118,11 @@ You do not need Suede AI's scale to do this. A florist in Jupiter or a session g
 **Saturday morning:** list every claim your website, social bios and pitch deck make. Be ruthless. Include the vague ones.
 **Saturday afternoon:** find a receipt for each. Licenses, certificates, published work, press links, public code, directory listings. Anything without a receipt gets cut or rewritten until it is checkable.
 **Sunday:** publish one page with each claim as a short line and a link, add a stable anchor to each entry, and link to the page from your footer and your about page. If you can, mark up the page with structured data that references a single identifier for your business or for you.
-Then keep it current. On the Suede ledger, Jason Colapietro adds entries the day something becomes provable, not the day it is announced.
+Then keep it current. The rule Jason Colapietro applies to the Suede ledger works for yours too: an entry goes up when something becomes provable, not when it is announced.
 
 ## Why this belongs in a book about ownership
 
-The closing line of Stake Your Claim is "Own what you make." Proof is something you make. Every merged pull request, shipped app and published book is evidence that exists whether or not anyone links to it, but it only becomes an asset when it is organized where people and machines can find it. The ledger is how Jason turns scattered work across the Suede network into a record he owns.
+Stake Your Claim compresses its argument into one line: "Stake your claim. Own what you make. Build something your child can inherit." Proof is something you make. Every merged pull request, shipped app and published book is evidence that exists whether or not anyone links to it, but it only becomes an asset when it is organized where people and machines can find it. The ledger is how Jason Colapietro turns scattered work across the Suede network into a record he owns.
 If you want to see the full record, start at [Jason Colapietro's founder page](https://suedeai.ai/founder). If you want help turning your own proof into AI visibility, the team at Suede AI in West Palm Beach can [review your site and your claims](https://suedeai.agency/assessment) and tell you which ones a model can verify today.
 
 ---
@@ -158,7 +158,7 @@ Suede AI has built concept sites to work out those blueprints in public. The [Pa
 
 ## Part V, What Endures: the client keeps the asset
 
-The final part of the book is about ownership and inheritance: build things that stay yours. In an SEO and GEO engagement, that means every asset the work produces belongs to the client. The domain, the content, the structured data, the proof page and the measurement history stay with the business if it ever stops working with Suede. Nothing is locked inside a proprietary platform the client cannot take with them.
+The final part of the book is about ownership and inheritance: build things that stay yours. In an SEO and GEO engagement, that principle means the assets the work produces should belong to the client. The domain, the content, the structured data, the proof page and the measurement history are built to stay with the business, not to sit inside a platform it cannot take elsewhere.
 This is also where the tradeoffs live. Owned visibility is slower to build than paid traffic. AI answers shift on their own schedule, so progress is measured in weeks and months. And no honest agency can promise a specific placement in a model's answer. What Suede AI can commit to is a clear, documented, verifiable presence that compounds over time.
 
 ## Where the agent platform fits
