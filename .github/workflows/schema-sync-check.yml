@@ -15,3 +15,4 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/check-schema-sync.mjs
+      - run: node scripts/check-notes.mjs

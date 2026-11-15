@@ -1,0 +1,30 @@
+# Stake Your Claim
+
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede AI, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede AI, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+
+## Book
+
+- [Stake Your Claim landing page](https://suede-ai.github.io/): summary and the five parts of the book
+- [Read the full book](https://suede-ai.github.io/book.html): the complete single-page edition
+- [Stake Your Claim on Amazon](https://www.amazon.com/dp/B0GRG8LGQQ): hardcover, paperback and Kindle
+
+## Notes
+
+- [Notes index](https://suede-ai.github.io/notes/): field notes on applying the book in practice
+- [Stake Your Claim for local businesses](https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/): turning AI search into an asset in West Palm Beach and Jupiter
+- [Owning your proof](https://suede-ai.github.io/notes/public-evidence-ledger/): why Jason Colapietro keeps a public evidence ledger, and how to build one
+- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede AI applies Stake Your Claim in client SEO and GEO work
+
+## Suede AI
+
+- [Suede AI](https://suedeai.ai/): agentic platform company
+- [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
+- [Suede AI agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
+- [Suede AI assessment](https://suedeai.agency/assessment): AI visibility assessment
+- [Evidence ledger](https://seo.suedeai.ai/evidence): receipts for every claim
+- [jasoncolapietro.com](https://jasoncolapietro.com/): personal site
+- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede AI
+
+## Optional
+
+- [llms-full.txt](https://suede-ai.github.io/llms-full.txt): full text of the notes

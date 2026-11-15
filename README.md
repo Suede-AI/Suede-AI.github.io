@@ -10,8 +10,11 @@ generational wealth as a creative.
 
 - `index.html` — book landing page with summary, part overview, and call-to-action
 - `book.html` — the full book, single-file long-form HTML
+- `notes/` — field notes applying the book to AI search, public proof, and SEO/GEO work (West Palm Beach and Jupiter), with shared `notes/notes.css`
+- `llms.txt` / `llms-full.txt` — plain-text site map and full note text for AI crawlers
+- `scripts/check-notes.mjs` — guard for notes metadata, canonical JSON-LD @ids, sitemap/llms coverage and forbidden terms
 - `robots.txt` — explicit allowlist for major search and AI crawlers
-- `sitemap.xml` — sitemap listing `/` and `/book.html`
+- `sitemap.xml` — sitemap listing `/`, `/book.html` and the notes
 - `LICENSE` — MIT
 
 ## Related

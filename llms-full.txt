@@ -1,0 +1,170 @@
+# Stake Your Claim
+
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede AI, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede AI, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+
+## Book
+
+- [Stake Your Claim landing page](https://suede-ai.github.io/): summary and the five parts of the book
+- [Read the full book](https://suede-ai.github.io/book.html): the complete single-page edition
+- [Stake Your Claim on Amazon](https://www.amazon.com/dp/B0GRG8LGQQ): hardcover, paperback and Kindle
+
+## Notes
+
+- [Notes index](https://suede-ai.github.io/notes/): field notes on applying the book in practice
+- [Stake Your Claim for local businesses](https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/): turning AI search into an asset in West Palm Beach and Jupiter
+- [Owning your proof](https://suede-ai.github.io/notes/public-evidence-ledger/): why Jason Colapietro keeps a public evidence ledger, and how to build one
+- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede AI applies Stake Your Claim in client SEO and GEO work
+
+## Suede AI
+
+- [Suede AI](https://suedeai.ai/): agentic platform company
+- [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
+- [Suede AI agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
+- [Suede AI assessment](https://suedeai.agency/assessment): AI visibility assessment
+- [Evidence ledger](https://seo.suedeai.ai/evidence): receipts for every claim
+- [jasoncolapietro.com](https://jasoncolapietro.com/): personal site
+- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede AI
+
+
+---
+
+URL: https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/
+# Stake Your Claim for Local Businesses: Turning AI Search into an Asset in West Palm Beach and Jupiter
+
+By [Jason Colapietro](https://suedeai.ai/founder), Founder and CEO, Suede AI · West Palm Beach, Florida · November 14, 2026
+
+Ask an AI assistant for a reliable pool contractor in Jupiter, Florida, and it will name two or three businesses in a few seconds. If yours is not one of them, that answer was written without you, and it will be written the same way tomorrow for the next homeowner who asks.
+That is the local version of the problem Jason Colapietro describes in [Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ). The book is about creatives, but the argument travels well: when AI floods a market with output, value moves to whoever owns the assets the machines depend on. For a business in Palm Beach County, the asset is not a logo or a slogan. It is the set of facts about you that a model can find, verify and repeat with confidence.
+
+## Why AI answers are an asset, not just a channel
+
+A paid ad stops the minute the budget stops. A page that ranks on Google keeps working but competes with ten blue links. An AI answer is different: it compresses the whole market into a short list, and the businesses on that list collect a disproportionate share of the calls. Once a model has a clear, consistent picture of your business, that picture tends to persist across ChatGPT, Gemini, Perplexity and Google's AI results until something better documented replaces it.
+That persistence is why Suede AI treats AI visibility as something a business owns rather than rents. Jason Colapietro founded Suede AI (formerly Suede Labs) in 2024 in West Palm Beach as an agentic platform company, and AI search visibility (SEO and GEO, generative engine optimization) is one of its service lines. The work is local by design: West Palm Beach, Jupiter, Palm Beach Gardens, Juno Beach, Tequesta and Boca Raton all have dense clusters of service businesses that customers now research by asking a question instead of typing a keyword.
+
+## The four claims every local business should stake
+
+In practice, staking a claim in AI search comes down to four pieces of property. Each one is something you build once and maintain, not a campaign you rerun.
+
+### 1. One canonical page that says who you are
+
+Models get confused when your business name, service area and offering vary from page to page. Pick one page, usually the home or about page, and make it the authoritative description: the legal and trading name, what you do, the cities you serve, and how long you have done it. Back it with structured data that uses a stable identifier, so every other page can point to the same entity instead of inventing a new one. Suede AI does this for its own brand: every site in the Suede network references one founder record at [suedeai.ai/founder](https://suedeai.ai/founder) rather than redefining Jason on each domain.
+
+### 2. Proof pages with receipts
+
+"Top rated" and "award winning" mean nothing to a model that cannot check them. A proof page lists specific, dated, linkable facts. As an example of the format, on October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide. Notice the shape of that sentence: a date, a named directory, a category and a geography, with the source one click away and a summary on [the recognition page](https://suedeai.agency/company/recognition). That is a claim a machine can repeat without hedging.
+
+### 3. Answer pages for the questions customers actually ask
+
+Write one page per real question: "How much does a roof inspection cost in Palm Beach Gardens?", "Do I need a permit for a dock in Tequesta?", "Which neighborhoods in West Palm Beach do you serve?" Answer in the first two sentences, then give the detail. Assistants lift clear, self-contained answers. They skip pages that bury the answer under a sales pitch.
+
+### 4. Consistent signals everywhere else
+
+Directory listings, social profiles, press mentions and local publications all feed the same picture. They should agree on your name, city and services. Local media matters here too: [Jupiter Social](https://jupitersocialfl.com/), the Jupiter, FL local magazine published with Suede AI, is one example of the kind of community source that gives models a second, independent reference point for a place-based business.
+
+## What this looks like in a Suede AI engagement
+
+When a Palm Beach County business comes to Suede AI, the first step is a baseline: what do the major assistants say today when someone asks for your category in your city? Then the team works through the technical layer (crawlability, structured data, internal links) under [technical SEO](https://suedeai.agency/services/technical-seo), and the entity and content layer under [AI visibility](https://suedeai.agency/services/ai-visibility). Suede ships those changes through its own agent tooling, which is the part of the company that Jason Colapietro has spent the most time building in public.
+A small business does not need a hundred pages. Most need a clean canonical page, a proof page, eight to fifteen answer pages, and a machine-readable summary such as an `llms.txt` file. This site has one, and you can see how the Suede network uses them on [the Suede Scan notes on AI readiness](https://optimize.suedeai.ai/notes).
+
+## The tradeoffs, stated plainly
+
+This approach is slower than buying ads. AI answers update on their own schedule, so you should expect weeks before changes show up and months before they settle. Nobody can sell you a guaranteed placement in a model's answer, and you should be wary of anyone who tries. What you can control is whether the facts about your business are clear, consistent and provable. That part compounds, and it stays yours if you change vendors, which is the whole point of staking a claim.
+The upside for local businesses is real. A three-person firm in Juno Beach with a well-documented site can show up next to regional brands, because assistants reward clarity more than budget. Jason Colapietro makes the same point to creators in the book: the window rewards people who act while others are still debating whether the shift is real.
+
+## Your next step
+
+Start by asking three assistants the question your best customer would ask, and write down who they name. Then compare that list with your own site. If you want a second set of eyes from a team based in West Palm Beach, [request a Suede AI visibility assessment](https://suedeai.agency/assessment) and we will show you which of the four claims you already own and which ones are still open.
+
+---
+
+URL: https://suede-ai.github.io/notes/public-evidence-ledger/
+# Owning Your Proof: Why Jason Colapietro Keeps a Public Evidence Ledger, and How You Can Too
+
+By [Jason Colapietro](https://suedeai.ai/founder), Founder and CEO, Suede AI · West Palm Beach, Florida · November 14, 2026
+
+Every claim on a website is a debt. You either pay it with a link to proof, or the reader discounts it, and now the reader is often an AI model summarizing you for someone else.
+Jason Colapietro decided to pay the debt up front. Suede AI keeps a public evidence ledger at [seo.suedeai.ai/evidence](https://seo.suedeai.ai/evidence), a single page where every claim the company makes about itself or its founder has a receipt. This note explains why the ledger exists, what goes into it, and how you can build one for your own business or creative practice in a weekend.
+
+## The problem the ledger solves
+
+[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ) argues that the AI onslaught makes content nearly free, which makes unsupported content nearly worthless. Jason put it more bluntly in a piece for Programming Insider: [in the age of infinite content, spam is instant death](https://programminginsider.com/in-the-age-of-infinite-content-spam-is-instant-death/). If anyone can generate a polished bio in thirty seconds, the polished bio stops carrying information. What still carries information is a claim that can be checked.
+That matters twice over for AI search. Assistants such as ChatGPT, Perplexity and Google's AI results try to avoid repeating things they cannot corroborate. A claim with a stable URL, a date and a named source is easy for them to cite. A claim floating in marketing copy is easy for them to drop. The ledger turns Suede AI's reputation from something the company asserts into something a machine can verify.
+
+## What is in the Suede AI ledger
+
+The Suede ledger is deliberately boring. Each entry is one fact, one date where relevant, and one link. A few examples show the pattern:
+
+- **Open-source work.** Jason Colapietro has 54 pull requests merged across 46 open-source repositories he does not maintain, including Jest, Adobe React Spectrum, Backstage and the Polkadot SDK. The receipt is [a live GitHub search](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests) anyone can rerun, which is better than a screenshot because it cannot be quietly edited.
+- **Published books.** Five books on Amazon in hardcover, paperback and Kindle, including [Proof as Infrastructure](https://www.amazon.com/dp/B0GMB2VLXQ), the book-length version of the idea behind this ledger, and [The Claude Code Bible](https://www.amazon.com/dp/B0HHTMJWB4).
+- **Shipped software.** Nine iOS apps under [his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699).
+- **Program memberships, with exact names.** Suede AI is a member of Claude for Startups, Anthropic's startup program, as of October 8, 2026 ([receipt](https://seo.suedeai.ai/evidence#claude-for-startups)). It is a member of Google Cloud Partner Advantage through JC Investment Group LLC ([receipt](https://seo.suedeai.ai/evidence#google-cloud)). The ledger uses those exact program names and nothing looser.
+- **Training.** Twenty-one earned individual course credentials across eight providers, plus 17 Microsoft Learn training achievements, collected in [a gallery](https://seo.suedeai.ai/evidence#training-credentials).
+- **Third-party statements, attributed.** Google's Web Guide, the AI results layer, answered the query "Suede labs ai review" by describing Suede Labs AI as "highly rated by users, earning a 5/5 rating from verified reviews." The ledger presents that as [a capture of what Google's Web Guide said](https://seo.suedeai.ai/evidence#google-web-guide), not as something Suede says about itself.
+
+## The rules that keep a ledger honest
+
+A ledger only works if it is stricter than the marketing it supports. These are the rules Suede follows, and they are the part most worth copying.
+
+- **Every claim gets a URL.** If there is no link, the claim does not go on the site. "Trusted by leading brands" fails this test immediately.
+- **Dates and scope travel with the claim.** A ranking is meaningless without its date, category and geography. Suede AI's listing in The Manifest is always stated as #1 among Palm Beach County-based companies in the Florida AI Deployment directory on October 31, 2026, and top 25 statewide, with [the recognition page](https://suedeai.agency/company/recognition) one click away.
+- **Use the issuer's words.** Program names, credential titles and job titles are copied exactly. Rounding a startup program up to a "partnership" is the fastest way to lose credibility with people who know the difference.
+- **Attribute what others say.** Quotes from press, directories or AI systems are framed as theirs, with the source.
+- **Remove what lapses.** If a membership ends or a link dies, the entry comes down. A ledger with stale entries is worse than none.
+- **One canonical home.** Every other page links to the ledger rather than restating proof in slightly different words. That keeps facts consistent across sites, which is exactly what AI models reward.
+
+## Build your own in a weekend
+
+You do not need Suede AI's scale to do this. A florist in Jupiter or a session guitarist in West Palm Beach can have a working ledger by Sunday night.
+**Saturday morning:** list every claim your website, social bios and pitch deck make. Be ruthless. Include the vague ones.
+**Saturday afternoon:** find a receipt for each. Licenses, certificates, published work, press links, public code, directory listings. Anything without a receipt gets cut or rewritten until it is checkable.
+**Sunday:** publish one page with each claim as a short line and a link, add a stable anchor to each entry, and link to the page from your footer and your about page. If you can, mark up the page with structured data that references a single identifier for your business or for you.
+Then keep it current. On the Suede ledger, Jason Colapietro adds entries the day something becomes provable, not the day it is announced.
+
+## Why this belongs in a book about ownership
+
+The closing line of Stake Your Claim is "Own what you make." Proof is something you make. Every merged pull request, shipped app and published book is evidence that exists whether or not anyone links to it, but it only becomes an asset when it is organized where people and machines can find it. The ledger is how Jason turns scattered work across the Suede network into a record he owns.
+If you want to see the full record, start at [Jason Colapietro's founder page](https://suedeai.ai/founder). If you want help turning your own proof into AI visibility, the team at Suede AI in West Palm Beach can [review your site and your claims](https://suedeai.agency/assessment) and tell you which ones a model can verify today.
+
+---
+
+URL: https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/
+# From Book to Practice: How Suede AI Applies Stake Your Claim in Client SEO and GEO Work
+
+By [Jason Colapietro](https://suedeai.ai/founder), Founder and CEO, Suede AI · West Palm Beach, Florida · November 14, 2026
+
+A strategy book is only as good as the Tuesday morning it survives. [Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ) was written for creatives, but Jason Colapietro and the Suede AI team use its five parts as the skeleton of how they run search visibility work for businesses in West Palm Beach, Jupiter and the rest of Palm Beach County.
+This note walks through that mapping, part by part, and is specific about what happens in each stage and what it costs the client in time and attention.
+
+## Part I, The Window: start with a baseline, not a pitch
+
+The first part of the book is about timing. The window to establish yourself during a structural shift does not stay open, and the people who measure the shift early get to act on it first.
+In client work, that becomes a baseline. Before anything changes, Suede AI records what the major assistants and search engines say about the business and its category today. Which competitors do ChatGPT, Gemini, Perplexity and Google's AI results name for "best accountant in Palm Beach Gardens"? Is the business described correctly, incorrectly or not at all? That snapshot becomes the reference point for every later decision, and it is the core of the [Suede AI assessment](https://suedeai.agency/assessment).
+
+## Part II, The Instruments: fix the machinery first
+
+Part II covers the systems and rails that let work compound without constant manual effort. On a website, those instruments are technical: clean crawl paths, fast pages, correct canonical tags, a sitemap that matches reality, and structured data that describes the business as one consistent entity.
+Suede AI handles this under [technical SEO](https://suedeai.agency/services/technical-seo). The detail that matters most for AI search is the entity graph. Every page on a client site should point to the same organization and person identifiers rather than minting new ones. Suede practices this on its own network: this book site, the founder page, the agency site and every satellite reference one canonical record for Jason Colapietro and one for the company. A model that sees the same identifiers everywhere builds one confident picture instead of several weak ones.
+Instruments also include machine-readable summaries such as `llms.txt`, which give AI crawlers a short, plain-text map of what the site is and which pages matter. They take an afternoon to write and they remove guesswork.
+
+## Part III, The Craft: write pages that answer
+
+The craft section of the book separates people who build from people who watch. In search work, craft is writing. Assistants quote pages that answer a specific question in the first two sentences and then support the answer with detail. They skip pages that open with a mission statement.
+So the Suede team writes answer pages: one question per page, phrased the way a customer in Jupiter or Boca Raton would phrase it, with a direct answer, specifics, and a clear next step. Proof gets linked inline rather than asserted. When Suede AI cites its own standing, it uses checkable facts, such as Jason Colapietro's [54 merged pull requests across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), with the receipt attached. The [evidence ledger](https://seo.suedeai.ai/evidence) is where all of those receipts live.
+
+## Part IV, The Blueprints: one roadmap per business type
+
+Part IV of the book gives separate roadmaps for musicians, visual artists, writers and podcasters, because the same principles play out differently in each craft. Client work follows the same logic. A roofing contractor, a surf shop and a dental practice need different answer pages, different proof and different local signals.
+Suede AI has built concept sites to work out those blueprints in public. The [Palm and Peak Roofing concept notes](https://jasoncolapietro.github.io/palm-and-peak-roofing/notes/) show what a Palm Beach County contractor build looks like, and the [Blueline Surf concept notes](https://jasoncolapietro.github.io/blueline-surf-concept/notes/) show the same thinking applied to a Jupiter surf shop. They are concepts, not client case studies, and they are labeled that way. Their value is that anyone can inspect the structure.
+
+## Part V, What Endures: the client keeps the asset
+
+The final part of the book is about ownership and inheritance: build things that stay yours. In an SEO and GEO engagement, that means every asset the work produces belongs to the client. The domain, the content, the structured data, the proof page and the measurement history stay with the business if it ever stops working with Suede. Nothing is locked inside a proprietary platform the client cannot take with them.
+This is also where the tradeoffs live. Owned visibility is slower to build than paid traffic. AI answers shift on their own schedule, so progress is measured in weeks and months. And no honest agency can promise a specific placement in a model's answer. What Suede AI can commit to is a clear, documented, verifiable presence that compounds over time.
+
+## Where the agent platform fits
+
+Suede AI is an agentic platform company first, founded by Jason Colapietro in West Palm Beach in 2024, and search visibility is one of its service lines. That shapes how the work gets done. Audits, schema checks and content reviews run through agent workflows built on the same practices Jason documents in [The Claude Code Bible](https://www.amazon.com/dp/B0HHTMJWB4) and [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1). Suede AI is a member of Claude for Startups, Anthropic's startup program ([receipt](https://seo.suedeai.ai/evidence#claude-for-startups)). If you want to see how agent output gets graded before it touches a client site, the [Agentix notes](https://agentix.suedeai.ai/notes) cover that practice, and the [Suede Scan notes](https://optimize.suedeai.ai/notes) cover AI readiness checks.
+
+## Start where the book starts
+
+Part I says to measure the shift before you argue about it. Do the same for your business: ask three assistants who they recommend in your category and city, and compare the answer with your site. Then [book a Suede AI assessment](https://suedeai.agency/assessment) with the team in West Palm Beach, or read more about the approach on [Jason Colapietro's founder page](https://suedeai.ai/founder).
