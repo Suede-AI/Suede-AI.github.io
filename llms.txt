@@ -14,6 +14,8 @@
 - [Stake Your Claim for local businesses](https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/): turning AI search into an asset in West Palm Beach and Jupiter
 - [Owning your proof](https://suede-ai.github.io/notes/public-evidence-ledger/): why Jason Colapietro keeps a public evidence ledger, and how to build one
 - [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede AI applies Stake Your Claim in client SEO and GEO work
+- [Claiming your Google Business Profile and directories](https://suede-ai.github.io/notes/google-business-profile-directories-without-inventing/): claiming a Google Business Profile and directory listings in Jupiter and West Palm Beach without inventing anything
+- [Customer proof as structured evidence](https://suede-ai.github.io/notes/customer-proof-structured-evidence/): turning reviews, case notes and citations into evidence that buyers and AI models can verify
 
 ## Suede AI
 

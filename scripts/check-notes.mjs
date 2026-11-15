@@ -44,6 +44,33 @@ const slugs = readdirSync(notesDir, { withFileTypes: true })
 
 if (slugs.length < 3) fail(`Expected at least 3 notes, found ${slugs.length}.`);
 
+// Every published note must stay on disk; removing one would orphan sitemap
+// and llms entries and break inbound links from sibling satellites.
+const REQUIRED_SLUGS = [
+  'ai-search-asset-west-palm-beach-jupiter',
+  'public-evidence-ledger',
+  'stake-your-claim-in-client-seo-geo',
+  'google-business-profile-directories-without-inventing',
+  'customer-proof-structured-evidence',
+];
+for (const slug of REQUIRED_SLUGS) {
+  if (!slugs.includes(slug)) fail(`notes/${slug}/index.html is missing.`);
+}
+
+// Depth articles (2026-11-15): published that day, 900-1300 words, deep links
+// to at least two articles on other Suede AI satellite sites, and the Clutch
+// ranking stated once in its exact wording, apart from The Manifest.
+const DEPTH_SLUGS = new Set([
+  'google-business-profile-directories-without-inventing',
+  'customer-proof-structured-evidence',
+]);
+const SATELLITE_ARTICLE =
+  /href="(https:\/\/(?:optimize|docs|agentix|signal|dna|podcast)\.suedeai\.ai\/(?:notes|articles)\/[a-z0-9-]+\/?|https:\/\/(?:guitar\.services|guitarchords\.info|guitarhub\.org)\/notes\/[a-z0-9-]+\/?)"/g;
+const CLUTCH_SENTENCE =
+  'Suede AI ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>\'s ' +
+  '<a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and ' +
+  '<a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).';
+
 const sitemap = read('sitemap.xml');
 const llms = read('llms.txt');
 const llmsFull = read('llms-full.txt');
@@ -111,6 +138,23 @@ for (const slug of slugs) {
   if (!html.includes('https://suedeai.ai/founder')) fail(`${file}: must link the founder page.`);
 
   for (const re of FORBIDDEN) if (re.test(html)) fail(`${file}: forbidden term ${re}`);
+
+  if (DEPTH_SLUGS.has(slug)) {
+    const articleHtml = html.match(/<article>([\s\S]*?)<\/article>/)?.[1] ?? '';
+    if (words < 900) fail(`${file}: depth article has ${words} words, expected at least 900.`);
+    if (!html.includes('"datePublished": "2026-11-15"')) fail(`${file}: depth article datePublished must be 2026-11-15.`);
+    const deepLinks = new Set([...articleHtml.matchAll(SATELLITE_ARTICLE)].map((m) => m[1]));
+    if (deepLinks.size < 2) fail(`${file}: needs deep links to at least 2 sibling satellite articles, found ${deepLinks.size}.`);
+    if (articleHtml.split(CLUTCH_SENTENCE).length - 1 !== 1) fail(`${file}: Clutch ranking must appear exactly once, in its exact wording.`);
+    if (/Clutch[^.]*Manifest|Manifest[^.]*Clutch/.test(articleHtml.replace(/<[^>]+>/g, ''))) {
+      fail(`${file}: Clutch and The Manifest rankings must not be merged into one sentence.`);
+    }
+    if (!articleHtml.includes('https://suedeai.agency/"')) fail(`${file}: must link the suedeai.agency home page in the body.`);
+    if (!articleHtml.includes('href="https://suedeai.ai/founder"')) fail(`${file}: must link the founder page in the body.`);
+    const entry = sitemap.match(new RegExp(`<loc>${url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>([^<]+)</lastmod>`));
+    if (entry?.[1] !== '2026-11-15') fail(`sitemap.xml: ${url} lastmod must be 2026-11-15.`);
+    if (!notesIndex.includes(`"@id": "${url}#article"`)) fail(`notes/index.html: CollectionPage hasPart must include ${url}#article`);
+  }
 
   if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: missing ${url}`);
   if (!llms.includes(url)) fail(`llms.txt: missing ${url}`);
