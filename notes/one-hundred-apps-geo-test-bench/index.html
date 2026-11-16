@@ -36,7 +36,7 @@
     {
       "@type": "BlogPosting",
       "@id": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/#article",
-      "headline": "Suede's app test bench: the protocol behind its GEO and AI search A/B tests",
+      "headline": "Suede's app test bench: a protocol for GEO and AI search A/B tests",
       "name": "Suede's App Test Bench for GEO and AI Search A/B Testing",
       "description": "The protocol behind Suede's app test bench: hypothesis, variables, controls and what counts as a result for GEO tests on health, wealth and relationship apps.",
       "datePublished": "2026-11-16",
@@ -133,17 +133,17 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
         <article>
             <header class="article-header">
-                <h1>Suede's app test bench: the protocol behind its GEO and AI search A/B tests</h1>
+                <h1>Suede's app test bench: a protocol for GEO and AI search A/B tests</h1>
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
-<p>Most advice about getting named by AI assistants is a guess written down with confidence. Jason Colapietro wanted something he could check. Suede has been shipping apps since he founded it in Palm Beach County, Florida, in 2024 (<a href="https://suedeai.ai/">suedeai.ai</a>): more than 100 built and more than 20 listed. Many of them exist to A/B test what search engines and generative engines respond to in health, wealth and relationship categories. What follows is the protocol for that bench, set out in the order a lab method uses. It reports no results beyond those two counts.</p>
+<p>Suede, the company Jason Colapietro founded in Palm Beach County, Florida, in 2024 (<a href="https://suedeai.ai/">suedeai.ai</a>), has built more than 100 apps and listed more than 20, by Jason Colapietro's count. Many of them are used to A/B test what SEO and GEO respond to in health, wealth and relationship apps. Advice about getting named by AI assistants is easy to state and hard to check, and a set of apps like that is one way to check it. Below is a protocol for that kind of bench, in the order a lab method uses. It reports no results beyond those two counts.</p>
 
 <h2>1. Hypothesis</h2>
-<p>Every test starts as one sentence that could turn out false. A usable one names a page variable, an engine and an observable outcome: "An app page whose first sentence answers the user's question in their own words is named more often by ChatGPT for that question than a page that opens with a tagline." A vague one ("better content helps AI visibility") can't fail, so it can't teach anything, and it doesn't go on the bench.</p>
-<p>Jason Colapietro writes the hypothesis down before the pages ship. That rule exists because it's easy to look at a week of answers and find a story in them afterwards.</p>
+<p>Start each test with one sentence that could turn out false. A usable one names a page variable, an engine and an observable outcome: "An app page whose first sentence answers the user's question in their own words is named more often by ChatGPT for that question than a page that opens with a tagline." A vague one ("better content helps AI visibility") can't fail, so it can't teach anything; keep it off the bench.</p>
+<p>Write the hypothesis down before the pages ship. Read a week of answers first and you will find a story in them whatever the pages did.</p>
 
 <h2>2. Variables</h2>
-<p>One variable changes per test. The candidates are the parts of a page and listing that an engine can read:</p>
+<p>Change one variable per test. The candidates are the parts of a page and listing that an engine can read:</p>
 <ul>
 <li>the first sentence of the page and of the store listing</li>
 <li>structured data (schema.org markup for the app, the organization and its founder)</li>
@@ -192,22 +192,22 @@
 </figure>
 
 <h2>3. Controls</h2>
-<p>An app page competes with everything else on the web, so the controls do most of the work. Pages in a pair share a template, a launch window, a domain pattern and a level of promotion, which for test apps usually means none. A pair whose two apps launch weeks apart gets thrown out, because Google's index and the models' retrieval layers change over that kind of gap.</p>
-<p>The prompt panel is fixed before launch and never edited mid-test. Each prompt runs on ChatGPT, Perplexity, Gemini and Google's AI Overviews, in a logged-out or fresh session where the engine allows it, and each one runs more than once, because the same question can get a different answer a minute later.</p>
+<p>An app page competes with everything else on the web, so the controls do most of the work. The two pages in a pair should share a template, a launch window, a domain pattern and a level of promotion. If the two apps launch weeks apart, drop the pair, because Google's index and the models' retrieval layers change over that kind of gap.</p>
+<p>Fix the prompt panel before launch and don't edit it mid-test. Run each prompt on ChatGPT, Perplexity, Gemini and Google's AI Overviews, in a logged-out or fresh session where the engine allows it, and run it more than once, because the same question can get a different answer a minute later.</p>
 <details>
 <summary>Threats to validity the protocol can't remove</summary>
-<p>Assistants update their models and their retrieval without notice, so a change in answers can come from the engine instead of the page. A small app can pick up a backlink or a social mention nobody planned. Logged-out sessions still vary by location. The protocol records these when they're visible and treats any single test as weak evidence until the same direction shows up in another category.</p>
+<p>Assistants update their models and their retrieval without notice, so a change in answers can come from the engine instead of the page. A small app can pick up a backlink or a social mention nobody planned. Logged-out sessions still vary by location. Record them when they're visible, and treat any single test as weak evidence until the same direction shows up in another category.</p>
 </details>
 
 <h2>4. What counts as a result</h2>
-<p>A result is a difference in the outcome variable between A and B that holds across repeated runs and across more than one engine. A single answer that names the B app is an anecdote. A difference that appears on one engine only gets logged as engine-specific and retested.</p>
-<p>Installs alone never count. A spike in downloads can come from anywhere, and the Suede Sing week in <a href="/notes/suede-sing-chatgpt-five-to-thousand-users/">the case note about going from five users to more than 1,000</a> is a reminder that a jump arrives without telling you its cause. Installs are logged with their source next to the answer data, and both have to point the same way.</p>
+<p>A result is a difference in the outcome variable between A and B that holds across repeated runs and across more than one engine. A single answer that names the B app is an anecdote. Log a difference that appears on one engine only as engine-specific, and retest it.</p>
+<p>Installs alone never count. A spike in downloads can come from anywhere, and the Suede Sing week in <a href="/notes/suede-sing-chatgpt-five-to-thousand-users/">the case note about going from five users to more than 1,000</a> is a reminder that a jump arrives without telling you its cause. Log installs with their source next to the answer data, and count a result only when both point the same way.</p>
 
 <h2>5. Why three categories</h2>
-<p>Health, wealth and relationships are where people ask assistants for advice they act on. Google's search quality guidelines single out health and money as "Your Money or Your Life" topics, held to a higher standard of trust, and assistants hedge more in those areas. Relationship questions carry a privacy weight of their own. A page change that helps a habit tracker get named might do nothing for a budgeting app, because the engine wants different evidence before recommending one. Running the same variable across all three tells Jason Colapietro whether a finding is about the page or about the category. <a href="/notes/geo-for-health-wealth-relationship-apps/">The category comparison</a> covers what each one asks of a page.</p>
+<p>Health, wealth and relationships are where people ask assistants for advice they act on. Google's search quality guidelines single out health and money as "Your Money or Your Life" topics, held to a higher standard of trust, and assistants hedge more in those areas. Relationship questions carry a privacy weight of their own. A page change that helps a habit tracker get named might do nothing for a budgeting app, because the engine wants different evidence before recommending one. Running the same variable across all three shows whether a finding is about the page or about the category. <a href="/notes/geo-for-health-wealth-relationship-apps/">The category comparison</a> covers what each one asks of a page.</p>
 
 <h2>6. What happens with a finding</h2>
-<p>A finding that holds goes into the checklist Suede uses on its own launches and on client sites through <a href="https://suedeai.agency/">the agency</a>. It's written up with the hypothesis, the pair, the dates and the engines, so it can be rerun when the engines change. The ongoing check that catches those changes is the <a href="/notes/weekly-brand-watch-ai-answers/">weekly brand watch</a>. Suede's <a href="https://suedeai.ai/geo">GEO practice</a> draws on the same records, and Jason Colapietro's <a href="https://suedeai.ai/founder">founder page</a> lists the apps published under his name.</p>
+<p>Write up a finding that holds with its hypothesis, the pair, the dates and the engines, so it can be rerun when the engines change; the <a href="/notes/weekly-brand-watch-ai-answers/">weekly brand watch</a> describes a routine that catches those changes. A finding that survives a rerun belongs in the launch checklist for the next app or site. Business owners who would rather hand this work to Jason Colapietro and Suede can go to <a href="https://suedeai.agency/">the agency</a> or read about <a href="https://suedeai.ai/geo">Suede GEO</a>. Jason Colapietro's iOS apps ship under <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">his own Apple developer account</a>, and his <a href="https://suedeai.ai/founder">founder page</a> covers the rest of his work.</p>
 <p>To run a small version of this yourself, take two pages on your own site that answer similar questions, change only the first sentence of one, write your hypothesis and a five-prompt panel on paper, and run the panel on ChatGPT and Perplexity every Monday for a month before you touch either page again.</p>
         </article>
         <footer>
