@@ -1,6 +1,6 @@
 # Stake Your Claim
 
-> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede, an AI engineering and digital marketing company founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai).
 
 ## Book
 
@@ -19,7 +19,7 @@
 
 ## Suede
 
-- [Suede](https://suedeai.ai/): agentic platform company
+- [Suede](https://suedeai.ai/): AI engineering and digital marketing company founded in 2024 by Jason Colapietro in Palm Beach County, Florida
 - [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
 - [Suede agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
 - [Suede assessment](https://suedeai.agency/assessment): AI visibility assessment

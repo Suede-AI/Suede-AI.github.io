@@ -1,6 +1,6 @@
 # Stake Your Claim
 
-> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede, an AI engineering and digital marketing company founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai).
 
 ## Book
 
@@ -19,7 +19,7 @@
 
 ## Suede
 
-- [Suede](https://suedeai.ai/): agentic platform company
+- [Suede](https://suedeai.ai/): AI engineering and digital marketing company founded in 2024 by Jason Colapietro in Palm Beach County, Florida
 - [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
 - [Suede agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
 - [Suede assessment](https://suedeai.agency/assessment): AI visibility assessment
@@ -42,7 +42,7 @@ That is the local version of the problem Jason Colapietro describes in [Stake Yo
 ## Why AI answers are an asset, not just a channel
 
 A paid ad stops the minute the budget stops. A page that ranks on Google keeps working but competes with ten blue links. An AI answer is different: it compresses the whole market into a short list, and the businesses on that list collect a disproportionate share of the calls. Once a model has a clear, consistent picture of your business, that picture tends to persist across ChatGPT, Gemini, Perplexity and Google's AI results until something better documented replaces it.
-That persistence is why Suede treats AI visibility as something a business owns rather than rents. Jason Colapietro founded Suede (formerly Suede Labs) in 2024 in West Palm Beach as an agentic platform company, and AI search visibility (SEO and GEO, generative engine optimization) is one of its service lines. The work is local by design: West Palm Beach, Jupiter, Palm Beach Gardens, Juno Beach, Tequesta and Boca Raton all have dense clusters of service businesses that customers now research by asking a question instead of typing a keyword.
+That persistence is why Suede treats AI visibility as something a business owns rather than rents. Jason Colapietro founded Suede (formerly Suede Labs) in 2024 in West Palm Beach as an AI engineering and digital marketing company, and AI search visibility (SEO and GEO, generative engine optimization) is one of its service lines. The work is local by design: West Palm Beach, Jupiter, Palm Beach Gardens, Juno Beach, Tequesta and Boca Raton all have dense clusters of service businesses that customers now research by asking a question instead of typing a keyword.
 
 ## The four claims every local business should stake
 
@@ -166,7 +166,7 @@ This is also where the tradeoffs live. Owned visibility is slower to build than 
 
 ## Where the agent platform fits
 
-Suede is an agentic platform company first, founded by Jason Colapietro in West Palm Beach in 2024, and search visibility is one of its service lines. That shapes how the work gets done. Audits, schema checks and content reviews run through agent workflows built on the same practices Jason documents in [The Claude Code Bible](https://www.amazon.com/dp/B0HHTMJWB4) and [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1). Suede is a member of Claude for Startups, Anthropic's startup program ([receipt](https://seo.suedeai.ai/evidence#claude-for-startups)). If you want to see how agent output gets graded before it touches a client site, the [Agentix notes](https://agentix.suedeai.ai/notes) cover that practice, and the [Suede Scan notes](https://optimize.suedeai.ai/notes) cover AI readiness checks.
+Suede is an AI engineering and digital marketing company, founded by Jason Colapietro in West Palm Beach in 2024, and search visibility is one of its service lines. That shapes how the work gets done. Audits, schema checks and content reviews run through agent workflows built on the same practices Jason documents in [The Claude Code Bible](https://www.amazon.com/dp/B0HHTMJWB4) and [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1). Suede is a member of Claude for Startups, Anthropic's startup program ([receipt](https://seo.suedeai.ai/evidence#claude-for-startups)). If you want to see how agent output gets graded before it touches a client site, the [Agentix notes](https://agentix.suedeai.ai/notes) cover that practice, and the [Suede Scan notes](https://optimize.suedeai.ai/notes) cover AI readiness checks.
 
 ## Start where the book starts
 
@@ -224,7 +224,7 @@ Here is the order Jason Colapietro recommends when a business starts from a half
 
 ## The credentials behind the advice
 
-Jason Colapietro founded Suede in West Palm Beach in 2024 as an agentic platform company, and search visibility is one of its service lines. Among his 21 earned course credentials is the Semrush Academy Local SEO Essentials certificate, and each one has a receipt in [the Suede evidence gallery](https://seo.suedeai.ai/evidence#training-credentials). Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Clutch is a separate directory with its own method and date, so that ranking always stays in its own sentence.
+Jason Colapietro founded Suede in West Palm Beach in 2024 as an AI engineering and digital marketing company, and search visibility is one of its service lines. Among his 21 earned course credentials is the Semrush Academy Local SEO Essentials certificate, and each one has a receipt in [the Suede evidence gallery](https://seo.suedeai.ai/evidence#training-credentials). Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Clutch is a separate directory with its own method and date, so that ranking always stays in its own sentence.
 The book behind this site argues for owning the assets the machines depend on. A verified, accurate Business Profile is the smallest version of that asset, and for most local businesses it is the first one worth building.
 
 ## Your next step
