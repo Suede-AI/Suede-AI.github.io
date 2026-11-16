@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Integration Engineering That Makes a Product Citable</title>
+    <meta name="description" content="Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="AI Integration Engineering That Makes a Product Citable">
+    <meta property="og:description" content="Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="AI Integration Engineering That Makes a Product Citable">
+    <meta name="twitter:description" content="Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/#article",
+      "headline": "AI Integration Engineering for GEO: The Part of Your Product an Engine Can Cite Is the Part With a URL",
+      "name": "AI Integration Engineering That Makes a Product Citable",
+      "description": "Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "AI integration engineering, GEO, citable product pages, server-side rendering, OAI-SearchBot, structured data, Suede Sing, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Integration Engineering That Makes a Product Citable",
+          "item": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>AI Integration Engineering for GEO: The Part of Your Product an Engine Can Cite Is the Part With a URL</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>When an AI assistant recommends a tool, it needs something to point at: a page it fetched, a description it can repeat, an address the person can open. A lot of AI products give it nothing. The useful part sits behind a login, inside a JavaScript bundle, or on a URL that changes every session. An engine cannot cite a page it cannot read, so it is more likely to name a competitor whose page it could.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, builds AI integrations with that problem in mind. The deployment side, keeping AI features stable in production, is covered in <a href="https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/">what shipping AI features across 20+ listed apps taught Suede</a>. This note is about integration: how to wire an AI feature into a product so the product itself becomes a source.</p>
+
+<figure>
+<svg viewBox="0 0 720 330" width="100%" role="img" aria-labelledby="cit-t cit-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cit-t">Invisible versus citable AI feature</title>
+<desc id="cit-d">On the left, an AI feature an engine cannot read: behind a login, rendered only in the browser, on a session URL, with crawlers blocked. On the right, a citable one: a stable public URL, a server-rendered description, structured data and allowed AI crawlers.</desc>
+<rect x="0" y="0" width="720" height="330" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="15" fill="#1a1a2e">
+<rect x="30" y="20" width="310" height="290" rx="12" fill="#f4f4f6" stroke="#1a1a2e" stroke-width="1.5"/>
+<text x="185" y="52" text-anchor="middle" font-weight="bold">Engine sees nothing</text>
+<text x="55" y="100">Behind a login</text>
+<text x="55" y="150">Browser-only rendering</text>
+<text x="55" y="200">Session URL</text>
+<text x="55" y="250">AI crawlers blocked</text>
+<rect x="380" y="20" width="310" height="290" rx="12" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="535" y="52" text-anchor="middle" font-weight="bold">Engine can cite it</text>
+<text x="405" y="100">Stable public URL</text>
+<text x="405" y="150">Server-rendered summary</text>
+<text x="405" y="200">App structured data</text>
+<text x="405" y="250">Search crawlers allowed</text>
+</g>
+</svg>
+<figcaption>What separates an AI feature engines can cite from one they cannot. Source: Suede integration checklist, as described by Jason Colapietro.</figcaption>
+</figure>
+
+<h2>Why does the address matter so much?</h2>
+<p>Suede Sing is the clearest example Suede has. It had never had more than five users. After ChatGPT began naming it as a vocal coach and pitch trainer, it passed 1,000 active users within about a week, according to Suede's own analytics as reported by Jason Colapietro. The full story is in <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">the Suede Sing case study</a>.</p>
+<p>The vocal range test has a single public address, <a href="https://sing.suedeai.ai/voice">sing.suedeai.ai/voice</a>, that a person can open without an account. When an assistant names the tool, the person who asked can act on it in one tap. A tool that requires a download, a sign-up and an onboarding screen before it does anything gives the engine a weaker thing to recommend.</p>
+<p>Suede now treats every AI feature's entry point as a permanent URL. It does not move between versions, it does not carry session tokens, and if it ever has to change, the old address redirects.</p>
+
+<h2>What should the page say before the AI runs?</h2>
+<p>A tool page often contains nothing but a button until a script loads and the model responds. A crawler that does not run the script, or does not wait for it, sees an empty page. Suede renders a plain description on the server: what the tool does, who it is for, what it does not do, and how the result is produced. The AI output then loads on top for the person using it.</p>
+<p>That description is written the way the <a href="https://arxiv.org/abs/2311.09735">GEO paper by Aggarwal and colleagues</a> found engines respond to: specific statements, sources where a claim needs one, and numbers only where they are real. In their KDD 2024 benchmark, adding citations, quotations and statistics raised visibility in generative answers by up to about 40 percent. For a tool page, the honest version is short. Say what the tool measures and how, and cite the method if there is one.</p>
+
+<h2>Can AI crawlers actually reach it?</h2>
+<p>Test it directly. OpenAI documents <a href="https://platform.openai.com/docs/bots">separate crawlers</a> for search (OAI-SearchBot), for training (GPTBot) and for fetches a user triggers (ChatGPT-User). Perplexity publishes <a href="https://docs.perplexity.ai/guides/bots">its own list</a>. A robots.txt rule copied from a template, or a firewall setting that challenges unfamiliar user agents, can block the search crawler while the site owner believes everything is open. Google's <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt introduction</a> covers the syntax. Suede's view on which of these settings moved results and which were placebo is in <a href="https://suede-ai.github.io/notes/crawler-access-what-mattered/">crawler access: what mattered</a>.</p>
+<p>A product can allow the search crawlers and still block training crawlers. Those are separate decisions, and treating them as one is a common mistake.</p>
+
+<h2>How do you describe the product to machines?</h2>
+<p>With structured data that matches the visible page. Suede marks up app pages with <a href="https://schema.org/SoftwareApplication">SoftwareApplication</a> (or <a href="https://schema.org/MobileApplication">MobileApplication</a> for store apps), using the fields Google lists in its <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app">software app documentation</a>, and links the app to its developer and its store listings. The goal is that an engine describing the product gets the name, category and maker right. <a href="https://suede-ai.github.io/notes/structured-data-for-apps/">Structured data for apps</a> goes into the entity links in detail.</p>
+
+<h2>Should AI output become pages?</h2>
+<p>This is where integration engineering goes wrong most often. A model can turn every user query into a public page, and some teams do it to manufacture thousands of URLs. Google's <a href="https://developers.google.com/search/docs/essentials/spam-policies">spam policies</a> name this directly as scaled content abuse, whether the pages come from a model or a person. Suede does not publish model output as indexable pages. The citable surface is the hand-written description of what the tool does. The generated output belongs to the person who asked for it.</p>
+<p>The output still matters for GEO, in a different way. If a coaching tool invents a fact about someone's voice, that is the answer people screenshot and repeat. Jason Colapietro keeps AI outputs inside what the app can measure, so the explanation describes a result the app actually computed.</p>
+
+<h2>Questions people ask</h2>
+<p><strong>Does an app need a web page at all if it lives in the stores?</strong> Suede thinks so. Store listings are good sources, but a page you control can carry structured data, a fuller description and a URL that works on any device.</p>
+<p><strong>Is fast loading part of this?</strong> Yes. The server-rendered description should arrive without waiting on the model, so both crawlers and people see the explanation immediately.</p>
+<p>To have Suede review how your own AI features read to engines, start with <a href="https://suedeai.agency/">Suede's SEO, GEO and web practice</a>. Jason Colapietro's background and app record are on <a href="https://suedeai.ai/founder">his founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

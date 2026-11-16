@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Data for Apps: Schema That Names You Right</title>
+    <meta name="description" content="Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/structured-data-for-apps/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Structured Data for Apps: Schema That Names You Right">
+    <meta property="og:description" content="Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/structured-data-for-apps/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Structured Data for Apps: Schema That Names You Right">
+    <meta name="twitter:description" content="Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/structured-data-for-apps/#article",
+      "headline": "Structured Data for Apps: Using SoftwareApplication Schema to Pin Down Identity",
+      "name": "Structured Data for Apps: Schema That Names You Right",
+      "description": "Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/structured-data-for-apps/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/structured-data-for-apps/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "SoftwareApplication schema, MobileApplication, JSON-LD, sameAs, entity linking, app structured data, GEO, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/structured-data-for-apps/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Structured Data for Apps: Schema That Names You Right",
+          "item": "https://suede-ai.github.io/notes/structured-data-for-apps/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Structured Data for Apps: Using SoftwareApplication Schema to Pin Down Identity</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Most advice about app schema is about stars. Add SoftwareApplication markup, the thinking goes, and Google may show a rating and a price under your result. That can happen, but it is the smaller reason to do the work. For an app that wants to be named in AI answers, structured data matters because it says, in a form a machine does not have to guess at, which app this is, who made it, and where the official listings live.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, ships a lot of apps with similar names. Suede Sing, Suede Voice, Suede Studio Guitar, Strumly, Suede Social and Suede Scan all come from the same developer, and several of them deal with sound or the voice. An engine that blurs two of them will describe the wrong product to someone who asked a clear question. The markup is how Suede keeps them apart.</p>
+
+<h2>Two jobs, and the one that matters more</h2>
+<p>Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app">software app structured data guide</a> covers the rich result: it asks for a name, an offer with a price (zero is fine for a free app), and either a rating or a review, and it recommends an operating system and an application category. If your app has no reviews yet, you are not eligible for that display, and no amount of markup changes that.</p>
+<p>The identity job has no such requirement. <a href="https://schema.org/SoftwareApplication">SoftwareApplication</a> and its subtype <a href="https://schema.org/MobileApplication">MobileApplication</a> let you state the category, the platform, the install URL, the author and, through sameAs, the other pages that describe the same app. A brand-new app with zero ratings can do all of that on day one. Jason Colapietro treats this as the default and the rich result as a bonus that arrives later, if reviews do.</p>
+
+<h2>What an app's graph looks like</h2>
+<figure>
+<svg viewBox="0 0 720 340" width="100%" role="img" aria-labelledby="graph-t graph-d" xmlns="http://www.w3.org/2000/svg">
+<title id="graph-t">Entity graph for one Suede app</title>
+<desc id="graph-d">The app page's MobileApplication node links by author to the founder, by publisher to the company, and by sameAs to its Google Play and App Store listings.</desc>
+<rect x="0" y="0" width="720" height="340" fill="#ffffff"/>
+<g stroke="#667eea" stroke-width="2.5">
+<line x1="360" y1="170" x2="130" y2="70"/>
+<line x1="360" y1="170" x2="590" y2="70"/>
+<line x1="360" y1="170" x2="130" y2="280"/>
+<line x1="360" y1="170" x2="590" y2="280"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="15" fill="#1a1a2e" text-anchor="middle">
+<rect x="250" y="140" width="220" height="60" rx="12" fill="#1a1a2e"/>
+<text x="360" y="176" fill="#ffffff">MobileApplication</text>
+<rect x="30" y="40" width="200" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="130" y="73">author: founder</text>
+<rect x="490" y="40" width="200" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="590" y="73">publisher: Suede</text>
+<rect x="30" y="250" width="200" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="130" y="283">sameAs: Google Play</text>
+<rect x="490" y="250" width="200" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="590" y="283">sameAs: App Store</text>
+</g>
+</svg>
+<figcaption>How Suede connects an app page to the entities around it. Source: Suede's schema practice as described by Jason Colapietro; property definitions from schema.org.</figcaption>
+</figure>
+<p>Each app gets one node with a stable @id on the page that describes it. That node points out to a small number of things, and every pointer is a URL that already exists:</p>
+<ul>
+<li>author and publisher reference the founder and the company by their canonical @id, rather than redefining a person or organization on every page. <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a> lets one document refer to a node defined elsewhere, and that is how Suede keeps a single record of who Jason Colapietro is.</li>
+<li>sameAs lists the store pages, such as the <a href="https://play.google.com/store/apps/details?id=ai.suedeai.suedevoice">Suede Voice listing on Google Play</a>, and for iOS apps the listing reachable from the <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">Apple developer page</a>.</li>
+<li>applicationCategory and operatingSystem say what the app is for and where it runs, in the same words the store uses.</li>
+</ul>
+<p>A trimmed version for one app looks like this:</p>
+<pre><code>{
+  "@type": "MobileApplication",
+  "@id": "https://example.com/app/#app",
+  "name": "Suede Voice",
+  "operatingSystem": "Android",
+  "applicationCategory": "MusicApplication",
+  "author": { "@id": "https://suedeai.ai/founder#person" },
+  "sameAs": ["https://play.google.com/store/apps/details?id=ai.suedeai.suedevoice"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}</code></pre>
+<p>The @id in the sample uses a placeholder domain; on a real page it is the app page's own URL plus a fragment.</p>
+
+<h2>The rule that keeps the graph honest</h2>
+<p>Everything in the markup has to be visible on the page and true on the listing. Google's structured data guidelines, linked from its <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app">software app guide</a>, say markup should describe content that is visible to users. A rating that sits in the JSON-LD and nowhere on the page is exactly the mismatch Suede removes before shipping.</p>
+<p>Before a page ships, Suede checks that the name in the schema matches the name on the store listing character for character, that the category and platform match what the store shows, and that any rating in the markup also appears on the page with a source. The note on <a href="https://suede-ai.github.io/notes/app-store-listing-is-a-source/">store listings as sources</a> covers the listing side of that match.</p>
+
+<h2>How Suede tests a schema change</h2>
+<p>Schema is a good fit for the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a> because it can change without changing a word of visible copy. Jason Colapietro has built more than 100 apps, 20+ of them in public stores, and many existed to try one variable at a time. For schema, the variable might be adding sameAs links to the store pages, or replacing an inline author object with a reference to the canonical founder @id. Suede asks the same fixed prompts before and after, such as "what does Suede Voice do" and "who makes Suede Sing," and records whether the answers name the right app and the right developer.</p>
+<p>The question is narrow on purpose: does an engine describe this specific app, and its developer, correctly? A dated capture answers that with a yes or a no, which a broad question like whether schema helps GEO never will. The note on <a href="https://suede-ai.github.io/notes/measuring-ai-referrals-honestly/">measuring AI referrals honestly</a> covers how to keep those captures comparable.</p>
+
+<h2>Questions people ask</h2>
+<h3>Is MobileApplication better than SoftwareApplication?</h3>
+<p>MobileApplication is a subtype, so it inherits everything. Use it for apps that run on phones; use WebApplication for anything that runs in the browser, and give each version its own node if an app exists in both forms.</p>
+<h3>Do I need ratings in my schema?</h3>
+<p>Only for Google's rich result. For identity, leave ratings out until they exist on the page with a source.</p>
+
+<p>Suede reviews app and product schema as part of its client work at <a href="https://suedeai.agency/">Suede's SEO and GEO practice</a>. The founder's record is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

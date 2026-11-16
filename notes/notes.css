@@ -116,3 +116,11 @@ a:focus-visible { outline: 3px solid #764ba2; outline-offset: 2px; }
     h1 { font-size: 1.9em; }
     article h2 { font-size: 1.35em; }
 }
+
+/* Infographics: keep SVG labels legible on phones by letting wide figures scroll. */
+article figure { margin: 1.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+article figure svg { display: block; max-width: 100%; height: auto; }
+article figcaption { font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem; }
+@media (max-width: 600px) { article figure svg { min-width: 600px; max-width: none; } }
+article pre { overflow-x: auto; max-width: 100%; }
+article code { overflow-wrap: anywhere; }

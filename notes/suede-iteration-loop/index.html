@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Suede Iteration Loop: How to Design a GEO Experiment</title>
+    <meta name="description" content="The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/suede-iteration-loop/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="The Suede Iteration Loop: How to Design a GEO Experiment">
+    <meta property="og:description" content="The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/suede-iteration-loop/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="The Suede Iteration Loop: How to Design a GEO Experiment">
+    <meta name="twitter:description" content="The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/suede-iteration-loop/#article",
+      "headline": "The Suede Iteration Loop: How to Design a GEO Experiment That Tells You Something",
+      "name": "The Suede Iteration Loop: How to Design a GEO Experiment",
+      "description": "The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/suede-iteration-loop/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/suede-iteration-loop/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "GEO experiment design, Suede iteration loop, A/B testing, AI search, prompt testing, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/suede-iteration-loop/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Suede Iteration Loop: How to Design a GEO Experiment",
+          "item": "https://suede-ai.github.io/notes/suede-iteration-loop/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>The Suede Iteration Loop: How to Design a GEO Experiment That Tells You Something</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Most GEO advice comes with no experiment behind it. Someone added an FAQ, saw their brand in a ChatGPT answer a week later, and wrote a thread about it. They may be right. They have no way to know, because they changed several things, asked the question once, and had no record of what the answer said before.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, uses a stricter method. Inside the company it is called the Suede iteration loop. Jason Colapietro ran it across thousands of app iterations in health, wealth and relationship apps, and it is the reason Suede can tell a client which changes it has seen work more than once. This note describes the loop so you can run it yourself.</p>
+
+<figure>
+<svg viewBox="0 0 720 360" width="100%" role="img" aria-labelledby="loop-t loop-d" xmlns="http://www.w3.org/2000/svg">
+<title id="loop-t">The Suede iteration loop</title>
+<desc id="loop-d">Six steps in a cycle: fix the prompt set, capture a baseline, change one variable, wait for recrawl, capture again, then keep or revert and log the result before starting the next round.</desc>
+<rect x="0" y="0" width="720" height="360" fill="#ffffff"/>
+<defs><marker id="loop-a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#667eea"/></marker></defs>
+<g font-family="Arial, sans-serif" font-size="15" fill="#1a1a2e" text-anchor="middle">
+<rect x="40" y="40" width="180" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="130" y="74">1. Fix prompt set</text>
+<rect x="270" y="40" width="180" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="360" y="74">2. Capture baseline</text>
+<rect x="500" y="40" width="180" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="590" y="74">3. Change one thing</text>
+<rect x="500" y="250" width="180" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="590" y="284">4. Wait for recrawl</text>
+<rect x="270" y="250" width="180" height="56" rx="10" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="360" y="284">5. Capture again</text>
+<rect x="40" y="250" width="180" height="56" rx="10" fill="#1a1a2e"/>
+<text x="130" y="284" fill="#ffffff">6. Keep or revert</text>
+</g>
+<g stroke="#667eea" stroke-width="2.5" fill="none" marker-end="url(#loop-a)">
+<path d="M222 68 L266 68"/>
+<path d="M452 68 L496 68"/>
+<path d="M590 98 L590 246"/>
+<path d="M498 278 L454 278"/>
+<path d="M268 278 L224 278"/>
+<path d="M130 248 L130 100"/>
+</g>
+<text x="360" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1a1a2e">Log every round</text>
+</svg>
+<figcaption>The Suede iteration loop. Source: Jason Colapietro's description of Suede's test method.</figcaption>
+</figure>
+
+<h2>Step 1: write the prompt set before you touch anything</h2>
+<p>Pick the questions a real person would ask an AI assistant when they need what you sell. For a vocal app like Suede Sing, that means questions such as how to find your vocal range or which app helps with pitch. Write them down, word for word, and freeze them. If you rephrase prompts between rounds, you are testing your wording along with the page.</p>
+<p>Keep the set small enough that you will actually run it every time. Include a few prompts where you do not expect to appear, so you can tell a general shift in the engine from a change caused by your edit.</p>
+
+<h2>Step 2: capture a baseline with dates</h2>
+<p>Run every prompt in each engine you care about and save the full answer, the date and the engine. Screenshots are fine. A spreadsheet row is better, because you can compare it later. Note whether you were named, how you were described, and which sources the engine cited. AI answers vary between runs, so ask each prompt more than once and record each result.</p>
+
+<h2>Step 3: change exactly one variable</h2>
+<p>This is the step people skip. Choose one change: the first sentence of the store description, one added citation, a corrected entity link, a new section answering a specific question. Leave everything else alone until the round is over. If you rewrite the description, add schema and publish a press release in the same week, any change in the answers belongs to all three and you learn nothing.</p>
+<p>The <a href="https://arxiv.org/abs/2311.09735">GEO paper from Aggarwal and colleagues</a>, presented at KDD 2024, used the same structure. They applied single edits such as adding citations, quotations or statistics to source content and measured visibility in generative answers. Some edits raised visibility by up to about 40 percent on their benchmark. Because each edit was isolated, they could rank them.</p>
+<p>Store pages give you tools for the human side of this. Apple's <a href="https://developer.apple.com/app-store/product-page-optimization/">product page optimization</a> and Google Play's <a href="https://support.google.com/googleplay/android-developer/answer/6227309">store listing experiments</a> split real traffic between listing variants. Suede uses them to check that a change written for engines does not hurt conversion with people.</p>
+
+<h2>Step 4: confirm the engines saw the change</h2>
+<p>An engine cannot cite a version of a page it has not fetched. Check your server logs for the crawlers that matter. OpenAI documents <a href="https://platform.openai.com/docs/bots">OAI-SearchBot, GPTBot and ChatGPT-User</a> and what each one does. Perplexity lists <a href="https://docs.perplexity.ai/guides/bots">its own crawlers</a>. If your <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt</a> blocks the search crawler, nothing you change on the page will show up in that engine's answers. Suede does not start the after-capture until there is a fetch of the changed page in the logs, or a reasonable wait has passed for pages it cannot see logs for, like store listings.</p>
+
+<h2>Step 5: capture again with the same prompts</h2>
+<p>Use the frozen prompt set, in the same engines, with the same number of runs. Compare row by row. Did you appear where you did not before? Did the description of you get more accurate? Did a different source start getting cited for you? Write down what moved and what did not, including the prompts where nothing changed.</p>
+
+<h2>Step 6: keep, revert, and log it either way</h2>
+<p>If the change helped, keep it and note it as a candidate. If it did nothing, revert it unless it helps human readers, and log it as a null result. Jason Colapietro treats a tactic as real only once it repeats on a second app. A single win could be noise, a model update or a lucky week. Repeated results are what go into client work, through the process in <a href="https://suede-ai.github.io/notes/from-app-lab-to-client-playbook/">from app lab to client playbook</a>.</p>
+<p>Suede also keeps a running list of tactics that went nowhere, written up in <a href="https://suede-ai.github.io/notes/geo-experiments-that-failed/">GEO experiments that failed</a>. When a client asks for one of those tactics, Suede can show the log instead of arguing.</p>
+
+<h2>Why run the loop on apps?</h2>
+<p>Because the loop needs many cheap rounds, and apps provide them. The case for that is in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">why Suede built 100+ apps as a GEO laboratory</a>. Jason Colapietro has built more than 100 apps, with more than 20 listed in public stores, and many of them existed to give the loop something to work on.</p>
+<p>The loop also kept Suede honest when something big happened. When ChatGPT began naming Suede Sing, which by Jason Colapietro's account had never had more than 5 users and then passed 1,000 active users within about a week, the first question was what had changed on the app and when. A dated log of every round is what makes that question answerable.</p>
+
+<h2>Common questions about the Suede iteration loop</h2>
+<h3>How long should one round take?</h3>
+<p>Long enough for the engines to fetch the change. That varies by engine and by page type, so check logs instead of picking a fixed number of days.</p>
+<h3>What if the engine's answers change even when I did nothing?</h3>
+<p>They will. That is why the prompt set includes control prompts and why each prompt runs more than once. A shift that also shows up in the control prompts came from the engine.</p>
+<p>For help running the loop on your own site, see <a href="https://suedeai.agency/">Suede's SEO and GEO practice</a> or <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>
