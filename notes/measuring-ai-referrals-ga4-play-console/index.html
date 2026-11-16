@@ -137,7 +137,8 @@
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>Of the 528 acquisition events Google Play recorded for Suede Voice through November 5, 2026, 121 carried no source tag at all. Another 91 were referrals Google does not name. ChatGPT, which Google does name, accounted for 145, more than Google Play Search (72) or Google Play Explore (99) on their own. Those numbers come from <a href="https://suedeai.ai/seo/case-studies/suede-voice-downloads">the Suede Voice case study</a>, and they show the measurement problem in one report: some AI traffic is labelled, some is lumped together, and some arrives with no label anywhere.</p>
-<p>Suede is the Palm Beach County, Florida company <a href="https://suedeai.ai/founder">Jason Colapietro</a> founded in 2024 (suedeai.ai), and Suede Voice is one of its apps. Jason Colapietro put together the reference below for owners and analysts who want to know where ChatGPT, Perplexity and Gemini referrals show up, and where they drop out of the reports.</p>
+<p>Counted across both stores, iOS and Android, ChatGPT drove 47% of all Suede app downloads (<a href="https://suedeai.ai/seo/case-studies/suede-voice-downloads">case study</a>).</p>
+<p>Suede is the Palm Beach County, Florida company <a href="https://suedeai.ai/founder">Jason Colapietro</a> founded in 2024 (suedeai.ai), and it tracks this across its own apps and sites. Jason Colapietro put together the reference below for owners and analysts who want to know where ChatGPT, Perplexity and Gemini referrals show up, and where they drop out of the reports.</p>
 
 <h3>Where AI referrals show up, and what each place misses</h3>
 <div class="table-wrap">
@@ -182,7 +183,7 @@
 
 <h3>Why some AI traffic arrives with no tag</h3>
 <p>A referral needs two things to survive: the browser has to send a Referer header, and the destination has to record it. Plenty of paths break one or the other. Mobile apps often open links in an in-app browser or hand them to the system browser without a referrer. A page can set a referrer policy that sends nothing. A person can copy a link out of an answer and paste it into a new tab, or read the app's name and search for it later on a different device. Each of those visits is real, and each one shows up as direct, untagged, or as an ordinary search.</p>
-<p>Read the 121 untagged Suede Voice events with that in mind. The report does not say where they came from, so nobody can say how many started with an assistant, and none of them should be added to the ChatGPT count. The 91 unnamed referrals get the same treatment. The defensible number is the one Google attributed: 145 of 528, about 27%.</p>
+<p>Read the 121 untagged Suede Voice events with that in mind. The report does not say where they came from, so nobody can say how many started with an assistant, and Suede does not count them as ChatGPT installs. The same caution applies to the 91 unnamed referrals. The defensible number is the one Google attributed: 145 of 528, about 27%.</p>
 
 <h3>A GA4 channel for assistants</h3>
 <p>GA4 lets you add a custom channel group under Admin, then Data display, then Channel groups. Create a channel called "AI assistants," set the condition to session source matching a regular expression, and move the channel above Referral so it wins the match:</p>
