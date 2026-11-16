@@ -58,7 +58,7 @@ for (const slug of REQUIRED_SLUGS) {
 }
 
 // Depth articles (2026-11-15): published that day, 900-1300 words, deep links
-// to at least two articles on other Suede AI satellite sites, and the Clutch
+// to at least two articles on other Suede satellite sites, and the Clutch
 // ranking stated once in its exact wording, apart from The Manifest.
 const DEPTH_SLUGS = new Set([
   'google-business-profile-directories-without-inventing',
@@ -67,7 +67,7 @@ const DEPTH_SLUGS = new Set([
 const SATELLITE_ARTICLE =
   /href="(https:\/\/(?:optimize|docs|agentix|signal|dna|podcast)\.suedeai\.ai\/(?:notes|articles)\/[a-z0-9-]+\/?|https:\/\/(?:guitar\.services|guitarchords\.info|guitarhub\.org)\/notes\/[a-z0-9-]+\/?)"/g;
 const CLUTCH_SENTENCE =
-  'Suede AI ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>\'s ' +
+  'Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>\'s ' +
   '<a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and ' +
   '<a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).';
 

@@ -1,6 +1,6 @@
 # Stake Your Claim
 
-> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede AI, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede AI, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede, an agentic platform company founded in 2024 in West Palm Beach, Florida.
 
 ## Book
 
@@ -13,20 +13,20 @@
 - [Notes index](https://suede-ai.github.io/notes/): field notes on applying the book in practice
 - [Stake Your Claim for local businesses](https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/): turning AI search into an asset in West Palm Beach and Jupiter
 - [Owning your proof](https://suede-ai.github.io/notes/public-evidence-ledger/): why Jason Colapietro keeps a public evidence ledger, and how to build one
-- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede AI applies Stake Your Claim in client SEO and GEO work
+- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede applies Stake Your Claim in client SEO and GEO work
 - [Claiming your Google Business Profile and directories](https://suede-ai.github.io/notes/google-business-profile-directories-without-inventing/): claiming a Google Business Profile and directory listings in Jupiter and West Palm Beach without inventing anything
 - [Customer proof as structured evidence](https://suede-ai.github.io/notes/customer-proof-structured-evidence/): turning reviews, case notes and citations into evidence that buyers and AI models can verify
 
-## Suede AI
+## Suede
 
-- [Suede AI](https://suedeai.ai/): agentic platform company
+- [Suede](https://suedeai.ai/): agentic platform company
 - [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
-- [Suede AI agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
-- [Suede AI assessment](https://suedeai.agency/assessment): AI visibility assessment
+- [Suede agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
+- [Suede assessment](https://suedeai.agency/assessment): AI visibility assessment
 - [Evidence ledger](https://seo.suedeai.ai/evidence): receipts for every claim
-- [Suede AI on Clutch](https://clutch.co/profile/suede-ai-seo): Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
+- [Suede on Clutch](https://clutch.co/profile/suede-ai-seo): Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
 - [jasoncolapietro.com](https://jasoncolapietro.com/): personal site
-- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede AI
+- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede
 
 ## Optional
 
