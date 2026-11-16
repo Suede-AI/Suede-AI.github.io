@@ -20,8 +20,8 @@ generational wealth as a creative.
 ## Related
 
 - Founder profile: [github.com/JasonColapietro](https://github.com/JasonColapietro)
-- Suede AI research and investor site: [suedeai.org](https://suedeai.org)
-- Suede AI org profile: [github.com/Suede-AI](https://github.com/Suede-AI)
+- Suede research and investor site: [suedeai.org](https://suedeai.org)
+- Suede org profile: [github.com/Suede-AI](https://github.com/Suede-AI)
 - X / Twitter: [@Johnnysuede](https://x.com/Johnnysuede) · [@AISUEDE](https://x.com/AISUEDE)
 - LinkedIn: [in/jasoncolapietro](https://www.linkedin.com/in/jasoncolapietro)
 

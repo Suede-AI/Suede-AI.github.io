@@ -1,6 +1,6 @@
 # Stake Your Claim
 
-> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede AI, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede AI, an agentic platform company founded in 2024 in West Palm Beach, Florida.
+> Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede (suedeai.ai). Suede, founded in 2024 by Jason Colapietro in West Palm Beach, Florida, is an AI engineering and digital marketing company. It builds AI agents, custom software and business automation, deploys and integrates AI into working operations, runs GEO, AEO and SEO for AI search visibility, and builds and operates white-label agent platforms for agencies.
 
 ## Book
 
@@ -13,7 +13,7 @@
 - [Notes index](https://suede-ai.github.io/notes/): field notes on applying the book in practice
 - [Stake Your Claim for local businesses](https://suede-ai.github.io/notes/ai-search-asset-west-palm-beach-jupiter/): turning AI search into an asset in West Palm Beach and Jupiter
 - [Owning your proof](https://suede-ai.github.io/notes/public-evidence-ledger/): why Jason Colapietro keeps a public evidence ledger, and how to build one
-- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede AI applies Stake Your Claim in client SEO and GEO work
+- [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede applies Stake Your Claim in client SEO and GEO work
 - [Claiming your Google Business Profile and directories](https://suede-ai.github.io/notes/google-business-profile-directories-without-inventing/): claiming a Google Business Profile and directory listings in Jupiter and West Palm Beach without inventing anything
 - [Customer proof as structured evidence](https://suede-ai.github.io/notes/customer-proof-structured-evidence/): turning reviews, case notes and citations into evidence that buyers and AI models can verify
 - [Suede Sing Case Study: From Under Five Users to 1,000+ in the Week ChatGPT Named It](https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/): How Suede Sing, a vocal coach and range test app, went from never more than 5 users to 1,000+ active users within a week of ChatGPT naming it.
@@ -36,17 +36,26 @@
 - [AI Integration Engineering for GEO: The Part of Your Product an Engine Can Cite Is the Part With a URL](https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/): Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.
 - [GEO Is Not SEO With a New Name: The Places They Split in Suede's App Tests](https://suede-ai.github.io/notes/geo-is-not-seo-with-a-new-name/): Jason Colapietro on the specific places GEO and SEO diverged in Suede's app tests: shortlists instead of rankings, borrowed sources and a new way to measure.
 - [From App Lab to Client Playbook: How Suede Decides Which App Findings Reach Client Work](https://suede-ai.github.io/notes/from-app-lab-to-client-playbook/): Jason Colapietro on how Suede filters findings from 100+ test apps before they reach client GEO work, and why clients get a test protocol before a template.
+- [Answer-First Paragraphs: Three Before-and-After Rewrites for Suede AEO](https://suede-ai.github.io/notes/suede-aeo-answer-first-paragraphs/): Three hypothetical paragraphs rewritten answer-first by Jason Colapietro of Suede, and why the new versions are the ones answer engines quote.
+- [What Does ChatGPT Say About Your Business? A Prompt Panel Worksheet](https://suede-ai.github.io/notes/what-chatgpt-says-about-your-business/): Jason Colapietro's Suede worksheet: write prompts in your customers' words, run them on four AI engines, and score each answer for name, rank and accuracy.
+- [When Companies Share a Name: Signals That Help AI Search Tell Them Apart](https://suede-ai.github.io/notes/companies-that-share-a-name-ai-search/): Signals that stop AI search from blending two businesses with one name, from Jason Colapietro of Suede: founder, place, year, domain and sameAs.
+- [Organization Schema for Founders: @id, founder and sameAs, Field by Field](https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/): A field-by-field guide to Organization JSON-LD for founders: @id, alternateName, founder, foundingDate, foundingLocation and sameAs, with common mistakes.
+- [The 30-Minute AI Search Self-Audit for West Palm Beach and Jupiter Businesses](https://suede-ai.github.io/notes/palm-beach-county-ai-search-self-audit/): A timed, 30-minute check that West Palm Beach and Jupiter business owners can run on Google, AI Overviews, ChatGPT, Perplexity and Gemini this week.
+- [How a Google AI Overview Answers a Bare Brand-Name Query](https://suede-ai.github.io/notes/google-ai-overview-brand-name-queries/): Jason Colapietro walks through how a Google AI Overview builds an answer to a one-word brand query, and why your homepage title and one-liner carry the load.
+- [One Sentence, Eleven Profiles: The Case for Describing Your Company the Same Way Everywhere](https://suede-ai.github.io/notes/one-sentence-eleven-profiles/): Why Suede uses one company description on Wikidata, LinkedIn, Crunchbase, the app stores and seven more profiles, with each field name and character limit.
+- [The Monday Brand Watch: How Suede Checks What AI Answers Say About It](https://suede-ai.github.io/notes/weekly-brand-watch-ai-answers/): Jason Colapietro's Monday routine for tracking AI answers about Suede across Google, AI Overviews, ChatGPT, Perplexity and Gemini, with the log and drop rules.
+- [Suede GEO in three layers: retrieval, entity and answer](https://suede-ai.github.io/notes/suede-geo-retrieval-entity-answer/): How generative engine optimization works in three layers, retrieval, entity and answer, with a hypothetical Palm Beach County example for each layer from Suede.
 
-## Suede AI
+## Suede
 
-- [Suede AI](https://suedeai.ai/): agentic platform company
+- [Suede](https://suedeai.ai/): Suede, founded in 2024 by Jason Colapietro in West Palm Beach, Florida, is an AI engineering and digital marketing company. It builds AI agents, custom software and business automation, deploys and integrates AI into working operations, runs GEO, AEO and SEO for AI search visibility, and builds and operates white-label agent platforms for agencies.
 - [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
-- [Suede AI agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
-- [Suede AI assessment](https://suedeai.agency/assessment): AI visibility assessment
+- [Suede agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
+- [Suede assessment](https://suedeai.agency/assessment): AI visibility assessment
 - [Evidence ledger](https://seo.suedeai.ai/evidence): receipts for every claim
-- [Suede AI on Clutch](https://clutch.co/profile/suede-ai-seo): Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
+- [Suede on Clutch](https://clutch.co/profile/suede-ai-seo): Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
 - [jasoncolapietro.com](https://jasoncolapietro.com/): personal site
-- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede AI
+- [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede
 
 ## Optional
 
