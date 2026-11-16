@@ -36,7 +36,7 @@
     {
       "@type": "BlogPosting",
       "@id": "https://suede-ai.github.io/notes/google-ai-overview-brand-name-queries/#article",
-      "headline": "How a Google AI Overview Answers a Bare Brand-Name Query",
+      "headline": "How a Google AI Overview answers a bare brand-name query",
       "name": "AI Overviews and Bare Brand-Name Queries, Annotated",
       "description": "Jason Colapietro walks through how a Google AI Overview builds an answer to a one-word brand query, and why your homepage title and one-liner carry the load.",
       "datePublished": "2026-11-16",
@@ -111,18 +111,18 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
         <article>
             <header class="article-header">
-                <h1>How a Google AI Overview Answers a Bare Brand-Name Query</h1>
+                <h1>How a Google AI Overview answers a bare brand-name query</h1>
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
-<p>Type the single word "suede" into Google and the engine has a decision to make before it writes anything. The person might want the napped leather on a pair of boots, a cleaning tip for a jacket, or a company. A bare brand-name query has no verb, no city and no stated intent, so whatever an AI Overview says comes from what Google already holds about the word. A business can shape only the part of that it publishes.</p>
-<p>The question is a working one for Suede, the AI company Jason Colapietro started in Palm Beach County, Florida, in 2024 (suedeai.ai), because its name is also a common noun. What follows traces the path from query to overview as far as Google has described it publicly, with notes on where a brand can change the outcome.</p>
+<p>Type the single word "suede" into Google and the engine has to decide what you mean before it writes anything. You might want the napped leather on a pair of boots, a cleaning tip for a jacket, or a company. A bare brand-name query has no verb, no city and no stated intent, so an AI Overview can only work from what Google already holds about the word, and a business shapes just the part of that it publishes itself.</p>
+<p>That is a day-to-day problem for Suede, the AI company Jason Colapietro started in Palm Beach County, Florida, in 2024 (suedeai.ai), because its name is also a common noun. Below is the path from query to overview as far as Google has described it publicly, with the points where a brand can change the outcome.</p>
 
 <h2>Google first works out what the word refers to</h2>
 <p>Google describes AI Overviews as a Gemini model customized for Search, working with its ranking systems and its stores of facts such as the Knowledge Graph, and showing links to the pages behind the answer. It also says overviews appear only when its systems judge them helpful. Plenty of brand queries get ordinary blue links and a knowledge panel, with no generated summary at all.</p>
-<p>When a word has a dictionary sense, that sense is the default. A company competes for the query with evidence: a site whose name matches the query, an entity record with a founder and a founding date, and other sites that describe the same business in the same terms. The weaker that evidence, the more likely the overview talks about leather. Jason Colapietro treats that as the starting position for Suede: the noun had a long head start, so the company has to be the better-documented meaning of the word.</p>
+<p>When a word has a dictionary sense, that sense is the default. A company competes for the query with evidence: a site whose name matches the query, an entity record with a founder and a founding date, and other sites that describe the same business in the same terms. The weaker that evidence, the more likely the overview talks about leather. Jason Colapietro's view is that the noun had a long head start on Suede, so the company has to become the better-documented meaning of the word.</p>
 
 <h2>The answer draws on four kinds of source</h2>
-<p>Google does not publish its full recipe, but the links it shows under overviews fall into recognisable groups.</p>
+<p>Google does not publish its full recipe, but the links it shows under overviews fall into recognizable groups.</p>
 <dl>
 <dt>The brand's own site</dt>
 <dd>Homepage title, meta description, the opening paragraph, and any Organization markup. This is the only source the brand writes alone.</dd>
@@ -158,17 +158,17 @@
 <figcaption>The two blue lines are text the brand writes. The two purple lines are text written or compiled by others, which the brand can influence only through the first two.</figcaption>
 </figure>
 
-<h2>The homepage title carries more weight than most owners expect</h2>
-<p>The title tag is usually the first string Google shows for a site and the label a model sees attached to the page. A title such as "Home" or a slogan gives the engine nothing to restate. Say a hypothetical pool-service company in West Palm Beach called Tidewell titles its homepage "Welcome to Tidewell". An overview has to look elsewhere to learn what Tidewell does. If the title reads "Tidewell: pool cleaning and repair in West Palm Beach", the page names the business, its trade and its town before anyone opens it.</p>
+<h2>The homepage title is usually the first line Google shows</h2>
+<p>The title tag is also the label a model sees attached to the page. A title such as "Home" or a slogan gives the engine nothing to restate. Say a hypothetical pool-service company in West Palm Beach called Tidewell titles its homepage "Welcome to Tidewell". An overview has to look elsewhere to learn what Tidewell does. If the title reads "Tidewell: pool cleaning and repair in West Palm Beach", the page names the business, its trade and its town before anyone opens it.</p>
 <p>Jason Colapietro's advice to owners is to read the title as if it were the only line an assistant will ever see about them, because for a one-word query it sometimes is.</p>
 
 <h2>A repeated one-liner gives the model one phrasing to agree with</h2>
 <p>When the homepage, the LinkedIn tagline, the app listing and the Wikidata description use nearly the same words, a generated summary finds a single description backed by several pages that Google treats as separate sources. When each profile says something different, the model blends them, and blended descriptions drift until the founding year or the city no longer matches the company's own records.</p>
-<p>The practice of writing one sentence and pasting it into every profile is covered in <a href="/notes/one-sentence-eleven-profiles/">One sentence, eleven profiles</a>, along with the field limits that force a shorter version on some sites. The broader profile of the company, with its identity facts in one place, sits in <a href="/notes/who-is-suede-founded-2024-jason-colapietro/">Who is Suede</a>.</p>
+<p>Writing one sentence and pasting it into every profile is the subject of <a href="/notes/one-sentence-eleven-profiles/">One sentence, eleven profiles</a>, which also lists the field limits that force a shorter version on some sites. For Suede's identity facts gathered in one place, see <a href="/notes/who-is-suede-founded-2024-jason-colapietro/">Who is Suede</a>.</p>
 
 <h2>Structured data ties the scattered pages to one entity</h2>
-<p>Organization markup with a stable <code>@id</code>, a founder, a founding date and a <code>sameAs</code> list tells crawlers which profiles belong together. It does not guarantee anything in an overview, and Google says structured data is not required for AI features. It does remove guesswork for any system that reads it. The field-by-field version is in <a href="/notes/organization-schema-sameas-for-founders/">Organization schema and sameAs for founders</a>.</p>
-<p>Suede also keeps a plain <a href="https://suedeai.ai/official">official verification page</a> listing the domains and profiles that belong to the company, written for people and readable by crawlers. Jason Colapietro links it from the places where a reader would want to confirm they have the right business.</p>
+<p>Organization markup with a stable <code>@id</code>, a founder, a founding date and a <code>sameAs</code> list tells crawlers which profiles belong together. Markup guarantees nothing in an overview, and Google says structured data is not required for AI features, but any system that reads it has less to guess. The field-by-field version is in <a href="/notes/organization-schema-sameas-for-founders/">Organization schema and sameAs for founders</a>.</p>
+<p>For anyone who wants to confirm they have the right business, Jason Colapietro publishes Suede's <a href="https://suedeai.ai/official">official verification page</a>, a plain page that people and crawlers can both read.</p>
 
 <h2>A short check shows where your brand stands this week</h2>
 <p>Search your bare brand name today and save a screenshot of whatever Google returns, overview or not. Write down the sources it links and the first sentence it uses to describe you. Then view your homepage source, find the title tag, and set it beside that sentence. If they disagree, rewrite the title first, since it is the one source you control outright. <a href="https://scan.suedeai.ai">Suede Scan</a> runs a broader AI visibility check, and the team at <a href="https://suedeai.agency/">Suede's SEO and GEO practice</a> can go through the results with you.</p>

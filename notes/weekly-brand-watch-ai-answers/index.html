@@ -36,7 +36,7 @@
     {
       "@type": "BlogPosting",
       "@id": "https://suede-ai.github.io/notes/weekly-brand-watch-ai-answers/#article",
-      "headline": "The Monday Brand Watch: How Suede Checks What AI Answers Say About It",
+      "headline": "The Monday brand watch: how Suede checks what AI answers say about it",
       "name": "A Weekly Brand Watch for AI Answers, Run Every Monday",
       "description": "Jason Colapietro's Monday routine for tracking AI answers about Suede across Google, AI Overviews, ChatGPT, Perplexity and Gemini, with the log and drop rules.",
       "datePublished": "2026-11-16",
@@ -111,13 +111,13 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
         <article>
             <header class="article-header">
-                <h1>The Monday Brand Watch: How Suede Checks What AI Answers Say About It</h1>
+                <h1>The Monday brand watch: how Suede checks what AI answers say about it</h1>
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
-<p>The routine produces one row per query per surface, every Monday, in a spreadsheet that nobody else reads until something goes wrong. Jason Colapietro keeps it for Suede, a Palm Beach County, Florida, business he launched in 2024 (on the web at suedeai.ai), because AI answers change without notice and the change is invisible unless someone writes down what the answer said last week. The log is deliberately plain, so that a drop stands out against weeks of identical rows.</p>
+<p>The routine produces one row per query per surface, every Monday. Jason Colapietro keeps the log for Suede, a Palm Beach County, Florida, business he launched in 2024 (on the web at suedeai.ai), because AI answers change without notice, and nobody sees the change unless someone wrote down what the answer said the week before. The log is deliberately plain, so that a drop stands out against weeks of identical rows.</p>
 
 <h2>Which queries go in?</h2>
-<p>The list is short and stays the same from week to week, so that rows can be compared. For Suede it is the bare name, the name with each service the company sells, and the founder's name:</p>
+<p>The list is short and stays the same from week to week, so that rows can be compared. For Suede it is the bare name, the name with each service the company sells, Jason Colapietro's own name, and one plain question:</p>
 <pre><code>suede
 suede ai
 suede geo
@@ -129,14 +129,14 @@ suede ai engineering
 jason colapietro
 who founded suede ai</code></pre>
 <p>A business adapting this should use the phrases a buyer would actually type, plus one question in plain language. Adding queries is fine. Swapping them out every few weeks breaks the comparison, so a new query starts its own history from the week it is added.</p>
-<p>The founder's name is on the list for a reason. Some people who hear about a company search for the person who runs it. If the answer for "jason colapietro" stops mentioning Suede, or describes him without the company, the two records are drifting apart, and Jason Colapietro logs that with the same weight as a miss on the company name.</p>
+<p>Some people who hear about a company search for the person who runs it, which is why the founder's name is there. If the answer for "jason colapietro" stops mentioning Suede, or describes Jason Colapietro without the company, the two records are drifting apart. Jason Colapietro's advice is to treat that as seriously as a miss on the company name.</p>
 
 <h2>Which surfaces?</h2>
-<p>Five: Google's ordinary results, Google's AI Overview when one appears, ChatGPT, Perplexity and Gemini. Each gets the same conditions every time. Google runs in a private window, signed out. The chat assistants run in a new conversation with memory and custom instructions off, and with web search on where the product offers it, since that is the mode most people use for questions about companies. Location affects Google results, so it helps to note where the check was run. For Jason Colapietro that is usually Jupiter.</p>
+<p>Five: Google's ordinary results, Google's AI Overview when one appears, ChatGPT, Perplexity and Gemini. Each gets the same conditions every time. Google runs in a private window, signed out. The chat assistants run in a new conversation with memory and custom instructions off, and with web search on where the product offers it, so the answer draws on current pages. Location affects Google results, so note where each check was run.</p>
 <p>Answers vary from one run to the next even under the same conditions. One run per cell is enough for a weekly log, as long as nobody treats a single week as a trend.</p>
 
 <h2>What goes in the log?</h2>
-<p>Eight columns. The second row below shows the shape of an entry and is an example with placeholders, not a recorded result.</p>
+<p>Eight columns. The row under the header is an example filled with placeholders to show the shape of an entry; it records nothing.</p>
 <div class="table-wrap">
 <table>
 <thead>
@@ -190,7 +190,7 @@ who founded suede ai</code></pre>
 </details>
 
 <h2>What happens on a drop?</h2>
-<p>A flag on Monday gets worked the same day, in this order, before Jason Colapietro touches anything else on the list:</p>
+<p>Work a flag the same day it appears, in this order, before anything else on the list:</p>
 <ol>
 <li>Rerun the query on the same surface in a fresh session to confirm it.</li>
 <li>Open every page the answer cited and find the sentence the error came from.</li>
@@ -198,7 +198,7 @@ who founded suede ai</code></pre>
 <li>Fix the source Suede controls first. If the error comes from a third-party profile, correct it there with the same one-liner used everywhere else.</li>
 <li>Write the fix and its date in the Notes column, then wait for next Monday's row.</li>
 </ol>
-<p>The fix is almost always on a page, rarely in the answer itself. <a href="/notes/google-ai-overview-brand-name-queries/">How Google assembles an overview for a brand name</a> explains which pages feed Google's version, and <a href="/notes/what-chatgpt-says-about-your-business/">the prompt-panel worksheet</a> extends the same idea to the questions a buyer asks before they know your name. Traffic that does arrive from these assistants is a separate measurement, covered in <a href="/notes/measuring-ai-referrals-ga4-play-console/">the field guide to AI referrals in GA4 and Play Console</a>.</p>
+<p>Nobody can edit an assistant's answer directly, so every fix lands on a page. <a href="/notes/google-ai-overview-brand-name-queries/">How Google assembles an overview for a brand name</a> explains which pages feed Google's version, and <a href="/notes/what-chatgpt-says-about-your-business/">the prompt-panel worksheet</a> extends the same idea to the questions a buyer asks before they know your name. Traffic that does arrive from these assistants is a separate measurement, covered in <a href="/notes/measuring-ai-referrals-ga4-play-console/">the field guide to AI referrals in GA4 and Play Console</a>.</p>
 <p class="callout">The routine carries over to any business with a name and a few services to check. <a href="https://suedeai.agency/">The Suede agency team</a> can help set it up on the queries your buyers use, and <a href="https://scan.suedeai.ai">Suede Scan</a> gives a one-off AI visibility reading if you want a baseline before the first Monday. More on what the service covers is on the <a href="https://suedeai.ai/ai-visibility">Suede AI visibility page</a>.</p>
 <p>To start, copy the eight column headers into a new sheet, write your ten queries down the left, and block thirty minutes on your calendar next Monday morning for the first pass.</p>
         </article>
