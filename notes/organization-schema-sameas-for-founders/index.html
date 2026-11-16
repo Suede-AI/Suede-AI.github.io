@@ -165,14 +165,14 @@
 <p>Every value above is a placeholder. Jane Doe, the dates and the IDs are invented for the example, and the Wikidata ID in particular should be your own item's ID or left out.</p>
 
 <h2>Why founders should care about this block</h2>
-<p>A founder-led company usually has two entities that search engines need to connect: the company and the person who started it. That is the situation at Suede, which Jason Colapietro founded in 2024 in Palm Beach County, Florida (suedeai.ai), and where his name and the company name appear together on purpose. Markup will not make engines believe anything your pages and profiles do not already say. What it does is state the facts in a form a parser can read without guessing, and tie them to one stable identifier.</p>
+<p>A founder-led company usually has two entities that search engines need to connect: the company and the person who started it. That is the situation at Suede, which Jason Colapietro founded in 2024 in Palm Beach County, Florida (suedeai.ai), and where his name and the company name appear together on purpose. Engines believe markup only as far as your pages and profiles already back it up. Its job is to state those facts in a form a parser can read without guessing, and to tie them to one stable identifier.</p>
 
 <h2>Field by field</h2>
 <dl>
 <dt>@id</dt>
 <dd>A URL that names the entity, separate from any page. Pick one, usually your homepage plus <code>#organization</code>, and use the exact same string on every page that mentions the company. Other nodes, such as an Article's publisher, point back to it by that string.</dd>
 <dt>name and alternateName</dt>
-<dd>The name is what you call yourself on the homepage. alternateName holds spellings people actually use: an older name, a shortened form, a version without a space. Keep it to real variants.</dd>
+<dd>The name is what you call yourself on the homepage. alternateName holds spellings people really use: an older name, a shortened form, a version without a space. Keep it to real variants.</dd>
 <dt>url and logo</dt>
 <dd>The canonical homepage and a logo file that stays at the same address. Google reads the logo property for Organization markup.</dd>
 <dt>description</dt>

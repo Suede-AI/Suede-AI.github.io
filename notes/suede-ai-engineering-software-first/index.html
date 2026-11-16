@@ -160,11 +160,11 @@
 </svg>
 <figcaption>How Jason Colapietro sketches the parts of an AI product. The block sizes are illustrative, not to scale, and the model is deliberately the smallest one.</figcaption>
 </figure>
-<p>People push back on that picture, usually because the model is the part that feels new. It is new. It is also the part you rent. Two teams calling the same model through the same API get the same raw capability on day one, so whatever separates their products lives somewhere else on the board.</p>
+<p>People push back on that picture, usually because the model is the part that feels new. It is new, and it is also the part you rent. Two teams calling the same model through the same API get the same raw capability on day one, so whatever separates their products lives somewhere else on the board.</p>
 
 <h2>Everything around the model decides whether a customer trusts it</h2>
 <p>Think about what happens when a user asks an AI feature a question. Before the model sees anything, the request has to be authenticated, checked for size, and matched to the right account. If the feature answers from your own documents, something has to fetch the right documents, and those documents have to be current, which means a pipeline somebody maintains. After the model answers, the output gets parsed, validated against what the screen expects, stored, and shown.</p>
-<p>Any of those steps can fail on an ordinary Tuesday. The provider can time out. The answer can come back in a shape the parser rejects. A user can paste a forty-page contract into a box built for a sentence. Each of those is a software problem with a software answer: a timeout and a retry with backoff, a schema check with a fallback message, an input limit enforced before the paid call goes out.</p>
+<p>Any of those steps can fail on an ordinary Tuesday. The provider can time out, the answer can come back in a shape the parser rejects, and a user can paste a forty-page contract into a box built for a sentence. Each of those is a software problem with a software answer: a timeout and a retry with backoff, a schema check with a fallback message, an input limit enforced before the paid call goes out.</p>
 <p>I spend a lot of review time on the unglamorous parts. Who can see this output? What does it cost if one account sends ten thousand requests in an hour? When the model is wrong, how would we know, and how fast? Those questions have nothing to do with which model you chose, and they decide whether a business can put the feature in front of customers.</p>
 
 <h2>What a hundred apps teach you about where the work goes</h2>
@@ -174,10 +174,10 @@
 <p>When you use infrastructure, you don&#8217;t think about it. It just works. It enables everything you build on top of it to function.</p>
 <footer>Jason Colapietro, <cite>Stake Your Claim</cite></footer>
 </blockquote>
-<p>I wrote that about infrastructure for creators. It describes good AI engineering too. The auth layer, the queue and the logs should be boring enough that nobody thinks about them, so the part that feels new can do its job.</p>
+<p>I wrote that about infrastructure for creators, and it describes good AI engineering too. The auth layer, the queue and the logs should be boring enough that nobody thinks about them, so the part that feels new can do its job.</p>
 
 <h2>Where the model does deserve the attention</h2>
-<p>Model choice and prompt design still matter. A model that is too weak for the task produces answers no amount of validation can rescue, and a vague prompt wastes good capability. My point is about order. Get the evaluation suite in place first, so that swapping a model or rewriting a prompt is a measured change with a before and an after. Without those evals, nobody can tell whether a model change helped.</p>
+<p>Model choice and prompt design still matter. A model that is too weak for the task produces answers no amount of validation can rescue, and a vague prompt wastes good capability. My point is about the order of the work: get the evaluation suite in place first, so that swapping a model or rewriting a prompt is a measured change with a before and an after. Without those evals, nobody can tell whether a model change helped.</p>
 <p>The same thinking carries into launch. The note on <a href="/notes/suede-ai-deployment-first-week-in-production/">an AI system's first week in production</a> lists what breaks once real traffic arrives, and the <a href="/notes/suede-ai-integration-one-transaction/">integration walkthrough</a> follows one request through every system it touches. Read them with the figure in mind and count how many of the failures sit in the model box.</p>
 
 <h2>Try this on your own product</h2>
