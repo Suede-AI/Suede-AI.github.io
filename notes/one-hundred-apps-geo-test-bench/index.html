@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suede's App Test Bench for GEO and AI Search A/B Testing</title>
+    <meta name="description" content="The protocol behind Suede's app test bench: hypothesis, variables, controls and what counts as a result for GEO tests on health, wealth and relationship apps.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Suede's App Test Bench for GEO and AI Search A/B Testing">
+    <meta property="og:description" content="The protocol behind Suede's app test bench: hypothesis, variables, controls and what counts as a result for GEO tests on health, wealth and relationship apps.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Suede's App Test Bench for GEO and AI Search A/B Testing">
+    <meta name="twitter:description" content="The protocol behind Suede's app test bench: hypothesis, variables, controls and what counts as a result for GEO tests on health, wealth and relationship apps.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/#article",
+      "headline": "Suede's app test bench: the protocol behind its GEO and AI search A/B tests",
+      "name": "Suede's App Test Bench for GEO and AI Search A/B Testing",
+      "description": "The protocol behind Suede's app test bench: hypothesis, variables, controls and what counts as a result for GEO tests on health, wealth and relationship apps.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Generative engine optimization testing"
+        },
+        {
+          "@type": "Thing",
+          "name": "A/B testing"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI search"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mobile apps"
+        },
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "suede geo testing, ai search ab testing, GEO experiments, app test bench, health apps, finance apps, relationship apps, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Suede's App Test Bench for GEO and AI Search A/B Testing",
+          "item": "https://suede-ai.github.io/notes/one-hundred-apps-geo-test-bench/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Suede's app test bench: the protocol behind its GEO and AI search A/B tests</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Most advice about getting named by AI assistants is a guess written down with confidence. Jason Colapietro wanted something he could check. Suede has been shipping apps since he founded it in Palm Beach County, Florida, in 2024 (<a href="https://suedeai.ai/">suedeai.ai</a>): more than 100 built and more than 20 listed. Many of them exist to A/B test what search engines and generative engines respond to in health, wealth and relationship categories. What follows is the protocol for that bench, set out in the order a lab method uses. It reports no results beyond those two counts.</p>
+
+<h2>1. Hypothesis</h2>
+<p>Every test starts as one sentence that could turn out false. A usable one names a page variable, an engine and an observable outcome: "An app page whose first sentence answers the user's question in their own words is named more often by ChatGPT for that question than a page that opens with a tagline." A vague one ("better content helps AI visibility") can't fail, so it can't teach anything, and it doesn't go on the bench.</p>
+<p>Jason Colapietro writes the hypothesis down before the pages ship. That rule exists because it's easy to look at a week of answers and find a story in them afterwards.</p>
+
+<h2>2. Variables</h2>
+<p>One variable changes per test. The candidates are the parts of a page and listing that an engine can read:</p>
+<ul>
+<li>the first sentence of the page and of the store listing</li>
+<li>structured data (schema.org markup for the app, the organization and its founder)</li>
+<li>a question-and-answer block written in the words people use with assistants</li>
+<li>the store description and its match with the website</li>
+<li>outbound links to sources that back a claim</li>
+</ul>
+<p>The outcome variable is whether a fixed set of prompts produces an answer that names the app, links to it, and describes it correctly. Where the app is installable, acquisition sources in Google Play Console or App Store Connect are a second outcome, read alongside the first.</p>
+<figure>
+<svg viewBox="0 0 680 320" role="img" aria-labelledby="bench-grid-title">
+<title id="bench-grid-title">Test matrix: three app categories as rows, four page variables as columns, each cell holding an A and B version</title>
+<rect x="0" y="0" width="680" height="320" fill="#ffffff"/>
+<g font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">
+<rect x="170" y="20" width="490" height="50" fill="#2c3e50"/>
+<text x="232" y="51">First line</text>
+<text x="355" y="51">Schema</text>
+<text x="477" y="51">Q&amp;A block</text>
+<text x="600" y="51">Store copy</text>
+</g>
+<g font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#2c3e50">
+<text x="16" y="116">Health</text>
+<text x="16" y="196">Wealth</text>
+<text x="16" y="276">Relationships</text>
+</g>
+<g fill="#f3f4fb" stroke="#dfe3e8" stroke-width="2">
+<rect x="172" y="80" width="118" height="70"/><rect x="295" y="80" width="118" height="70"/><rect x="418" y="80" width="118" height="70"/><rect x="541" y="80" width="118" height="70"/>
+<rect x="172" y="160" width="118" height="70"/><rect x="295" y="160" width="118" height="70"/><rect x="418" y="160" width="118" height="70"/><rect x="541" y="160" width="118" height="70"/>
+<rect x="172" y="240" width="118" height="70"/><rect x="295" y="240" width="118" height="70"/><rect x="418" y="240" width="118" height="70"/><rect x="541" y="240" width="118" height="70"/>
+</g>
+<g font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">
+<text x="231" y="121"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="354" y="121"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="477" y="121"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="600" y="121"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="231" y="201"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="354" y="201"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="477" y="201"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="600" y="201"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="231" y="281"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="354" y="281"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="477" y="281"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+<text x="600" y="281"><tspan fill="#667eea" font-weight="700">A</tspan><tspan fill="#2c3e50"> / </tspan><tspan fill="#764ba2" font-weight="700">B</tspan></text>
+</g>
+</svg>
+<figcaption>The shape of the bench: each category is tested against each page variable, with an A and a B version per cell. The grid shows the design only; it holds no results.</figcaption>
+</figure>
+
+<h2>3. Controls</h2>
+<p>An app page competes with everything else on the web, so the controls do most of the work. Pages in a pair share a template, a launch window, a domain pattern and a level of promotion, which for test apps usually means none. A pair whose two apps launch weeks apart gets thrown out, because Google's index and the models' retrieval layers change over that kind of gap.</p>
+<p>The prompt panel is fixed before launch and never edited mid-test. Each prompt runs on ChatGPT, Perplexity, Gemini and Google's AI Overviews, in a logged-out or fresh session where the engine allows it, and each one runs more than once, because the same question can get a different answer a minute later.</p>
+<details>
+<summary>Threats to validity the protocol can't remove</summary>
+<p>Assistants update their models and their retrieval without notice, so a change in answers can come from the engine instead of the page. A small app can pick up a backlink or a social mention nobody planned. Logged-out sessions still vary by location. The protocol records these when they're visible and treats any single test as weak evidence until the same direction shows up in another category.</p>
+</details>
+
+<h2>4. What counts as a result</h2>
+<p>A result is a difference in the outcome variable between A and B that holds across repeated runs and across more than one engine. A single answer that names the B app is an anecdote. A difference that appears on one engine only gets logged as engine-specific and retested.</p>
+<p>Installs alone never count. A spike in downloads can come from anywhere, and the Suede Sing week in <a href="/notes/suede-sing-chatgpt-five-to-thousand-users/">the case note about going from five users to more than 1,000</a> is a reminder that a jump arrives without telling you its cause. Installs are logged with their source next to the answer data, and both have to point the same way.</p>
+
+<h2>5. Why three categories</h2>
+<p>Health, wealth and relationships are where people ask assistants for advice they act on. Google's search quality guidelines single out health and money as "Your Money or Your Life" topics, held to a higher standard of trust, and assistants hedge more in those areas. Relationship questions carry a privacy weight of their own. A page change that helps a habit tracker get named might do nothing for a budgeting app, because the engine wants different evidence before recommending one. Running the same variable across all three tells Jason Colapietro whether a finding is about the page or about the category. <a href="/notes/geo-for-health-wealth-relationship-apps/">The category comparison</a> covers what each one asks of a page.</p>
+
+<h2>6. What happens with a finding</h2>
+<p>A finding that holds goes into the checklist Suede uses on its own launches and on client sites through <a href="https://suedeai.agency/">the agency</a>. It's written up with the hypothesis, the pair, the dates and the engines, so it can be rerun when the engines change. The ongoing check that catches those changes is the <a href="/notes/weekly-brand-watch-ai-answers/">weekly brand watch</a>. Suede's <a href="https://suedeai.ai/geo">GEO practice</a> draws on the same records, and Jason Colapietro's <a href="https://suedeai.ai/founder">founder page</a> lists the apps published under his name.</p>
+<p>To run a small version of this yourself, take two pages on your own site that answer similar questions, change only the first sentence of one, write your hypothesis and a five-prompt panel on paper, and run the panel on ChatGPT and Perplexity every Monday for a month before you touch either page again.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede, founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai), builds AI agents, GEO and AEO visibility, and production apps, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-credential">Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>'s <a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and <a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/official">Official Suede site</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

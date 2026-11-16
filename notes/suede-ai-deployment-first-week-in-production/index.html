@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suede AI Deployment: What Breaks in the First Week Live</title>
+    <meta name="description" content="Jason Colapietro of Suede lists what tends to break in an AI system's first week in production, from odd inputs to runaway costs, and what to have ready.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Suede AI Deployment: What Breaks in the First Week Live">
+    <meta property="og:description" content="Jason Colapietro of Suede lists what tends to break in an AI system's first week in production, from odd inputs to runaway costs, and what to have ready.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Suede AI Deployment: What Breaks in the First Week Live">
+    <meta name="twitter:description" content="Jason Colapietro of Suede lists what tends to break in an AI system's first week in production, from odd inputs to runaway costs, and what to have ready.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/#article",
+      "headline": "Suede AI Deployment: What Breaks in an AI System's First Week in Production",
+      "name": "Suede AI Deployment: What Breaks in the First Week Live",
+      "description": "Jason Colapietro of Suede lists what tends to break in an AI system's first week in production, from odd inputs to runaway costs, and what to have ready.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI deployment"
+        },
+        {
+          "@type": "Thing",
+          "name": "Suede AI deployment"
+        },
+        {
+          "@type": "Thing",
+          "name": "Production monitoring for AI systems"
+        },
+        {
+          "@type": "Thing",
+          "name": "Staged rollout"
+        },
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        }
+      ],
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        }
+      ],
+      "keywords": "suede ai deployment, AI in production, LLM deployment checklist, staged rollout, rollback, monitoring, idempotency"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Suede AI Deployment: What Breaks in the First Week Live",
+          "item": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Suede AI Deployment: What Breaks in an AI System's First Week in Production</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Staging traffic is polite. The test cases were written by the people who built the feature, so they ask the questions the feature was built to answer. Real users paste a whole email thread into a field meant for one sentence, send a photo of a receipt instead of typing the total, and click the button four times when the reply takes longer than they expected.</p>
+<p>This is the list <a href="https://suedeai.ai/founder">Jason Colapietro</a> keeps for the first week after an AI feature goes live. Suede, the company he started in Palm Beach County, Florida, in 2024 (suedeai.ai), has built more than 100 apps and listed more than 20, by his count, many of them used to test what SEO and GEO respond to in health, wealth and relationship apps. Every one of those listings had a first week. The items below are the ones worth preparing for before launch, roughly in the order they tend to show up.</p>
+
+<figure>
+<svg viewBox="0 0 680 280" role="img" aria-labelledby="deploy-gates-title">
+<title id="deploy-gates-title">Deployment pipeline with four gates: review, staged rollout, monitoring, and a rollback path back to the last good version</title>
+<rect x="0" y="0" width="680" height="280" rx="10" fill="#f3f4fb"/>
+<rect x="16" y="70" width="104" height="60" rx="8" fill="#2c3e50"/>
+<text x="68" y="106" font-size="16" fill="#ffffff" text-anchor="middle">Build</text>
+<rect x="152" y="70" width="104" height="60" rx="8" fill="#667eea"/>
+<text x="204" y="106" font-size="16" fill="#ffffff" text-anchor="middle">Review</text>
+<rect x="288" y="70" width="104" height="60" rx="8" fill="#667eea"/>
+<text x="340" y="98" font-size="15" fill="#ffffff" text-anchor="middle">Staged</text>
+<text x="340" y="117" font-size="15" fill="#ffffff" text-anchor="middle">rollout</text>
+<rect x="424" y="70" width="104" height="60" rx="8" fill="#764ba2"/>
+<text x="476" y="106" font-size="16" fill="#ffffff" text-anchor="middle">Monitor</text>
+<rect x="560" y="70" width="104" height="60" rx="8" fill="#ffffff" stroke="#2c3e50" stroke-width="2"/>
+<text x="612" y="106" font-size="16" fill="#2c3e50" text-anchor="middle">Everyone</text>
+<g stroke="#2c3e50" stroke-width="2" fill="#2c3e50">
+<line x1="120" y1="100" x2="146" y2="100"/><polygon points="146,95 152,100 146,105"/>
+<line x1="256" y1="100" x2="282" y2="100"/><polygon points="282,95 288,100 282,105"/>
+<line x1="392" y1="100" x2="418" y2="100"/><polygon points="418,95 424,100 418,105"/>
+<line x1="528" y1="100" x2="554" y2="100"/><polygon points="554,95 560,100 554,105"/>
+</g>
+<g font-size="14" fill="#2c3e50" text-anchor="middle">
+<text x="204" y="56">gate 1</text><text x="340" y="56">gate 2</text><text x="476" y="56">gate 3</text>
+</g>
+<path d="M476 130 V 200 H 68 V 136" fill="none" stroke="#764ba2" stroke-width="3" stroke-dasharray="8 6"/>
+<polygon points="62,138 68,128 74,138" fill="#764ba2"/>
+<rect x="196" y="186" width="152" height="30" rx="6" fill="#ffffff" stroke="#764ba2" stroke-width="2"/>
+<text x="272" y="206" font-size="15" fill="#764ba2" text-anchor="middle">Rollback (gate 4)</text>
+<text x="340" y="252" font-size="14" fill="#2c3e50" text-anchor="middle">Any gate can stop the release. Rollback returns to the last good build.</text>
+</svg>
+<figcaption>The release path this list assumes: a human review, a rollout to a small share of users, a monitoring window, and a rollback that has been rehearsed before it is needed.</figcaption>
+</figure>
+
+<h3>Inputs nobody wrote a test for</h3>
+<p>Long pastes, empty fields, other languages, emoji-only messages, an image where text was expected. Have a maximum input length that is enforced before the model call, a clear message when something is rejected, and a sample of real inputs that someone reads every day of the first week. Jason Colapietro treats that sample as the source of next month's test cases.</p>
+
+<h3>Rate limits you only meet under load</h3>
+<p>Model providers cap requests and tokens per minute, and the caps that felt generous in testing can run out when a launch email goes to the whole list. The bad version is a retry loop that hits the limit again immediately, multiplying the problem. Retry with exponential backoff and jitter, queue work that doesn't need an instant reply, and alert well before the quota runs out.</p>
+
+<h3>Cost per request drifting upward</h3>
+<p>Conversations get longer than the demo, users retry, and an agent that calls tools can loop. Log the token count and an estimated cost on every request from day one, set a daily budget alert, and put a hard ceiling on how many tool calls one request may make. A cost spike usually shows up in the log before it shows up on the invoice.</p>
+
+<h3>The slow tail</h3>
+<p>Average response time looks fine; the slowest few percent do not. Hosting platforms and API gateways have their own request timeouts, and a slow model reply can hit one and fail with an error the user never sees explained. Set timeouts deliberately, stream responses where the interface allows it, and decide what the user sees when the answer doesn't arrive.</p>
+
+<h3>The model changing under you</h3>
+<p>Providers update models, and an alias that pointed at one version last month may point at another now. Pin the exact model version in production. Keep a small set of saved prompts with known good answers, and run it before you switch versions on purpose.</p>
+
+<h3>Actions that run twice</h3>
+<p>A double click, a retry after a timeout, or a webhook delivered twice can send two emails, book two appointments or create two invoices. Anything that writes to another system needs an idempotency key, so the second attempt is recognized and skipped. The <a href="/notes/suede-ai-integration-one-transaction/">one-transaction walkthrough</a> follows a single lead through every system it touches, and two of its failure paths are this same problem.</p>
+
+<h3>Personal data in the logs</h3>
+<p>Users type names, phone numbers and account details into prompts. If the full prompt goes into your logs, so does all of that. Redact before you log, decide how long logs are kept, and check who on the team can read them.</p>
+
+<h3>Flagged answers that nobody reads</h3>
+<p>A thumbs-down button that writes to a table no one opens does nothing for anyone. Name one person who reads flagged answers every day of the first week, and give them a way to turn a bad answer into a test case. This is ordinary support work, and Jason Colapietro makes the argument in <a href="/notes/suede-ai-engineering-software-first/">the software-first essay</a> that most of an AI product is exactly this kind of ordinary software.</p>
+
+<h3>The provider having a bad day</h3>
+<p>Every hosted model has outages. Decide in advance what happens when the call fails: a queued retry, a simpler fallback, or a hand-off to a person with the user's message attached. A useful log line for all of the above looks something like this:</p>
+<pre><code>{"request_id": "example-0001", "model": "pinned-version",
+ "input_tokens": 0, "output_tokens": 0, "latency_ms": 0,
+ "tool_calls": 0, "outcome": "ok | fallback | error",
+ "flagged": false}</code></pre>
+
+<h3>A rollback that was never rehearsed</h3>
+<p>Put the feature behind a flag, and turn it off once in staging before launch, so the team has done it at least once. A rollback plan that exists only in a document tends to fail the first time someone needs it.</p>
+
+<h3>What to have written down before launch day</h3>
+<p>Take this page and write a name next to every heading: who watches costs, who reads flagged answers, who can flip the flag at night. If a heading has no name, that is the gap to close first. Suede plans and runs this kind of launch as <a href="https://suedeai.ai/ai-deployment">Suede AI deployment</a>, and Jason Colapietro's agency team takes on the same work for clients through <a href="https://suedeai.agency/">suedeai.agency</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede, founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai), builds AI agents, GEO and AEO visibility, and production apps, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-credential">Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>'s <a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and <a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/official">Official Suede site</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

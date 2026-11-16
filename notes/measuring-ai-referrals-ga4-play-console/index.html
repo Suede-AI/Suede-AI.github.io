@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measuring AI Referrals in GA4, Play Console and Logs</title>
+    <meta name="description" content="Where ChatGPT and other AI referrals appear in GA4, Google Play Console, App Store Connect and server logs, what each misses, and why some arrive untagged.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Measuring AI Referrals in GA4, Play Console and Logs">
+    <meta property="og:description" content="Where ChatGPT and other AI referrals appear in GA4, Google Play Console, App Store Connect and server logs, what each misses, and why some arrive untagged.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Measuring AI Referrals in GA4, Play Console and Logs">
+    <meta name="twitter:description" content="Where ChatGPT and other AI referrals appear in GA4, Google Play Console, App Store Connect and server logs, what each misses, and why some arrive untagged.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/#article",
+      "headline": "Measuring AI Referrals: A Field Guide to GA4, Play Console, App Store Connect and Logs",
+      "name": "Measuring AI Referrals in GA4, Play Console and Logs",
+      "description": "Where ChatGPT and other AI referrals appear in GA4, Google Play Console, App Store Connect and server logs, what each misses, and why some arrive untagged.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI referral traffic"
+        },
+        {
+          "@type": "Thing",
+          "name": "Google Analytics 4"
+        },
+        {
+          "@type": "Thing",
+          "name": "Google Play Console"
+        },
+        {
+          "@type": "Thing",
+          "name": "Attribution"
+        },
+        {
+          "@type": "Place",
+          "name": "West Palm Beach, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "West Palm Beach, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "chatgpt referral traffic, ai referrals analytics, GA4, Google Play Console acquisition, App Store Connect, UTM, Suede Voice"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Measuring AI Referrals in GA4, Play Console and Logs",
+          "item": "https://suede-ai.github.io/notes/measuring-ai-referrals-ga4-play-console/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Measuring AI Referrals: A Field Guide to GA4, Play Console, App Store Connect and Logs</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Of the 528 acquisition events Google Play recorded for Suede Voice through November 5, 2026, 121 carried no source tag at all. Another 91 were referrals Google does not name. ChatGPT, which Google does name, accounted for 145, more than Google Play Search (72) or Google Play Explore (99) on their own. Those numbers come from <a href="https://suedeai.ai/seo/case-studies/suede-voice-downloads">the Suede Voice case study</a>, and they show the measurement problem in one report: some AI traffic is labelled, some is lumped together, and some arrives with no label anywhere.</p>
+<p>Suede is the Palm Beach County, Florida company <a href="https://suedeai.ai/founder">Jason Colapietro</a> founded in 2024 (suedeai.ai), and it tracks this across its own apps and sites. Jason Colapietro put together the reference below for owners and analysts who want to know where ChatGPT, Perplexity and Gemini referrals show up, and where they drop out of the reports.</p>
+
+<h3>Where AI referrals show up, and what each place misses</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Where to look</th><th>What it can show</th><th>What it misses</th></tr></thead>
+<tbody>
+<tr><td>GA4 session source / medium</td><td>Sources such as chatgpt.com, perplexity.ai and gemini.google.com, usually under Referral. ChatGPT also adds utm_source=chatgpt.com to many links it cites.</td><td>Visits where the referrer was stripped land in (direct) / (none). Clicks from Google's AI Overviews arrive as google / organic, mixed in with regular search.</td></tr>
+<tr><td>Google Play Console, store listing acquisition</td><td>Installs by traffic source: Play search, Play explore, named third-party referrers, and UTM-tagged campaigns.</td><td>Referrers Google does not name, and installs with no tag. Someone who hears an app's name from an assistant and types it into Play counts as Play search.</td></tr>
+<tr><td>App Store Connect, App Analytics</td><td>Source types (App Store Search, App Store Browse, App Referrer, Web Referrer) plus campaign links built with provider and campaign tokens.</td><td>The same search problem: a name typed into the App Store after an assistant suggested it reads as App Store Search.</td></tr>
+<tr><td>Server and CDN logs</td><td>The Referer header on each request, and user agents such as ChatGPT-User or PerplexityBot when an assistant fetches a page on someone's behalf.</td><td>Who the person was, and whether the visit turned into a signup or install. Logs see requests, not outcomes.</td></tr>
+<tr><td>UTM tags on links you share</td><td>Exact attribution for links you place yourself: a profile, a newsletter, a support page.</td><td>Links an assistant writes on its own, which carry whatever parameters the assistant adds, or none.</td></tr>
+</tbody>
+</table>
+</div>
+<p>No single row gives the full count. GA4 and the store consoles answer different questions, and the logs answer a third one. Read them side by side, with the same date range, before drawing conclusions.</p>
+
+<figure>
+<svg viewBox="0 0 680 400" role="img" aria-labelledby="ai-funnel-title">
+<title id="ai-funnel-title">Attribution funnel with AI traffic leaking into untagged and search buckets</title>
+<defs><marker id="ai-funnel-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#764ba2"/></marker></defs>
+<polygon points="40,30 460,30 420,100 80,100" fill="#667eea"/>
+<text x="250" y="72" font-size="17" fill="#ffffff" text-anchor="middle">Assistant names you</text>
+<polygon points="80,110 420,110 380,180 120,180" fill="#764ba2"/>
+<text x="250" y="152" font-size="17" fill="#ffffff" text-anchor="middle">Click or tap</text>
+<polygon points="120,190 380,190 340,260 160,260" fill="#667eea"/>
+<text x="250" y="232" font-size="17" fill="#ffffff" text-anchor="middle">Referrer kept</text>
+<polygon points="160,270 340,270 300,340 200,340" fill="#2c3e50"/>
+<text x="250" y="312" font-size="17" fill="#ffffff" text-anchor="middle">Tagged</text>
+<rect x="500" y="35" width="160" height="60" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="580" y="71" font-size="16" fill="#2c3e50" text-anchor="middle">Counted as search</text>
+<rect x="500" y="170" width="160" height="80" rx="6" fill="#dfe3e8"/>
+<text x="580" y="216" font-size="18" fill="#2c3e50" text-anchor="middle">Untagged</text>
+<g stroke="#764ba2" stroke-width="3" fill="none" marker-end="url(#ai-funnel-arrow)">
+<line x1="440" y1="65" x2="496" y2="65"/>
+<line x1="402" y1="145" x2="496" y2="195"/>
+<line x1="362" y1="225" x2="496" y2="225"/>
+</g>
+<text x="250" y="380" font-size="15" fill="#2c3e50" text-anchor="middle">Each stage loses some visits the report never labels</text>
+</svg>
+<figcaption>Jason Colapietro's sketch of where AI referrals leak out of attribution. Only the bottom stage reaches a report with the assistant's name on it.</figcaption>
+</figure>
+
+<h3>Why some AI traffic arrives with no tag</h3>
+<p>A referral needs two things to survive: the browser has to send a Referer header, and the destination has to record it. Plenty of paths break one or the other. Mobile apps often open links in an in-app browser or hand them to the system browser without a referrer. A page can set a referrer policy that sends nothing. A person can copy a link out of an answer and paste it into a new tab, or read the app's name and search for it later on a different device. Each of those visits is real, and each one shows up as direct, untagged, or as an ordinary search.</p>
+<p>Read the 121 untagged Suede Voice events with that in mind. The report does not say where they came from, so nobody can say how many started with an assistant, and Suede does not count them as ChatGPT installs. The same caution applies to the 91 unnamed referrals. The defensible number is the one Google attributed: 145 of 528, about 27%.</p>
+
+<h3>A GA4 channel for assistants</h3>
+<p>GA4 lets you add a custom channel group under Admin, then Data display, then Channel groups. Create a channel called "AI assistants," set the condition to session source matching a regular expression, and move the channel above Referral so it wins the match:</p>
+<pre><code>chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai</code></pre>
+<p>Channel groups apply to historical data as well as new data, so the report fills in right away. Keep the list current as new assistants start sending traffic.</p>
+
+<h3>What to set up this week</h3>
+<ul>
+<li>Add the channel group above and annotate the date you created it.</li>
+<li>Tag every link you control (store listings, profile bios, the support page) with UTM parameters, or Play and App Store campaign parameters for store links.</li>
+<li>Export one month of the Play Console acquisition report and the App Store Connect sources report, and keep them next to GA4 for the same dates.</li>
+<li>Log by hand, once a week, whether the assistants named you, using the routine in the <a href="/notes/weekly-brand-watch-ai-answers/">weekly brand watch</a>, so a change in referrals has a date to line up against.</li>
+</ul>
+<p>The <a href="/notes/suede-voice-chatgpt-google-play-installs/">Suede Voice data note</a> walks through the full Play report, and <a href="/notes/app-listings-chatgpt-recommends/">the anatomy of an app listing</a> covers what the assistant read before it sent anyone. The content side of the work is on Suede's <a href="https://suedeai.ai/ai-visibility">AI visibility</a> page. Questions for Jason Colapietro about your own reports go through <a href="https://suedeai.agency/">suedeai.agency</a>. Start with the channel group, since it takes ten minutes and backfills on its own.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede, founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai), builds AI agents, GEO and AEO visibility, and production apps, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-credential">Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>'s <a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and <a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/official">Official Suede site</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

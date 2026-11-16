@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineering at Suede: An AI Product Is Mostly Software</title>
+    <meta name="description" content="Jason Colapietro on why the model is the smallest part of an AI product, and why Suede's AI engineering starts with the ordinary software around it.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/suede-ai-engineering-software-first/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="AI Engineering at Suede: An AI Product Is Mostly Software">
+    <meta property="og:description" content="Jason Colapietro on why the model is the smallest part of an AI product, and why Suede's AI engineering starts with the ordinary software around it.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/suede-ai-engineering-software-first/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="AI Engineering at Suede: An AI Product Is Mostly Software">
+    <meta name="twitter:description" content="Jason Colapietro on why the model is the smallest part of an AI product, and why Suede's AI engineering starts with the ordinary software around it.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/suede-ai-engineering-software-first/#article",
+      "headline": "Most of an AI Product Is Ordinary Software: How Suede Approaches AI Engineering",
+      "name": "AI Engineering at Suede: An AI Product Is Mostly Software",
+      "description": "Jason Colapietro on why the model is the smallest part of an AI product, and why Suede's AI engineering starts with the ordinary software around it.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/suede-ai-engineering-software-first/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/suede-ai-engineering-software-first/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI engineering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Software engineering"
+        },
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "Jupiter, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "suede ai engineering, AI engineering, AI product architecture, software engineering, model integration, Jupiter Florida"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/suede-ai-engineering-software-first/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Engineering at Suede: An AI Product Is Mostly Software",
+          "item": "https://suede-ai.github.io/notes/suede-ai-engineering-software-first/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Most of an AI Product Is Ordinary Software: How Suede Approaches AI Engineering</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Most of the code in an AI product never talks to a model. It checks who you are, stores what you typed, decides whether you have run out of credits, retries a request that timed out, and writes a log line someone can read at two in the morning. The model call is one function in that codebase, and in my experience it is the function that takes the least time to write.</p>
+<p>I'm Jason Colapietro. I started Suede in Palm Beach County, Florida in 2024, and the company lives at suedeai.ai. What we call <a href="https://suedeai.ai/ai-engineering">AI engineering</a> grew out of shipping apps, and the habits that keep those apps running are the same ones any careful software team has. This essay is my case for building AI products in that order: software first, model second.</p>
+
+<h2>The model is the smallest box on the diagram</h2>
+<p>When I sketch an AI product on a whiteboard, the drawing looks roughly like the one below. The interface and the data take up most of the space. Accounts, tests and monitoring fill the middle. The model sits in a corner, attached to everything and responsible for very little of the code.</p>
+<figure>
+<svg viewBox="0 0 680 390" role="img" aria-labelledby="eng-fig-title">
+<title id="eng-fig-title">Illustrative proportions of an AI product, with the model as a small block</title>
+<rect x="20" y="20" width="640" height="300" rx="8" fill="#f3f4fb" stroke="#dfe3e8" stroke-width="2"/>
+<rect x="30" y="30" width="300" height="110" rx="6" fill="#667eea"/>
+<text x="180" y="92" font-size="18" fill="#ffffff" text-anchor="middle">Interface</text>
+<rect x="340" y="30" width="310" height="110" rx="6" fill="#764ba2"/>
+<text x="495" y="92" font-size="18" fill="#ffffff" text-anchor="middle">Data and retrieval</text>
+<rect x="30" y="150" width="200" height="100" rx="6" fill="#2c3e50"/>
+<text x="130" y="206" font-size="17" fill="#ffffff" text-anchor="middle">Auth and roles</text>
+<rect x="240" y="150" width="200" height="100" rx="6" fill="#667eea"/>
+<text x="340" y="206" font-size="17" fill="#ffffff" text-anchor="middle">Tests and evals</text>
+<rect x="450" y="150" width="200" height="100" rx="6" fill="#764ba2"/>
+<text x="550" y="206" font-size="17" fill="#ffffff" text-anchor="middle">Monitoring</text>
+<rect x="30" y="260" width="300" height="50" rx="6" fill="#dfe3e8"/>
+<text x="180" y="291" font-size="16" fill="#2c3e50" text-anchor="middle">Billing and limits</text>
+<rect x="340" y="260" width="230" height="50" rx="6" fill="#dfe3e8"/>
+<text x="455" y="291" font-size="16" fill="#2c3e50" text-anchor="middle">Retries, fallbacks</text>
+<rect x="580" y="260" width="70" height="50" rx="6" fill="#ffffff" stroke="#764ba2" stroke-width="3"/>
+<text x="615" y="291" font-size="15" fill="#764ba2" text-anchor="middle">Model</text>
+<text x="340" y="360" font-size="16" fill="#2c3e50" text-anchor="middle">Illustrative, not to scale</text>
+</svg>
+<figcaption>How Jason Colapietro sketches the parts of an AI product. The block sizes are illustrative, not to scale, and the model is deliberately the smallest one.</figcaption>
+</figure>
+<p>People push back on that picture, usually because the model is the part that feels new. It is new. It is also the part you rent. Two teams calling the same model through the same API get the same raw capability on day one, so whatever separates their products lives somewhere else on the board.</p>
+
+<h2>Everything around the model decides whether a customer trusts it</h2>
+<p>Think about what happens when a user asks an AI feature a question. Before the model sees anything, the request has to be authenticated, checked for size, and matched to the right account. If the feature answers from your own documents, something has to fetch the right documents, and those documents have to be current, which means a pipeline somebody maintains. After the model answers, the output gets parsed, validated against what the screen expects, stored, and shown.</p>
+<p>Any of those steps can fail on an ordinary Tuesday. The provider can time out. The answer can come back in a shape the parser rejects. A user can paste a forty-page contract into a box built for a sentence. Each of those is a software problem with a software answer: a timeout and a retry with backoff, a schema check with a fallback message, an input limit enforced before the paid call goes out.</p>
+<p>I spend a lot of review time on the unglamorous parts. Who can see this output? What does it cost if one account sends ten thousand requests in an hour? When the model is wrong, how would we know, and how fast? Those questions have nothing to do with which model you chose, and they decide whether a business can put the feature in front of customers.</p>
+
+<h2>What a hundred apps teach you about where the work goes</h2>
+<p>Suede has built more than 100 apps and listed more than 20, many of them used to A/B test what search engines and AI assistants respond to across health, wealth and relationship categories. Building at that volume makes the proportions obvious. The model integration in each app is a small, repeatable piece. The listing, the support page, the onboarding flow, the analytics, the crash reports and the store review process take the hours. The <a href="/notes/one-hundred-apps-geo-test-bench/">test bench write-up</a> describes how those apps are set up as experiments.</p>
+<p>A line from my book <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim</a> keeps coming back to me when I review this kind of work:</p>
+<blockquote>
+<p>When you use infrastructure, you don&#8217;t think about it. It just works. It enables everything you build on top of it to function.</p>
+<footer>Jason Colapietro, <cite>Stake Your Claim</cite></footer>
+</blockquote>
+<p>I wrote that about infrastructure for creators. It describes good AI engineering too. The auth layer, the queue and the logs should be boring enough that nobody thinks about them, so the part that feels new can do its job.</p>
+
+<h2>Where the model does deserve the attention</h2>
+<p>Model choice and prompt design still matter. A model that is too weak for the task produces answers no amount of validation can rescue, and a vague prompt wastes good capability. My point is about order. Get the evaluation suite in place first, so that swapping a model or rewriting a prompt is a measured change with a before and an after. Without those evals, nobody can tell whether a model change helped.</p>
+<p>The same thinking carries into launch. The note on <a href="/notes/suede-ai-deployment-first-week-in-production/">an AI system's first week in production</a> lists what breaks once real traffic arrives, and the <a href="/notes/suede-ai-integration-one-transaction/">integration walkthrough</a> follows one request through every system it touches. Read them with the figure in mind and count how many of the failures sit in the model box.</p>
+
+<h2>Try this on your own product</h2>
+<p>Draw your AI feature as boxes, the way the figure does. Write every component on the board: interface, data, accounts, limits, retries, tests, monitoring, model. Next to each box, write the name of the person who owns it and one sentence on what happens when it fails. If the model is the only box with a name next to it, that gap is where your engineering time should go next.</p>
+<p>Owners and technical buyers who want that drawing checked can bring it to the Suede engineers at <a href="https://suedeai.agency/">suedeai.agency</a>. My background and the products behind this essay are on <a href="https://suedeai.ai/founder">the Jason Colapietro founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede, founded in 2024 by Jason Colapietro in Palm Beach County, Florida (suedeai.ai), builds AI agents, GEO and AEO visibility, and production apps, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-credential">Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>'s <a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and <a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/official">Official Suede site</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>
