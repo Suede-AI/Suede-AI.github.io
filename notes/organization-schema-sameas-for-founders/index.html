@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Schema and sameAs: A Guide for Founders</title>
+    <meta name="description" content="A field-by-field guide to Organization JSON-LD for founders: @id, alternateName, founder, foundingDate, foundingLocation and sameAs, with common mistakes.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Organization Schema and sameAs: A Guide for Founders">
+    <meta property="og:description" content="A field-by-field guide to Organization JSON-LD for founders: @id, alternateName, founder, foundingDate, foundingLocation and sameAs, with common mistakes.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Organization Schema and sameAs: A Guide for Founders">
+    <meta name="twitter:description" content="A field-by-field guide to Organization JSON-LD for founders: @id, alternateName, founder, foundingDate, foundingLocation and sameAs, with common mistakes.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/#article",
+      "headline": "Organization Schema for Founders: @id, founder and sameAs, Field by Field",
+      "name": "Organization Schema and sameAs: A Guide for Founders",
+      "description": "A field-by-field guide to Organization JSON-LD for founders: @id, alternateName, founder, foundingDate, foundingLocation and sameAs, with common mistakes.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Schema.org Organization"
+        },
+        {
+          "@type": "Thing",
+          "name": "JSON-LD structured data"
+        },
+        {
+          "@type": "Thing",
+          "name": "Entity disambiguation"
+        },
+        {
+          "@type": "Place",
+          "name": "West Palm Beach, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "West Palm Beach, Florida"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "organization schema sameas, JSON-LD, schema.org Organization, founder schema, entity SEO, suede entity, West Palm Beach"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Organization Schema and sameAs: A Guide for Founders",
+          "item": "https://suede-ai.github.io/notes/organization-schema-sameas-for-founders/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Organization Schema for Founders: @id, founder and sameAs, Field by Field</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Below is a complete Organization block for a made-up company, Example Co, followed by what each field does for a search engine trying to work out who you are.</p>
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://example.com/#organization",
+  "name": "Example Co",
+  "alternateName": ["Example Company", "ExampleCo"],
+  "url": "https://example.com/",
+  "logo": "https://example.com/logo.png",
+  "description": "Example Co builds scheduling software for dental practices. Founded 2021 by Jane Doe in Jupiter, Florida.",
+  "founder": { "@id": "https://example.com/about/jane-doe#person" },
+  "foundingDate": "2021-03",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Jupiter, Florida",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jupiter",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    }
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q00000000",
+    "https://www.linkedin.com/company/example-co",
+    "https://www.crunchbase.com/organization/example-co",
+    "https://github.com/example-co",
+    "https://apps.apple.com/us/developer/example-co/id000000000"
+  ]
+}</code></pre>
+<p>Every value above is a placeholder. Jane Doe, the dates and the IDs are invented for the example, and the Wikidata ID in particular should be your own item's ID or left out.</p>
+
+<h2>Why founders should care about this block</h2>
+<p>A founder-led company usually has two entities that search engines need to connect: the company and the person who started it. That is the situation at Suede, which Jason Colapietro founded in 2024 in Palm Beach County, Florida (suedeai.ai), and where his name and the company name appear together on purpose. Engines believe markup only as far as your pages and profiles already back it up. Its job is to state those facts in a form a parser can read without guessing, and to tie them to one stable identifier.</p>
+
+<h2>Field by field</h2>
+<dl>
+<dt>@id</dt>
+<dd>A URL that names the entity, separate from any page. Pick one, usually your homepage plus <code>#organization</code>, and use the exact same string on every page that mentions the company. Other nodes, such as an Article's publisher, point back to it by that string.</dd>
+<dt>name and alternateName</dt>
+<dd>The name is what you call yourself on the homepage. alternateName holds spellings people really use: an older name, a shortened form, a version without a space. Keep it to real variants.</dd>
+<dt>url and logo</dt>
+<dd>The canonical homepage and a logo file that stays at the same address. Google reads the logo property for Organization markup.</dd>
+<dt>description</dt>
+<dd>One sentence that matches the description on your homepage and your profiles word for word. The note on <a href="/notes/one-sentence-eleven-profiles/">using one sentence across eleven profiles</a> explains why the repetition helps.</dd>
+<dt>founder</dt>
+<dd>A reference by @id to a Person node, ideally defined once on an about or founder page with its own name, jobTitle and sameAs. A plain string such as "Jane Doe" gives a parser a name and nothing to connect it to. The Person node can carry its own sameAs list too; Jason Colapietro's iOS apps, for example, ship under <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">his own Apple developer account</a>, which is the kind of page that list is for.</dd>
+<dt>foundingDate</dt>
+<dd>An ISO 8601 date: a year, a year and month, or a full date. "Spring 2021" is text a machine has to interpret.</dd>
+<dt>foundingLocation</dt>
+<dd>A Place with a name and a PostalAddress. For a company that shares its name with others, location is one of the cheapest distinguishing facts you have.</dd>
+<dt>sameAs</dt>
+<dd>URLs of profiles that describe this same organization: your Wikidata item, LinkedIn company page, Crunchbase, GitHub, app store developer page. Each one is a claim that says "that page is about us."</dd>
+</dl>
+
+<figure>
+<svg viewBox="0 0 680 420" role="img" aria-labelledby="sameas-fig-title">
+<title id="sameas-fig-title">One organization @id linked by sameAs to six profiles</title>
+<rect x="0" y="0" width="680" height="420" fill="#ffffff"/>
+<g stroke="#dfe3e8" stroke-width="4">
+<line x1="340" y1="210" x2="340" y2="62"/>
+<line x1="340" y1="210" x2="560" y2="120"/>
+<line x1="340" y1="210" x2="560" y2="300"/>
+<line x1="340" y1="210" x2="340" y2="358"/>
+<line x1="340" y1="210" x2="120" y2="300"/>
+<line x1="340" y1="210" x2="120" y2="120"/>
+</g>
+<circle cx="340" cy="210" r="78" fill="#667eea"/>
+<text x="340" y="204" font-size="18" fill="#ffffff" text-anchor="middle">Example Co</text>
+<text x="340" y="228" font-size="15" fill="#ffffff" text-anchor="middle">#organization</text>
+<g font-size="16" fill="#2c3e50" text-anchor="middle">
+<rect x="270" y="20" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="340" y="48">Wikidata</text>
+<rect x="490" y="98" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="560" y="126">LinkedIn</text>
+<rect x="490" y="278" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="560" y="306">Crunchbase</text>
+<rect x="270" y="356" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="340" y="384">GitHub</text>
+<rect x="50" y="278" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="120" y="306">App Store</text>
+<rect x="50" y="98" width="140" height="44" rx="6" fill="#f3f4fb" stroke="#764ba2" stroke-width="2"/>
+<text x="120" y="126">Founder page</text>
+</g>
+<text x="462" y="152" font-size="14" fill="#764ba2" text-anchor="middle">sameAs</text>
+</svg>
+<figcaption>One @id at the hub, with each spoke a sameAs URL. The founder link is a separate property in the markup; it sits on the wheel here because it does the same job of tying the company to something outside your homepage.</figcaption>
+</figure>
+
+<h2>Mistakes that split one company into two</h2>
+<ul>
+<li>A different @id on different pages, such as <code>/#org</code> on the homepage and <code>/about#company</code> on the about page. A parser sees two identifiers and has no instruction to merge them.</li>
+<li>sameAs pointing at a news article, a search results page or a directory category. Those pages mention you; they are not profiles of you.</li>
+<li>sameAs pointing at a profile of a different company with the same name. This happens when someone copies a Wikidata ID from a search without checking the founder and location on the item. The guide to <a href="/notes/companies-that-share-a-name-ai-search/">companies that share a name</a> covers the other signals that keep two entities apart.</li>
+<li>Profiles that do not link back. A sameAs URL is stronger when the profile itself lists your website.</li>
+<li>Keyword stuffing in alternateName. "Example Co best dental scheduling Florida" is not a name anyone uses.</li>
+<li>Markup that disagrees with the visible page, for example a founding year in JSON-LD that differs from the year on the about page.</li>
+</ul>
+<p>Jason Colapietro keeps the facts for Suede in one public place, the <a href="https://suedeai.ai/official">official Suede page</a>, so every profile and every block of markup can be checked against a single source. The <a href="/notes/why-suede-is-just-suede/">profile of who Suede is</a> shows those facts in plain language.</p>
+
+<h2>Check it before you ship it</h2>
+<p>Paste your block into the Schema Markup Validator at validator.schema.org and fix every error it reports, then run the page through Google's Rich Results Test. Next, open each sameAs URL in a private window and confirm three things on the profile: the same name, the same founding facts, and a link back to your site. Any profile that fails one of those checks comes out of the list until it is corrected.</p>
+<p>If you want someone to read the markup and the profiles together, Jason Colapietro and the Suede team do that review at <a href="https://suedeai.agency/">suedeai.agency</a>; the founder record behind it is at <a href="https://suedeai.ai/founder">suedeai.ai/founder</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede, founded in 2024 by Jason Colapietro in West Palm Beach, Florida, is an AI engineering and digital marketing company. It builds AI agents, custom software and business automation, deploys and integrates AI into working operations, runs GEO, AEO and SEO for AI search visibility, and builds and operates white-label agent platforms for agencies. Its SEO, GEO and web practice serves West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-credential">Suede ranks among <a href="https://clutch.co/profile/suede-ai-seo">Clutch</a>'s <a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and <a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/official">Official Suede site</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>

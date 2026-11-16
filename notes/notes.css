@@ -124,3 +124,24 @@ article figcaption { font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem; }
 @media (max-width: 600px) { article figure svg { min-width: 600px; max-width: none; } }
 article pre { overflow-x: auto; max-width: 100%; }
 article code { overflow-wrap: anywhere; }
+
+/* Building blocks for the reference notes (tables, comparisons, callouts, code, definitions). */
+.table-wrap { overflow-x: auto; margin: 0 0 22px; }
+article table { border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 0.95em; }
+article th, article td { border-bottom: 1px solid #dfe3e8; padding: 9px 10px; text-align: left; vertical-align: top; }
+article th { background: #f3f4fb; color: #1a1a1a; }
+article td.num, article th.num { text-align: right; font-variant-numeric: tabular-nums; }
+article blockquote { border-left: 4px solid #764ba2; padding: 6px 0 6px 20px; margin: 0 0 22px; color: #3d4852; font-style: italic; }
+article pre { background: #1f2430; color: #e6e6e6; padding: 16px 18px; border-radius: 6px; margin: 0 0 22px; font-size: 0.85em; line-height: 1.55; }
+article pre code { background: none; padding: 0; color: inherit; }
+.callout { background: #f6f3ff; border: 1px solid #ddd3fb; border-radius: 6px; padding: 18px 20px; margin: 0 0 24px; }
+.callout p:last-child { margin-bottom: 0; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+.compare > div { background: #f8f9fa; border-radius: 6px; padding: 16px 18px; }
+.compare h3 { margin-top: 0; }
+article dl { margin: 0 0 22px; }
+article dt { font-weight: bold; margin-top: 12px; }
+article dd { margin: 4px 0 10px 1.2em; font-size: 1.05em; }
+article details { border: 1px solid #e3e6ea; border-radius: 6px; padding: 12px 16px; margin: 0 0 14px; }
+article summary { cursor: pointer; font-weight: bold; }
+@media (max-width: 640px) { .compare { grid-template-columns: 1fr; } }
