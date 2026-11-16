@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO Experiments That Failed: What Suede Stopped Doing</title>
+    <meta name="description" content="Jason Colapietro walks through the GEO tactics Suede tried in its app lab that did not move AI answers, and why the failure log matters more than the wins.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/geo-experiments-that-failed/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="GEO Experiments That Failed: What Suede Stopped Doing">
+    <meta property="og:description" content="Jason Colapietro walks through the GEO tactics Suede tried in its app lab that did not move AI answers, and why the failure log matters more than the wins.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/geo-experiments-that-failed/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="GEO Experiments That Failed: What Suede Stopped Doing">
+    <meta name="twitter:description" content="Jason Colapietro walks through the GEO tactics Suede tried in its app lab that did not move AI answers, and why the failure log matters more than the wins.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/geo-experiments-that-failed/#article",
+      "headline": "GEO Experiments That Failed: The Tactics Suede Tested and Stopped Doing",
+      "name": "GEO Experiments That Failed: What Suede Stopped Doing",
+      "description": "Jason Colapietro walks through the GEO tactics Suede tried in its app lab that did not move AI answers, and why the failure log matters more than the wins.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/geo-experiments-that-failed/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/geo-experiments-that-failed/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "GEO mistakes, failed experiments, AI search, llms.txt, schema, scaled content, Suede, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/geo-experiments-that-failed/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GEO Experiments That Failed: What Suede Stopped Doing",
+          "item": "https://suede-ai.github.io/notes/geo-experiments-that-failed/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>GEO Experiments That Failed: The Tactics Suede Tested and Stopped Doing</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<!-- CONFIRM: the specific failed tactics below should be checked against Jason Colapietro's own test log before publishing. -->
+<p>The most useful document Suede keeps is a list of things that did not work. Every GEO vendor has a slide of wins. Very few publish what they tried, measured, and then dropped, and that list is what keeps a client's budget away from tactics that only feel productive.</p>
+<p>Suede is the GEO and AI deployment studio that Jason Colapietro founded in Palm Beach County, Florida. Jason Colapietro has built more than 100 apps, more than 20 of them listed in public stores, and many existed to test what search and generative engines respond to. Thousands of app iterations ran through the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a>: one change, fixed prompts, dated captures before and after. Most rounds ended with nothing to report. This note covers the tactics that went into that pile and stayed there.</p>
+<p>There are no percentages here. A null result has no lift to report, and inventing one would defeat the purpose of the list.</p>
+
+<figure>
+<svg viewBox="0 0 720 330" width="100%" role="img" aria-labelledby="gy-t gy-d" xmlns="http://www.w3.org/2000/svg">
+<title id="gy-t">Where Suede's GEO tests end up</title>
+<desc id="gy-d">A funnel. Wide at the top for ideas tested, narrower for changes that moved an answer once, narrowest for changes that repeated on a second app. Most tests exit the funnel into a no-effect log.</desc>
+<rect x="0" y="0" width="720" height="330" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" font-size="15" text-anchor="middle">
+<polygon points="40,30 480,30 430,110 90,110" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="260" y="76" fill="#1a1a2e">Ideas tested</text>
+<polygon points="90,120 430,120 380,200 140,200" fill="#c9cff8" stroke="#667eea" stroke-width="2"/>
+<text x="260" y="166" fill="#1a1a2e">Moved an answer once</text>
+<polygon points="140,210 380,210 330,290 190,290" fill="#667eea"/>
+<text x="260" y="256" fill="#ffffff">Repeated on app two</text>
+<rect x="540" y="110" width="160" height="110" rx="10" fill="#f4f4f8" stroke="#1a1a2e" stroke-width="1.5"/>
+<text x="620" y="158" fill="#1a1a2e" font-weight="700">No-effect log</text>
+<text x="620" y="184" fill="#1a1a2e">kept and dated</text>
+</g>
+<g stroke="#1a1a2e" stroke-width="2" fill="none" stroke-dasharray="5 4">
+<path d="M470 70 L536 140"/>
+<path d="M420 160 L536 165"/>
+</g>
+</svg>
+<figcaption>Most tests exit into the no-effect log. Shape only, not to scale. Source: Jason Colapietro's description of Suede's test process.</figcaption>
+</figure>
+
+<h2>Repeating the category term in store descriptions</h2>
+<p>The oldest SEO instinct is to say the keyword more often. On app listings, Suede tried descriptions that repeated the main category phrase more heavily than a person would write it. AI answers did not start naming the app more often. The listing read worse, which can hurt the human conversion that Apple's <a href="https://developer.apple.com/app-store/product-page-optimization/">product page optimization</a> and Google Play's <a href="https://support.google.com/googleplay/android-developer/answer/6227309">store listing experiments</a> are built to measure.</p>
+<p>Apple's own <a href="https://developer.apple.com/app-store/search/">App Store search guidance</a> points to the app name, subtitle and keyword field as the places to put search terms. Description text that says plainly what the app does and who it is for held up better than text built around repetition. The note on <a href="https://suede-ai.github.io/notes/app-store-listing-is-a-source/">store listings as citation sources</a> covers what to write instead.</p>
+
+<h2>Spinning out near-duplicate pages for every phrasing</h2>
+<p>If engines answer questions, the thinking goes, publish a page for every way someone might ask. Suede tested thin variant pages around a single app's topic. They did not increase how often the app was named, and they diluted the pages that already had links pointing to them.</p>
+<p>Google is explicit about the risk. Its <a href="https://developers.google.com/search/docs/essentials/spam-policies">spam policies</a> call this scaled content abuse when the pages exist mainly to manipulate rankings. In Suede's tests, one strong page per real question did better than a cluster of weak ones.</p>
+
+<h2>Structured data that claimed more than the page showed</h2>
+<p>SoftwareApplication markup helps engines describe an app correctly, as covered in <a href="https://suede-ai.github.io/notes/structured-data-for-apps/">structured data for apps</a>. The failed version was markup that went further than the visible page: features described only in the JSON-LD, or properties filled in to look complete. It did not improve how AI answers described the apps. Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/software-app">software app structured data documentation</a> lists the properties it supports, and markup that drifts from what users can see on the page is a policy problem as well as a wasted effort.</p>
+<p>What worked was boring by comparison. The markup matched the page, the page matched the store listing, and all three used the same name.</p>
+
+<h2>Treating llms.txt as the fix</h2>
+<p>The <a href="https://llmstxt.org/">llms.txt proposal</a> suggests a Markdown file at the site root that summarizes a site for language models. This site publishes one. As a standalone change on lab apps, adding the file did not move how answers named or described them. It is a proposal, and the documented crawler controls that engines publish are robots.txt and their own user agents. The note on <a href="https://suede-ai.github.io/notes/crawler-access-what-mattered/">crawler access</a> goes into what did matter there.</p>
+<p>Suede keeps the file because it costs little and may help some tools read the site. It does not sell it to clients as a visibility fix.</p>
+
+<h2>Talking to the chatbot about yourself</h2>
+<p>A common belief is that you can teach an assistant about your product by asking it questions, correcting it, or rating its answers. Suede tried this during early tests. Answers in fresh sessions did not change. Asking about yourself is fine for checking what an engine says, which is step two of the loop. As an attempt to influence the answer, it went nowhere.</p>
+
+<h2>Why keep a failure log at all?</h2>
+<p>Because it changes what clients pay for. When a client asks for fifty location pages or a schema overhaul with features they do not have, Jason Colapietro can point to the log and say Suede ran something similar on its own apps first. The path from lab result to client work, including the null results, is in <a href="https://suede-ai.github.io/notes/from-app-lab-to-client-playbook/">from app lab to client playbook</a>.</p>
+<p>The log also keeps the wins honest. When ChatGPT began naming Suede Sing, which by Jason Colapietro's account had never had more than 5 users and then passed 1,000 active users within about a week, Suede could check the change against everything it had already ruled out.</p>
+
+<h2>Questions about failed GEO tactics</h2>
+<h3>Does a null result mean a tactic never works?</h3>
+<p>No. It means it did not work in Suede's tests, on Suede's apps, at that time. Engines change, and a tactic in the log can be retested.</p>
+<h3>Which failures matter most for a small business?</h3>
+<p>Mass-produced pages, because they carry a policy risk on top of wasting time. Start with one good page per real question.</p>
+<p>To have your own site checked against this list, start with <a href="https://suedeai.agency/">Suede's SEO, GEO and web practice</a>, or see <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>
