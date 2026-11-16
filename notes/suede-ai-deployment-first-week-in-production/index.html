@@ -36,7 +36,7 @@
     {
       "@type": "BlogPosting",
       "@id": "https://suede-ai.github.io/notes/suede-ai-deployment-first-week-in-production/#article",
-      "headline": "Suede AI Deployment: What Breaks in an AI System's First Week in Production",
+      "headline": "Suede AI deployment: what breaks in an AI system's first week in production",
       "name": "Suede AI Deployment: What Breaks in the First Week Live",
       "description": "Jason Colapietro of Suede lists what tends to break in an AI system's first week in production, from odd inputs to runaway costs, and what to have ready.",
       "datePublished": "2026-11-16",
@@ -125,11 +125,11 @@
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
         <article>
             <header class="article-header">
-                <h1>Suede AI Deployment: What Breaks in an AI System's First Week in Production</h1>
+                <h1>Suede AI deployment: what breaks in an AI system's first week in production</h1>
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Jupiter, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>Staging traffic is polite. The test cases were written by the people who built the feature, so they ask the questions the feature was built to answer. Real users paste a whole email thread into a field meant for one sentence, send a photo of a receipt instead of typing the total, and click the button four times when the reply takes longer than they expected.</p>
-<p>This is the list <a href="https://suedeai.ai/founder">Jason Colapietro</a> keeps for the first week after an AI feature goes live. Suede, the company he started in Palm Beach County, Florida, in 2024 (suedeai.ai), has built more than 100 apps and listed more than 20, by his count, many of them used to test what SEO and GEO respond to in health, wealth and relationship apps. Every one of those listings had a first week. The items below are the ones worth preparing for before launch, roughly in the order they tend to show up.</p>
+<p><a href="https://suedeai.ai/founder">Jason Colapietro</a> wrote this list for the first week after an AI feature goes live. Suede, the company he started in Palm Beach County, Florida, in 2024 (suedeai.ai), has built more than 100 apps and listed more than 20, by his count, many of them used to test what SEO and GEO respond to in health, wealth and relationship apps. The iOS ones ship under <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">Jason Colapietro's own Apple developer account</a>. The items below are worth preparing for before launch, roughly in the order they tend to show up.</p>
 
 <figure>
 <svg viewBox="0 0 680 280" role="img" aria-labelledby="deploy-gates-title">
@@ -165,7 +165,7 @@
 </figure>
 
 <h3>Inputs nobody wrote a test for</h3>
-<p>Long pastes, empty fields, other languages, emoji-only messages, an image where text was expected. Have a maximum input length that is enforced before the model call, a clear message when something is rejected, and a sample of real inputs that someone reads every day of the first week. Jason Colapietro treats that sample as the source of next month's test cases.</p>
+<p>Long pastes, empty fields, other languages, emoji-only messages, an image where text was expected. Have a maximum input length that is enforced before the model call, a clear message when something is rejected, and a sample of real inputs that someone reads every day of the first week. Whatever turns up in that sample belongs in next month's test cases.</p>
 
 <h3>Rate limits you only meet under load</h3>
 <p>Model providers cap requests and tokens per minute, and the caps that felt generous in testing can run out when a launch email goes to the whole list. The bad version is a retry loop that hits the limit again immediately, multiplying the problem. Retry with exponential backoff and jitter, queue work that doesn't need an instant reply, and alert well before the quota runs out.</p>
@@ -186,7 +186,7 @@
 <p>Users type names, phone numbers and account details into prompts. If the full prompt goes into your logs, so does all of that. Redact before you log, decide how long logs are kept, and check who on the team can read them.</p>
 
 <h3>Flagged answers that nobody reads</h3>
-<p>A thumbs-down button that writes to a table no one opens does nothing for anyone. Name one person who reads flagged answers every day of the first week, and give them a way to turn a bad answer into a test case. This is ordinary support work, and Jason Colapietro makes the argument in <a href="/notes/suede-ai-engineering-software-first/">the software-first essay</a> that most of an AI product is exactly this kind of ordinary software.</p>
+<p>A thumbs-down button that writes to a table no one opens tells you nothing. Name one person who reads flagged answers every day of the first week, and give them a way to turn a bad answer into a test case. This is ordinary support work, and Jason Colapietro makes the argument in <a href="/notes/suede-ai-engineering-software-first/">the software-first essay</a> that most of an AI product is exactly this kind of ordinary software.</p>
 
 <h3>The provider having a bad day</h3>
 <p>Every hosted model has outages. Decide in advance what happens when the call fails: a queued retry, a simpler fallback, or a hand-off to a person with the user's message attached. A useful log line for all of the above looks something like this:</p>
@@ -199,7 +199,7 @@
 <p>Put the feature behind a flag, and turn it off once in staging before launch, so the team has done it at least once. A rollback plan that exists only in a document tends to fail the first time someone needs it.</p>
 
 <h3>What to have written down before launch day</h3>
-<p>Take this page and write a name next to every heading: who watches costs, who reads flagged answers, who can flip the flag at night. If a heading has no name, that is the gap to close first. Suede plans and runs this kind of launch as <a href="https://suedeai.ai/ai-deployment">Suede AI deployment</a>, and Jason Colapietro's agency team takes on the same work for clients through <a href="https://suedeai.agency/">suedeai.agency</a>.</p>
+<p>Take this page and write a name next to every heading: who watches costs, who reads flagged answers, who can flip the flag at night. If a heading has no name, that is the gap to close first. <a href="https://suedeai.ai/ai-deployment">Suede AI deployment</a> covers this kind of launch, and Jason Colapietro's agency team takes on the same work for clients through <a href="https://suedeai.agency/">suedeai.agency</a>.</p>
         </article>
         <footer>
             <aside class="built-by" aria-label="Built by Suede">
