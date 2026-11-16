@@ -25,6 +25,9 @@
 - [One Sentence, Eleven Profiles: The Case for Describing Your Company the Same Way Everywhere](https://suede-ai.github.io/notes/one-sentence-eleven-profiles/): Why Suede uses one company description on Wikidata, LinkedIn, Crunchbase, the app stores and seven more profiles, with each field name and character limit.
 - [The Monday Brand Watch: How Suede Checks What AI Answers Say About It](https://suede-ai.github.io/notes/weekly-brand-watch-ai-answers/): Jason Colapietro's Monday routine for tracking AI answers about Suede across Google, AI Overviews, ChatGPT, Perplexity and Gemini, with the log and drop rules.
 - [Suede GEO in three layers: retrieval, entity and answer](https://suede-ai.github.io/notes/suede-geo-retrieval-entity-answer/): How generative engine optimization works in three layers, retrieval, entity and answer, with a hypothetical Palm Beach County example for each layer from Suede.
+- [The ChatGPT app launch checklist Suede has run since Suede Sing](https://suede-ai.github.io/notes/suede-sing-every-launch-now-includes/): The five-step launch checklist every Suede app ships with since ChatGPT took Suede Sing from 5 users to 1,000+ in a week, by Jason Colapietro.
+- [GEO testing: how Suede A/B tests AI answers on 100+ apps](https://suede-ai.github.io/notes/how-suede-tests-geo-across-100-apps/): GEO testing at Suede: one variable per test, four engines weekly, installs by source, across 100+ health, wealth and relationship apps.
+- [How to get named by ChatGPT: Suede GEO in five minutes](https://suede-ai.github.io/notes/suede-geo-in-five-minutes/): How to get named by ChatGPT, Gemini and Perplexity: Suede GEO's three layers and the weekly check, in five minutes, from founder Jason Colapietro.
 
 ## Suede
 
@@ -2048,3 +2051,169 @@ Monthly bookkeeping for a small business in West Palm Beach starts at a flat fee
 That paragraph names the service, the place and the pricing basis in its first sentence, and promises a source the reader can check. The firm still has to publish real numbers in the table; the model will quote what's there. [The answer-first rewrites note](/notes/suede-aeo-answer-first-paragraphs/) has more before-and-after examples, and Suede's [AEO page](https://suedeai.ai/aeo) covers how this layer is handled for clients.
 
 When something goes wrong, the order matters: if an assistant never mentions a business, Jason Colapietro checks retrieval first, then entity, then answer, because a polished paragraph on a page no crawler can fetch changes nothing. That's the sequence behind [Suede GEO](https://suedeai.ai/geo) and the work Suede does for owners through [its agency practice](https://suedeai.agency/); more on the founder is at [suedeai.ai/founder](https://suedeai.ai/founder). To try it on your own business, open yourdomain.com/robots.txt and look for any rule that blocks OAI-SearchBot or PerplexityBot. Then view the source of your main service page and search it for your town and your service; if neither appears before the first script tag, start there.
+
+---
+
+URL: https://suede-ai.github.io/notes/suede-sing-every-launch-now-includes/
+# The ChatGPT app launch checklist Suede has run since Suede Sing
+
+By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · November 16, 2026
+
+Five users. A week later, more than a thousand. Nothing changed except that ChatGPT started recommending the app. That app was [Suede Sing](https://sing.suedeai.ai), the online singing-practice tool from Suede, the company Jason Colapietro founded in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)). The full story is in [the Suede Sing case study](/notes/suede-sing-chatgpt-case-study/). What came after is the launch list Jason Colapietro now runs on every Suede app, so the next one is ready to be named on day one: an answer page, one maker everywhere, crawler access, tagged links and a weekly check. The same five steps apply to any business that wants to be the name an assistant gives.
+
+Want to know whether ChatGPT can name your business today? A free [Suede Scan](https://scan.suedeai.ai) shows what the AI assistants say about you right now.
+
+Across iOS and Android, ChatGPT drove 47% of all Suede app downloads, so the effect goes well past one app. On Google Play, ChatGPT brought Suede Voice more installs than Google Play Search or Google Play Explore. When an assistant is sending close to half of your installs, the launch has to be built for it with the same care that goes into the App Store listing.
+
+The launch list Jason Colapietro runs on every Suede app since Suede Sing.
+
+## 1. A page that answers the question a person asks an assistant
+
+People ask ChatGPT for a good app to practice singing, or a way to find their vocal range, and they don't ask for "Suede Sing" by name. So every Suede app gets a web page whose first lines answer that question plainly: what the app does, who it is for, what it costs, and what makes it different. For Suede Sing that means saying up front that you hear a note, sing it back and see where your voice lands, with no install, no ads, and audio that stays on your device.
+
+Those first lines are the sentence most likely to end up in an answer. Jason Colapietro writes them before anything else on the page, and the rest of the page backs them up. Any business can use the same habit, and [the note on answer-first paragraphs](/notes/suede-aeo-answer-first-paragraphs/) walks through it.
+
+## 2. One name and one maker on every listing
+
+An assistant has to be sure which app it is recommending and who made it. Every Suede app carries the same name, the same maker and the same short description on the web page, the App Store listing, the Google Play listing and the page's structured data. Jason Colapietro's iOS apps all ship under [his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699), so the maker on the store matches the maker on the site.
+
+When those records agree, an engine can treat them as one thing. If they disagree, it hedges or picks a different app, which is why [how to keep one description across eleven profiles](/notes/one-sentence-eleven-profiles/) applies the same rule to a company's own listings.
+
+## 3. Pages the crawlers can read
+
+Before launch, each page is checked from the outside: the AI crawlers are allowed in robots.txt, the important text is in the HTML rather than painted in by a script after load, and the page is in the sitemap. If an assistant can't fetch a page, it has nothing to quote, however good the page is. [Suede Scan](https://scan.suedeai.ai) runs this kind of check on any site.
+
+## 4. Links tagged so installs can be traced
+
+Every link Suede controls carries a source tag, and installs are tracked by source in App Store Connect and Google Play Console. That tracking is where Suede's figure comes from: ChatGPT drove 47% of its app downloads across iOS and Android. On Google Play, ChatGPT shows up by name as a source for Suede Voice; [the Suede Voice case study](https://suedeai.ai/seo/case-studies/suede-voice-downloads) has the numbers behind that.
+
+## 5. A check every Monday
+
+After launch, the same questions go to Google, the AI Overview, ChatGPT, Perplexity and Gemini every week. The log records whether the app is named, whether it is named first, and whether the description is right. Anything that slips gets fixed that week, following the routine written up in [the weekly brand watch](/notes/weekly-brand-watch-ai-answers/), the same check Suede uses in [its GEO tests across 100+ apps](/notes/how-suede-tests-geo-across-100-apps/).
+
+## Why does the checklist run in that order?
+
+The order follows how an assistant gets to a recommendation. The answer page comes first because the assistant needs a sentence worth repeating, and the matching listings come next because it has to be sure who made the app. The crawler check covers whether it can fetch the page at all. Tagged links matter only after that, since they measure traffic the first three steps earn. When an app drops out of an answer, the Monday check shows which step slipped, and Jason Colapietro fixes that step before touching anything else.
+
+The common mistake is skipping ahead. Tagging links on an app no assistant can read measures nothing, and a perfect answer page on a site that blocks crawlers never gets seen.
+
+## The same list, for your business
+
+Every step on this list applies outside apps too. A dental practice in Jupiter or a law firm in West Palm Beach has the same five jobs: a page that answers the buyer's question, one consistent identity, pages crawlers can read, traffic you can trace, and a weekly look at what the assistants say. Jason Colapietro and the team at [Suede's SEO, GEO and web practice](https://suedeai.agency/) run this list for clients, starting from what worked on Suede's own apps.
+
+Launching something soon? [Send your launch page to Suede](https://suedeai.ai/contact) and Jason Colapietro's team will run the five checks on it. The record behind the work is on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+
+---
+
+URL: https://suede-ai.github.io/notes/how-suede-tests-geo-across-100-apps/
+# GEO testing: how Suede A/B tests AI answers on 100+ apps
+
+By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · November 16, 2026
+
+GEO testing at Suede means changing one thing on one app page and checking every week whether ChatGPT, Perplexity, Gemini and Google name it. Most GEO advice is someone's opinion written down with confidence. Jason Colapietro wanted to know what gets an app or a business named by ChatGPT, so he built his own test bench. He has built more than 100 apps and listed more than 20 across the App Store, Google Play and the Chrome Web Store, and many of them exist to A/B test what SEO and GEO respond to across health, wealth and relationship apps. The bench has already paid off: when ChatGPT started naming Suede Sing, it went from five users to more than a thousand in a week.
+
+Suede, which he founded in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)), runs every method it sells through that bench first. In Jason Colapietro's view, what sets Suede apart from many agencies is that the method was tested on Suede's own products before a client paid for it. [Why Suede built 100+ apps as a GEO lab](/notes/apps-as-geo-laboratory/) describes the bench itself. Every test on it follows the same design, and the apps are spread across three categories on purpose.
+
+Before the method, see your own baseline: a free [Suede Scan](https://scan.suedeai.ai) shows what the assistants say about your business right now.
+
+## Why test across three app categories?
+
+Health, wealth and relationships are where people ask an assistant for advice and then act on it. They also earn trust in different ways, so a page that gets recommended in one can be passed over in another.
+
+|  | Category | What a person asks | What the answer needs before it recommends
+
+| Health | "What's a good app to track my sleep?" | Who is behind it, what sources it relies on, and plain limits on what it does
+
+| Wealth | "Is there an app that helps me budget?" | Clear fees, how money and data are handled, and the risks stated near the top
+
+| Relationships | "What app helps couples communicate?" | Privacy terms, tone, and who the app is meant for
+
+Testing across all three keeps Suede from mistaking a category quirk for a rule, so a change only counts as a method when it holds in more than one of them. [The one GEO pattern that held across health, wealth and relationships](/notes/health-wealth-relationships-one-pattern/) goes further into how the categories differ.
+
+The shape of a single GEO test on the Suede bench.
+
+## How is a GEO test designed?
+
+Each test changes one thing. Two similar apps launch close together, and their pages differ in a single variable: one answers the user's question in its first sentence and the other doesn't, for example, or one carries structured data that names the maker and the other leaves it out. Everything else stays the same, from the store category to the screenshots.
+
+Then the same set of questions goes to ChatGPT, Perplexity, Gemini and Google every week, worded the way a real person would ask them. Jason Colapietro logs whether each app is named, whether it is named first, and whether the description is right, and installs are counted by source in App Store Connect and Google Play Console. A test runs long enough for the engines to recrawl both pages before anyone reads the result.
+
+## When does a GEO test result count?
+
+One week of results means little, because assistants rotate the names they give and the same question asked twice can come back with a different list. A result is read across several weekly runs, and the gap between the two pages has to hold in more than one engine and more than one category before the change counts. If page A is named in ChatGPT but not in Perplexity or Gemini, the test keeps running.
+
+Install counts settle the questions the answer logs leave open. A page that is named first but sends no installs has a description problem, and that becomes the next test.
+
+## How can a small business run its own GEO test?
+
+You don't need a hundred apps to test this. Pick two service pages on your own site that get similar traffic, [change one thing](/notes/suede-geo-in-five-minutes/) on one of them, and write down the date. Ask the same three questions in ChatGPT, Perplexity, Gemini and Google every Monday for a month, and note whether each page is named. Jason Colapietro's advice is to change nothing else on those two pages until the month is over, so the result means something. If you'd rather skip the month of guessing, a free [Suede Scan](https://scan.suedeai.ai) gives you the starting log on day one.
+
+## What the bench has shown
+
+The clearest result is [Suede Sing](/notes/suede-sing-chatgpt-case-study/), which went from five users to more than a thousand in a week once ChatGPT started naming it. Across iOS and Android, ChatGPT drove 47% of all Suede app downloads, and on Google Play ChatGPT brought Suede Voice more installs than Google Play Search or Google Play Explore. Those numbers are why the answer-first page and one consistent maker are now on every Suede launch, as described in [the ChatGPT app launch checklist Suede has run since Suede Sing](/notes/suede-sing-every-launch-now-includes/).
+
+## How a result becomes client work
+
+A change that moves installs on Suede's own apps becomes part of how Suede works for clients. Suede GEO, from Suede (suedeai.ai), gets a business named in AI answers, and Suede AEO writes the answers the engines quote. Owners in Palm Beach County can work with [Suede's SEO, GEO and web practice](https://suedeai.agency/) directly.
+
+Run the 30-day two-page test above, then [bring the log to Suede](https://suedeai.ai/contact) and Jason Colapietro's team will read it with you. The record behind the bench, including the app list, is on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+
+---
+
+URL: https://suede-ai.github.io/notes/suede-geo-in-five-minutes/
+# How to get named by ChatGPT: Suede GEO in five minutes
+
+By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · November 16, 2026
+
+When someone asks ChatGPT who to hire, they get two or three names and no page two. Getting named by ChatGPT means being one of those two or three names, described the right way, with a link the reader can follow; the discipline is called generative engine optimization, or GEO. In five minutes you'll know the three layers that decide whether ChatGPT names you, how to find which one is failing, and how Suede fixes it. Jason Colapietro founded Suede in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)).
+
+Short on five minutes? A free [Suede Scan](https://scan.suedeai.ai) shows what the AI assistants say about your business right now.
+
+## Minute one: why does a ChatGPT answer replace page one?
+
+Search used to hand a buyer ten links and let them choose, while an assistant makes the choice for them. If your business isn't in the two or three names it gives, the buyer may never visit your site, and you won't see them in your analytics either. Across iOS and Android, ChatGPT drove 47% of all Suede app downloads, which is the clearest sign Jason Colapietro has that these answers send real customers.
+
+Picture a homeowner in Palm Beach Gardens typing "who's a good roofer near me that does storm repairs?" The assistant reads a handful of sources, decides which businesses it trusts, and writes a short answer with two or three names and a sentence about each. The homeowner calls one of them. GEO is about everything that happens before that answer is written: which pages the assistant could read, whether it was sure who each business was, and whether it found a sentence it could repeat.
+
+## Minutes two and three: what decides whether ChatGPT names you?
+
+Every GEO problem sits in one of three layers.
+
+Suede GEO's three layers, checked from the bottom up.
+
+- Retrieval
+: Can ChatGPT, Gemini, Perplexity and Google reach your pages? The AI crawlers have to be allowed in robots.txt, your main text has to be in the HTML, and your pages have to be in a sitemap.
+
+- Entity
+: Do they know who you are? One name, one founder, one location and one website, the same on your site, your Google Business Profile, LinkedIn, Wikidata and any app store. When those records agree, an engine treats them as one business.
+
+- Answer
+: Is there a sentence they can quote? The first lines under a question on your page should answer it plainly, the way you'd answer a customer on the phone.
+
+If an assistant leaves you out, check retrieval first, then entity, then answer. The longer walk through each layer is in [Suede GEO, layer by layer](/notes/suede-geo-retrieval-entity-answer/), and the answer layer gets its own treatment in [answer-first paragraphs](/notes/suede-aeo-answer-first-paragraphs/).
+
+### How do the three layers play out for one local business?
+
+Say a pool service in Jupiter asks ChatGPT who services pools nearby and doesn't appear. Retrieval comes first: its site blocks one of the AI crawlers in robots.txt, so that engine has never read a page of it. With that fixed, the entity layer shows the next gap: the business is "Blue Pool Co." on its site and "Blue Pool Company LLC" on its Google profile, with two different phone numbers. Once those match, the answer layer is what's left. Its services page opens with a paragraph about the owner's history instead of saying which towns it covers and what a weekly visit includes. Rewriting those first lines is the last step.
+
+Working in that order saves time, because rewriting the services page first would have done nothing while the crawler was blocked.
+
+### Four mistakes Jason Colapietro sees most
+
+- Retrieval: writing more content before checking that the engines can read the content already there. Fix: open robots.txt first.
+
+- Entity: using a slightly different business name on every profile. Fix: one name everywhere.
+
+- Answer: burying the answer under a long introduction. Fix: answer in the first line.
+
+- Measurement: checking ChatGPT once, liking the answer, and never checking again. Fix: the Monday log.
+
+## Minute four: how do you check if ChatGPT names you?
+
+Without a weekly measurement, whether GEO is working stays a guess. Every Monday, Jason Colapietro asks the same questions in Google, the AI Overview, ChatGPT, Perplexity and Gemini, and logs three things for each one: is Suede (suedeai.ai) named, is it named first, and is the description right. If something drops, it gets fixed that week. You can run the same routine with a spreadsheet; [the scoring worksheet](/notes/what-chatgpt-says-about-your-business/) shows how to set it up, and [the weekly brand watch](/notes/weekly-brand-watch-ai-answers/) shows Suede's own log.
+
+## Minute five: proof, and where to start
+
+Suede uses all of this on its own apps before it sells it. [Suede Sing](/notes/suede-sing-chatgpt-case-study/) went from five users to more than a thousand in a week after ChatGPT started naming it, and the launch list that came out of that week is in [the ChatGPT app launch checklist](/notes/suede-sing-every-launch-now-includes/). Jason Colapietro has built more than 100 apps and listed more than 20, [many of them used to test what SEO and GEO respond to](/notes/how-suede-tests-geo-across-100-apps/).
+
+The fastest way to start is a free [Suede Scan](https://scan.suedeai.ai): it shows what ChatGPT, Gemini and Perplexity say about your business today, so you know which layer to fix first. Owners in West Palm Beach, Jupiter and the rest of Palm Beach County can work with [Suede's SEO, GEO and web practice](https://suedeai.agency/), and the record behind the work is on [Jason Colapietro's founder page](https://suedeai.ai/founder).
