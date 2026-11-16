@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler Access for GEO: What Mattered and What Didn't</title>
+    <meta name="description" content="Jason Colapietro sorts crawler access into gates and placebos: which robots.txt rules decide whether AI search can cite you, and where llms.txt fits.">
+    <meta name="author" content="Jason Colapietro">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://suede-ai.github.io/notes/crawler-access-what-mattered/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/notes/notes.css">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:title" content="Crawler Access for GEO: What Mattered and What Didn't">
+    <meta property="og:description" content="Jason Colapietro sorts crawler access into gates and placebos: which robots.txt rules decide whether AI search can cite you, and where llms.txt fits.">
+    <meta property="og:url" content="https://suede-ai.github.io/notes/crawler-access-what-mattered/">
+    <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stake Your Claim by Jason Colapietro">
+    <meta property="article:published_time" content="2026-11-16">
+    <meta property="article:author" content="https://suedeai.ai/founder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AISUEDE">
+    <meta name="twitter:creator" content="@Johnnysuede">
+    <meta name="twitter:title" content="Crawler Access for GEO: What Mattered and What Didn't">
+    <meta name="twitter:description" content="Jason Colapietro sorts crawler access into gates and placebos: which robots.txt rules decide whether AI search can cite you, and where llms.txt fits.">
+    <meta name="twitter:image" content="https://suede-ai.github.io/og-image.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://suede-ai.github.io/notes/crawler-access-what-mattered/#article",
+      "headline": "Crawler Access for GEO: robots.txt, OAI-SearchBot and llms.txt, Sorted by What Mattered",
+      "name": "Crawler Access for GEO: What Mattered and What Didn't",
+      "description": "Jason Colapietro sorts crawler access into gates and placebos: which robots.txt rules decide whether AI search can cite you, and where llms.txt fits.",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "inLanguage": "en",
+      "url": "https://suede-ai.github.io/notes/crawler-access-what-mattered/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://suede-ai.github.io/notes/crawler-access-what-mattered/"
+      },
+      "image": "https://suede-ai.github.io/og-image.png",
+      "author": {
+        "@id": "https://suedeai.ai/founder#person"
+      },
+      "publisher": {
+        "@id": "https://suedeai.ai/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://suede-ai.github.io/#website"
+      },
+      "about": [
+        {
+          "@id": "https://suede-ai.github.io/#book"
+        },
+        {
+          "@type": "Place",
+          "name": "Palm Beach County, Florida"
+        }
+      ],
+      "keywords": "robots.txt, OAI-SearchBot, GPTBot, PerplexityBot, llms.txt, AI crawler access, GEO, Jason Colapietro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://suede-ai.github.io/notes/crawler-access-what-mattered/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stake Your Claim",
+          "item": "https://suede-ai.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notes",
+          "item": "https://suede-ai.github.io/notes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crawler Access for GEO: What Mattered and What Didn't",
+          "item": "https://suede-ai.github.io/notes/crawler-access-what-mattered/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav" aria-label="Site">
+            <a href="/">Stake Your Claim</a>
+            <a href="/book.html">Read the book</a>
+            <a href="/notes/">Notes</a>
+        </nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <article>
+            <header class="article-header">
+                <h1>Crawler Access for GEO: robots.txt, OAI-SearchBot and llms.txt, Sorted by What Mattered</h1>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+            </header>
+<p>Crawler access is the cheapest part of GEO to get right and the easiest to get wrong without noticing. One line in robots.txt can keep a page out of ChatGPT's search results, and nothing on the site will look broken. Meanwhile, teams spend afternoons on files that no engine has said it reads.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, sorts crawler work into two bins. Gates are settings that decide whether an engine can use a page at all, and the vendors document them. Placebos are things that feel like progress but have no documented effect, and they stay in that bin until a test shows otherwise. This note goes through both, using the public documentation and the way Suede runs its app tests.</p>
+
+<figure>
+<svg viewBox="0 0 720 320" width="100%" role="img" aria-labelledby="gate-t gate-d" xmlns="http://www.w3.org/2000/svg">
+<title id="gate-t">Gates and placebos in crawler access</title>
+<desc id="gate-d">Two columns. Gates: search crawler allowed, page loads without login, answer text in the HTML, stable canonical URL. Placebo until tested: llms.txt on its own, AI-only copies of pages, training-bot rules, crawl-rate tweaks.</desc>
+<rect x="0" y="0" width="720" height="320" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" fill="#1a1a2e">
+<rect x="20" y="20" width="330" height="280" rx="12" fill="#eef0fd" stroke="#667eea" stroke-width="2"/>
+<text x="185" y="56" font-size="18" font-weight="bold" text-anchor="middle">Gates</text>
+<text x="40" y="104" font-size="15">Search crawler allowed</text>
+<text x="40" y="154" font-size="15">Page loads without login</text>
+<text x="40" y="204" font-size="15">Answer text in the HTML</text>
+<text x="40" y="254" font-size="15">Stable, canonical URL</text>
+<rect x="370" y="20" width="330" height="280" rx="12" fill="#ffffff" stroke="#9aa6f2" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="535" y="56" font-size="18" font-weight="bold" text-anchor="middle">Placebo until tested</text>
+<text x="390" y="104" font-size="15">llms.txt on its own</text>
+<text x="390" y="154" font-size="15">AI-only copies of pages</text>
+<text x="390" y="204" font-size="15">Training-bot rules</text>
+<text x="390" y="254" font-size="15">Crawl-rate tweaks</text>
+</g>
+</svg>
+<figcaption>How Suede classifies crawler work. Source: Jason Colapietro's description of Suede's testing practice, with vendor documentation linked in the text.</figcaption>
+</figure>
+
+<h2>Which crawler are you actually blocking?</h2>
+<p>A mistake Jason Colapietro looks for first in any audit is treating "AI bots" as one thing. OpenAI <a href="https://platform.openai.com/docs/bots">documents three separate agents</a>. OAI-SearchBot finds pages to show in ChatGPT search results. GPTBot collects content that may be used to train models. ChatGPT-User fetches a page when a person in ChatGPT asks for it. Each has its own robots.txt token, so you can allow one and block another.</p>
+<p>For a business that wants to be cited, that split decides most of the outcome. A site that blocks GPTBot to keep its content out of training has made a reasonable choice about training. It has not blocked ChatGPT search, as long as OAI-SearchBot is still allowed. A site that copies a "block all AI" snippet from a forum and includes OAI-SearchBot has opted out of being shown in ChatGPT search, and OpenAI says so in plain language on that page.</p>
+<p><a href="https://docs.perplexity.ai/guides/bots">Perplexity's crawler page</a> draws the same line between PerplexityBot, which indexes pages for its answers, and Perplexity-User, which fetches when a person asks. Both vendors describe the user-triggered agent separately from the crawler, and robots.txt does not apply to the two in the same way, so read their pages before assuming a block holds.</p>
+
+<h2>The gates, in the order Suede checks them</h2>
+<ol>
+<li>robots.txt allows the search crawlers by name, or does not mention them under a blanket disallow. Google's <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt introduction</a> is the clearest explanation of how groups and user-agent matching work, and the same rules apply to every crawler that honors the file.</li>
+<li>The page loads for a crawler without a login, a cookie wall or a client-side script that has to run before any text appears.</li>
+<li>The sentence you want quoted is in the served HTML. An app landing page whose description arrives through JavaScript after load gives a crawler less to work with than a plain paragraph.</li>
+<li>Each page has one stable, canonical URL. Answer engines link to pages, and a page that moves breaks the links they already hold.</li>
+</ol>
+<p>Each of these is a yes or a no, and a failure at any one makes everything downstream irrelevant. That is why Jason Colapietro puts them first in every client review at <a href="https://suedeai.agency/">Suede's agency practice</a>.</p>
+
+<h2>Where llms.txt fits</h2>
+<p>The <a href="https://llmstxt.org/">llms.txt proposal</a> suggests a Markdown file at the site root that summarizes a site for language models and points to clean versions of key pages. It is a sensible idea, and this site publishes one. The proposal is a proposal, though. Google's page on <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and your website</a> says you do not need new machine-readable files or special markup to appear in its AI results, and the crawler pages above describe robots.txt, not llms.txt.</p>
+<p>So Suede files llms.txt under "placebo until tested." It costs little to publish and it is useful as a human-readable map. What Suede will not do is tell a client that adding one will get them named in answers. In the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a>, a change earns a "keep" only when the fixed prompt set shows a different answer after the change and the change was the only thing that moved. A file that engines do not document reading is hard to isolate that way, and Suede does not claim a result it cannot isolate. The <a href="https://suede-ai.github.io/notes/geo-experiments-that-failed/">note on experiments that did nothing</a> covers how Suede records tactics like this.</p>
+
+<h2>Why app tests made this clearer</h2>
+<p>Jason Colapietro has built more than 100 apps, many of them to test what SEO and GEO respond to. App landing pages are small, so a crawler problem shows up fast: if a page is blocked or empty to a bot, there is nothing else on the site for an engine to fall back on. On a large client site, a blocked section can hide behind hundreds of pages that still work. That is part of why Suede runs these questions on apps first, a choice explained in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">apps as a GEO laboratory</a>.</p>
+<p>For the related question of how the page describes the app once a crawler gets there, see <a href="https://suede-ai.github.io/notes/structured-data-for-apps/">structured data for apps</a>.</p>
+
+<h2>Questions people ask</h2>
+<h3>If I block GPTBot, will ChatGPT stop citing me?</h3>
+<p>Per OpenAI's documentation, GPTBot is the training crawler. ChatGPT search results rely on OAI-SearchBot, which has its own token. Check that your rules treat them separately.</p>
+<h3>Should I publish llms.txt?</h3>
+<p>It does no harm and can help people and tools find your best pages. Treat it as housekeeping, and do not expect it to fix a blocked crawler or an empty page.</p>
+<h3>How do I check what a crawler sees?</h3>
+<p>Fetch the page with JavaScript disabled and read what is left. If the answer you want quoted is missing, an engine is likely missing it too.</p>
+
+<p>More on the work and the person behind it is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
+        </article>
+        <footer>
+            <aside class="built-by" aria-label="Built by Suede">
+            <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
+            <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.ai/">Suede</a> &middot;
+                <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
+                <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
+                <a href="https://jupitersocialfl.com/">Jupiter Social magazine</a>
+            </p>
+            <p class="built-by-title">More from Suede</p>
+            <p class="built-by-links">
+                <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
+                <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
+                <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
+                <a href="https://podcast.suedeai.ai/notes/">Suede podcast notes</a> &middot;
+                <a href="https://scan.suedeai.ai/">Suede Scan</a>
+            </p>
+        </aside>
+            <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>
+        </footer>
+    </div>
+</body>
+</html>
