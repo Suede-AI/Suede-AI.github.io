@@ -40,7 +40,7 @@
       "name": "Structured Data for Apps: Schema That Names You Right",
       "description": "Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-16",
+      "dateModified": "2026-11-17",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/structured-data-for-apps/",
       "mainEntityOfPage": {
@@ -167,7 +167,7 @@
 <p>Before a page ships, Suede checks that the name in the schema matches the name on the store listing character for character, that the category and platform match what the store shows, and that any rating in the markup also appears on the page with a source. The note on <a href="https://suede-ai.github.io/notes/app-store-listing-is-a-source/">store listings as sources</a> covers the listing side of that match.</p>
 
 <h2>How Suede tests a schema change</h2>
-<p>Schema is a good fit for the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a> because it can change without changing a word of visible copy. Jason Colapietro has built more than 100 apps, 20+ of them in public stores, and many existed to try one variable at a time. For schema, the variable might be adding sameAs links to the store pages, or replacing an inline author object with a reference to the canonical founder @id. Suede asks the same fixed prompts before and after, such as "what does Suede Voice do" and "who makes Suede Sing," and records whether the answers name the right app and the right developer.</p>
+<p>Schema is a good fit for the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a> because it can change without changing a word of visible copy. Jason Colapietro has built more than 100 apps, 17 of them live in public stores (9 App Store, 6 Google Play, 2 Chrome extensions), and many existed to try one variable at a time. For schema, the variable might be adding sameAs links to the store pages, or replacing an inline author object with a reference to the canonical founder @id. Suede asks the same fixed prompts before and after, such as "what does Suede Voice do" and "who makes Suede Sing," and records whether the answers name the right app and the right developer.</p>
 <p>The question is narrow on purpose: does an engine describe this specific app, and its developer, correctly? A dated capture answers that with a yes or a no, which a broad question like whether schema helps GEO never will. The note on <a href="https://suede-ai.github.io/notes/measuring-ai-referrals-honestly/">measuring AI referrals honestly</a> covers how to keep those captures comparable.</p>
 
 <h2>Questions people ask</h2>

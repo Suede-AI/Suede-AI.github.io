@@ -40,7 +40,7 @@
       "name": "AI Integration Engineering That Makes a Product Citable",
       "description": "Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-16",
+      "dateModified": "2026-11-17",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/",
       "mainEntityOfPage": {
@@ -110,7 +110,7 @@
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>When an AI assistant recommends a tool, it needs something to point at: a page it fetched, a description it can repeat, an address the person can open. A lot of AI products give it nothing. The useful part sits behind a login, inside a JavaScript bundle, or on a URL that changes every session. An engine cannot cite a page it cannot read, so it is more likely to name a competitor whose page it could.</p>
-<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, builds AI integrations with that problem in mind. The deployment side, keeping AI features stable in production, is covered in <a href="https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/">what shipping AI features across 20+ listed apps taught Suede</a>. This note is about integration: how to wire an AI feature into a product so the product itself becomes a source.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, builds AI integrations with that problem in mind. The deployment side, keeping AI features stable in production, is covered in <a href="https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/">what shipping AI features across 17 live store apps taught Suede</a>. This note is about integration: how to wire an AI feature into a product so the product itself becomes a source.</p>
 
 <figure>
 <svg viewBox="0 0 720 330" width="100%" role="img" aria-labelledby="cit-t cit-d" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +136,7 @@
 </figure>
 
 <h2>Why does the address matter so much?</h2>
-<p>Suede Sing is the clearest example Suede has. It had never had more than five users. After ChatGPT began naming it as a vocal coach and pitch trainer, it passed 1,000 active users within about a week, according to Suede's own analytics as reported by Jason Colapietro. The full story is in <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">the Suede Sing case study</a>.</p>
+<p>Suede Sing is the clearest example Suede has. It had at most 5 users. After ChatGPT began naming it as a vocal coach and pitch trainer, it passed 1,000 active users, combined across all its platforms, within about a week, according to Suede's own analytics as reported by Jason Colapietro. The full story is in <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">the Suede Sing case study</a>.</p>
 <p>The vocal range test has a single public address, <a href="https://sing.suedeai.ai/">sing.suedeai.ai</a>, that a person can open without an account. When an assistant names the tool, the person who asked can act on it in one tap. A tool that requires a download, a sign-up and an onboarding screen before it does anything gives the engine a weaker thing to recommend.</p>
 <p>Suede now treats every AI feature's entry point as a permanent URL. It does not move between versions, it does not carry session tokens, and if it ever has to change, the old address redirects.</p>
 
