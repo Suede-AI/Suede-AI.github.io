@@ -37,6 +37,134 @@ const read = (p) => readFileSync(path.join(repoRoot, p), 'utf8');
 const errors = [];
 const fail = (msg) => errors.push(msg);
 
+// Banned hedging phrases (owner ruling 2026-11-18). Founder-stated facts are
+// the record, so public copy never disclaims, qualifies or undercuts them.
+// Case-insensitive; ['’] also catches curly apostrophes.
+const HEDGE_FAMILIES = [
+  {
+    family: 'promise disclaimer',
+    patterns: [
+      /cannot be promised/i,
+      /can['’]t promise/i,
+      /cannot promise/i,
+      /no one can guarantee/i,
+      /nobody can guarantee/i,
+      /not a guarantee/i,
+      /no guarantee/i,
+    ],
+  },
+  {
+    family: 'proves-nothing framing',
+    patterns: [/what this does not prove/i, /does not prove/i, /doesn['’]t prove/i, /\bnot proof\b/i],
+  },
+  {
+    family: 'unit disclaimer on a founder figure',
+    patterns: [/events, not users/i, /not active users/i, /not unique products/i, /not installs\b/i, /not downloads\b/i],
+  },
+  {
+    family: 'attribution qualifier',
+    patterns: [/as reported by/i, /founder[-‐‑ ]reported/i, /self[-‐‑ ]reported/i],
+  },
+  {
+    family: 'listing caveat',
+    patterns: [/editions overlap/i, /Android editions overlap iOS/i, /counts describe platform listings/i],
+  },
+];
+
+// Files the hedge scan skips, each with the reason it is out of scope.
+const HEDGE_EXEMPT_PATHS = [
+  { re: /^(LICENSE|.*\/?(terms|privacy|licen[cs]es?)(\/index)?\.(html|md|txt))$/i, why: 'legal pages state legal terms verbatim' },
+  { re: /^scripts\//, why: 'code, error messages and guard self-test fixtures, not public copy' },
+  { re: /^(AGENTS|CLAUDE)\.md$/, why: 'agent instructions list the banned phrases so agents can avoid them' },
+  { re: /^docs\/handoffs\//, why: 'internal handoff records, not published' },
+  { re: /^(google[0-9a-f]+\.html|[0-9a-f]{64}\.txt)$/, why: 'search-engine verification tokens carry no copy' },
+  { re: /^site\/book\/.*(method|measur)/i, why: 'book methodology chapters teach readers measurement; not claims about Suede' },
+];
+
+// Regions inside a scanned file that the hedge scan blanks out (newlines are
+// kept so reported line numbers stay true).
+const HEDGE_EXEMPT_REGIONS = [
+  { re: /<!--[\s\S]*?-->/g, why: 'HTML comments are code comments, never rendered' },
+  { re: /<blockquote[\s\S]*?<\/blockquote>/gi, why: 'third-party quotes stay verbatim' },
+  { re: /<script(?![^>]*application\/ld\+json)[^>]*>[\s\S]*?<\/script>/gi, why: 'scripts are code; JSON-LD stays in scope' },
+  { re: /<style[\s\S]*?<\/style>/gi, why: 'stylesheets are code' },
+  { re: /\bregistry record (?:does not|doesn['’]t) prove ownership\b/gi, why: 'IP-registry legal explanation' },
+];
+
+const HEDGE_SCANNED_EXT = /\.(html|txt|xml|json|md)$/i;
+
+function hedgeExemptPath(rel) {
+  return HEDGE_EXEMPT_PATHS.find((e) => e.re.test(rel));
+}
+
+function scanHedges(rel, text) {
+  if (hedgeExemptPath(rel)) return [];
+  let scrubbed = text;
+  for (const { re } of HEDGE_EXEMPT_REGIONS) scrubbed = scrubbed.replace(re, (m) => m.replace(/[^\n]/g, ' '));
+  const hits = [];
+  scrubbed.split('\n').forEach((line, i) => {
+    for (const { family, patterns } of HEDGE_FAMILIES) {
+      for (const re of patterns) {
+        const m = line.match(re);
+        if (m) hits.push(`${rel}:${i + 1}: banned hedging phrase (${family}): "${m[0]}"`);
+      }
+    }
+  });
+  return hits;
+}
+
+function hedgeSelfTest() {
+  const problems = [];
+  const caught = [
+    ['promise disclaimer', 'notes/x/index.html', '<p>Results cannot be promised.</p>'],
+    ['promise disclaimer', 'index.html', '<p>We can’t promise rankings.</p>'],
+    ['proves-nothing framing', 'llms.txt', 'What this does not prove: anything.'],
+    ['proves-nothing framing', 'notes/x/index.html', '<script type="application/ld+json">{"text":"This is not proof"}</script>'],
+    ['unit disclaimer on a founder figure', 'llms-full.txt', '145 acquisition events, not users.'],
+    ['attribution qualifier', 'notes/x/index.html', '<figcaption>Source: Suede app analytics, as reported by Jason Colapietro.</figcaption>'],
+    ['attribution qualifier', 'book.html', 'a founder-reported figure'],
+    ['listing caveat', 'app-store-listings.json', '{"scope":"Counts describe platform listings. Android editions overlap iOS products."}'],
+  ];
+  for (const [family, rel, text] of caught) {
+    const hits = scanHedges(rel, text);
+    if (!hits.some((h) => h.includes(`(${family})`))) problems.push(`self-test: ${family} not caught in ${rel}`);
+    if (!hits.every((h) => h.startsWith(`${rel}:1: `))) problems.push(`self-test: hit for ${rel} lacks file:line`);
+  }
+  const multi = scanHedges('index.html', 'ok\nok\nnobody can guarantee it');
+  if (!multi[0]?.startsWith('index.html:3: ')) problems.push('self-test: line number not reported correctly');
+  const exempt = [
+    ['LICENSE', 'THE SOFTWARE IS PROVIDED AS IS, WITH NO GUARANTEE'],
+    ['terms.html', '<p>There is no guarantee of results.</p>'],
+    ['privacy/index.html', '<p>We cannot promise uptime.</p>'],
+    ['scripts/fixture.mjs', "throw new Error('not proof')"],
+    ['AGENTS.md', '- "cannot be promised"'],
+    ['docs/handoffs/2026-11-18.md', 'events, not users'],
+    ['google4b0bcf0a4950299c.html', 'self-reported'],
+    ['site/book/chapter-07-measurement.html', 'A spike does not prove causation.'],
+    ['index.html', '<!-- not a guarantee -->'],
+    ['index.html', '<blockquote>Nobody can guarantee a citation.</blockquote>'],
+    ['index.html', "<script>console.error('not proof')</script>"],
+    ['notes/x/index.html', '<p>A registry record doesn’t prove ownership.</p>'],
+  ];
+  for (const [rel, text] of exempt) {
+    if (scanHedges(rel, text).length) problems.push(`self-test: exemption not respected for ${rel}`);
+  }
+  return problems;
+}
+
+function walkPublic(dir = repoRoot, out = []) {
+  for (const d of readdirSync(dir, { withFileTypes: true })) {
+    if (d.name === '.git' || d.name === 'node_modules' || d.name === '.github') continue;
+    const abs = path.join(dir, d.name);
+    if (d.isDirectory()) walkPublic(abs, out);
+    else if (HEDGE_SCANNED_EXT.test(d.name) || d.name === 'LICENSE') out.push(path.relative(repoRoot, abs).split(path.sep).join('/'));
+  }
+  return out;
+}
+
+hedgeSelfTest().forEach(fail);
+for (const rel of walkPublic()) scanHedges(rel, read(rel)).forEach(fail);
+
 const notesDir = path.join(repoRoot, 'notes');
 const slugs = readdirSync(notesDir, { withFileTypes: true })
   .filter((d) => d.isDirectory() && existsSync(path.join(notesDir, d.name, 'index.html')))
