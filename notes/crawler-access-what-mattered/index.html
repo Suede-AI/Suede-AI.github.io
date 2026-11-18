@@ -40,7 +40,7 @@
       "name": "Crawler Access for GEO: What Mattered and What Didn't",
       "description": "Jason Colapietro sorts crawler access into gates and placebos: which robots.txt rules decide whether AI search can cite you, and where llms.txt fits.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-16",
+      "dateModified": "2026-11-18",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/crawler-access-what-mattered/",
       "mainEntityOfPage": {
@@ -151,7 +151,7 @@
 
 <h2>Where llms.txt fits</h2>
 <p>The <a href="https://llmstxt.org/">llms.txt proposal</a> suggests a Markdown file at the site root that summarizes a site for language models and points to clean versions of key pages. It is a sensible idea, and this site publishes one. The proposal is a proposal, though. Google's page on <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and your website</a> says you do not need new machine-readable files or special markup to appear in its AI results, and the crawler pages above describe robots.txt, not llms.txt.</p>
-<p>So Suede files llms.txt under "placebo until tested." It costs little to publish and it is useful as a human-readable map. What Suede will not do is tell a client that adding one will get them named in answers. In the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a>, a change earns a "keep" only when the fixed prompt set shows a different answer after the change and the change was the only thing that moved. A file that engines do not document reading is hard to isolate that way, and Suede does not claim a result it cannot isolate. The <a href="https://suede-ai.github.io/notes/geo-experiments-that-failed/">note on experiments that did nothing</a> covers how Suede records tactics like this.</p>
+<p>So Suede files llms.txt under "placebo until tested." It costs little to publish and it is useful as a human-readable map. Suede puts client effort into the gates that decide citation first. In the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a>, a change earns a "keep" only when the fixed prompt set shows a different answer after the change and the change was the only thing that moved. Suede keeps a tactic once the prompt set isolates its effect, and llms.txt stays in the placebo column until it does. The <a href="https://suede-ai.github.io/notes/geo-experiments-that-failed/">note on experiments that did nothing</a> covers how Suede records tactics like this.</p>
 
 <h2>Why app tests made this clearer</h2>
 <p>Jason Colapietro has built more than 100 apps, many of them to test what SEO and GEO respond to. App landing pages are small, so a crawler problem shows up fast: if a page is blocked or empty to a bot, there is nothing else on the site for an engine to fall back on. On a large client site, a blocked section can hide behind hundreds of pages that still work. That is part of why Suede runs these questions on apps first, a choice explained in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">apps as a GEO laboratory</a>.</p>
