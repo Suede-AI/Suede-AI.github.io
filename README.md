@@ -12,7 +12,7 @@ generational wealth as a creative.
 - `book.html` — the full book, single-file long-form HTML
 - `notes/` — field notes applying the book to AI search, public proof, Google Business Profiles and directories, customer proof as structured evidence, and SEO/GEO work (West Palm Beach and Jupiter), with shared `notes/notes.css`
 - `llms.txt` / `llms-full.txt` — plain-text site map and full note text for AI crawlers
-- `scripts/check-notes.mjs` — guard for notes metadata, canonical JSON-LD @ids, sitemap/llms coverage and forbidden terms
+- `scripts/check-notes.mjs` — guard for notes metadata, canonical JSON-LD @ids, sitemap/llms coverage, forbidden terms and banned hedging phrases across all public copy
 - `robots.txt` — explicit allowlist for major search and AI crawlers
 - `sitemap.xml` — sitemap listing `/`, `/book.html` and the notes
 - `LICENSE` — MIT
