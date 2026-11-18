@@ -40,7 +40,7 @@
       "name": "AI Integration Engineering That Makes a Product Citable",
       "description": "Jason Colapietro on building AI integrations engines can cite: stable URLs, server-rendered answers, open crawler access and outputs that never invent facts.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-18",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/ai-integration-engineering-for-geo/",
       "mainEntityOfPage": {
@@ -136,13 +136,13 @@
 </figure>
 
 <h2>Why does the address matter so much?</h2>
-<p>Suede Sing is the clearest example Suede has. It had at most 5 users. After ChatGPT began naming it as a vocal coach and pitch trainer, it passed 1,000 active users, combined across all its platforms, within about a week, according to Suede's own analytics as reported by Jason Colapietro. The full story is in <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">the Suede Sing case study</a>.</p>
+<p>Suede Sing is the clearest example Suede has. It had at most 5 users. After ChatGPT began naming it as a vocal coach and pitch trainer, it passed 1,000 active users, combined across all its platforms, within about a week. The full story is in <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">the Suede Sing case study</a>.</p>
 <p>The vocal range test has a single public address, <a href="https://sing.suedeai.ai/">sing.suedeai.ai</a>, that a person can open without an account. When an assistant names the tool, the person who asked can act on it in one tap. A tool that requires a download, a sign-up and an onboarding screen before it does anything gives the engine a weaker thing to recommend.</p>
 <p>Suede now treats every AI feature's entry point as a permanent URL. It does not move between versions, it does not carry session tokens, and if it ever has to change, the old address redirects.</p>
 
 <h2>What should the page say before the AI runs?</h2>
 <p>A tool page often contains nothing but a button until a script loads and the model responds. A crawler that does not run the script, or does not wait for it, sees an empty page. Suede renders a plain description on the server: what the tool does, who it is for, what it does not do, and how the result is produced. The AI output then loads on top for the person using it.</p>
-<p>That description is written the way the <a href="https://arxiv.org/abs/2311.09735">GEO paper by Aggarwal and colleagues</a> found engines respond to: specific statements, sources where a claim needs one, and numbers only where they are real. In their KDD 2024 benchmark, adding citations, quotations and statistics raised visibility in generative answers by up to about 40 percent. For a tool page, the honest version is short. Say what the tool measures and how, and cite the method if there is one.</p>
+<p>That description is written the way the <a href="https://arxiv.org/abs/2311.09735">GEO paper by Aggarwal and colleagues</a> found engines respond to: specific statements, sources where a claim needs one, and numbers only where they are real. In their KDD 2024 benchmark, adding citations, quotations and statistics raised visibility in generative answers by up to about 40 percent. For a tool page, the strongest version is short. Say what the tool measures and how, and cite the method if there is one.</p>
 
 <h2>Can AI crawlers actually reach it?</h2>
 <p>Test it directly. OpenAI documents <a href="https://platform.openai.com/docs/bots">separate crawlers</a> for search (OAI-SearchBot), for training (GPTBot) and for fetches a user triggers (ChatGPT-User). Perplexity publishes <a href="https://docs.perplexity.ai/guides/bots">its own list</a>. A robots.txt rule copied from a template, or a firewall setting that challenges unfamiliar user agents, can block the search crawler while the site owner believes everything is open. Google's <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt introduction</a> covers the syntax. Suede's view on which of these settings moved results and which were placebo is in <a href="https://suede-ai.github.io/notes/crawler-access-what-mattered/">crawler access: what mattered</a>.</p>

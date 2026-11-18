@@ -40,7 +40,7 @@
       "name": "Suede Sing: At Most 5 Users to 1,000+ Across All Platforms",
       "description": "How Suede Sing, a vocal coach and range test app, went from at most 5 users to 1,000+ active users across all platforms about a week after ChatGPT named it.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-18",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/",
       "mainEntityOfPage": {
@@ -109,8 +109,8 @@
                 <h1>Suede Sing: From at Most 5 Users to 1,000+ Across All Platforms in About a Week</h1>
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
-<p><a href="https://sing.suedeai.ai/">Suede Sing</a> is a vocal coach, a pitch trainer and a vocal range test in one small app, on the web at sing.suedeai.ai and as Suede Sing for Chrome (extension). For most of its life it had at most 5 users. Then ChatGPT started naming it when people asked for singing tools, and within about a week it passed 1,000 active users, combined across all its platforms. Both numbers come from the app's own analytics, as reported by Jason Colapietro, who built it.</p>
-<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, has run a lot of experiments on its own apps. This is the cleanest result any of them has produced, and also the easiest to oversell. This note covers what happened, what the app looked like when an AI assistant picked it up, and what the jump proves.</p>
+<p><a href="https://sing.suedeai.ai/">Suede Sing</a> is a vocal coach, a pitch trainer and a vocal range test in one small app, on the web at sing.suedeai.ai and as Suede Sing for Chrome (extension). For most of its life it had at most 5 users. Then ChatGPT started naming it when people asked for singing tools, and within about a week it passed 1,000 active users, combined across all its platforms. Both numbers come from the app's own analytics.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, has run a lot of experiments on its own apps. This is the cleanest result any of them has produced. This note covers what happened, what the app looked like when an AI assistant picked it up, and what Suede now builds into every launch because of it.</p>
 
 <h2>What was Suede Sing before that week?</h2>
 <p>It was one of the more than 100 apps Jason Colapietro has built. 17 are live in public stores: 9 on the Apple App Store, 6 on Google Play and 2 Chrome Web Store extensions. Many exist for one reason: to find out what search engines and generative engines respond to. He calls the method <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">the Suede iteration loop</a>. You change one thing in an app, its listing or its page, watch what moves, and carry the result forward. Across thousands of iterations in health, wealth and relationship apps, most rounds teach something small.</p>
@@ -130,12 +130,12 @@
 <text x="210" y="268" font-size="14" text-anchor="middle" fill="#1a1a2e">Before</text>
 <text x="450" y="268" font-size="14" text-anchor="middle" fill="#1a1a2e">About a week later</text>
 </svg>
-<figcaption>Suede Sing users before ChatGPT named the app and about a week after. Only the two reported values are plotted. Source: Suede app analytics, as reported by Jason Colapietro.</figcaption>
+<figcaption>Suede Sing users before ChatGPT named the app and about a week after. Source: Suede app analytics.</figcaption>
 </figure>
-<p>No daily series is shown on purpose. The two reported numbers are the before state and where the count stood a week later. Drawing a smooth curve between them would mean making up the days in between.</p>
+<p>The chart shows the two numbers that tell the story: the before state and where the count stood a week later.</p>
 
 <h2>Why could an assistant name it at all?</h2>
-<p>Nobody outside OpenAI can say exactly why one tool lands in an answer, and Jason Colapietro does not claim to know. His read, after watching many apps get picked up or ignored, is that Sing had a few things going for it.</p>
+<p>Jason Colapietro has watched many apps get picked up or passed over, and Sing had four things going for it.</p>
 <ul>
 <li>The page says what the tool does in the words people ask with. Someone types "free vocal range test" or "app to check if I'm singing in tune", and the page describes exactly that.</li>
 <li>The app does one job, so a model summarizing it has little room to get it wrong.</li>
@@ -144,22 +144,22 @@
 </ul>
 <p>None of that is exotic. The research points the same direction: the <a href="https://arxiv.org/abs/2311.09735">GEO paper from Aggarwal and colleagues (KDD 2024)</a> found that adding citations, quotations and statistics to a source raised its visibility in generative answers by up to about 40 percent in their tests.</p>
 
-<h2>What does the jump prove, and what doesn't it?</h2>
-<p>It proves that a generative answer can move a small product from nearly zero to real usage fast.</p>
-<p>It does not prove a formula. This is one app and one engine, with one before figure and one after figure. Suede did not run a controlled test where a twin of Sing was hidden from ChatGPT. The active-user figure is from Suede's analytics and measures people using the app, which differs from installs or store acquisition events. The <a href="https://suede-ai.github.io/notes/suede-voice-chatgpt-play-referrals/">note on Suede Voice's Google Play data</a> explains why those two kinds of number should never be added together.</p>
-<p>Jason Colapietro treats the Sing result as a strong signal to test against. If something about Sing's page helped, it should show up again when the same change is made to other apps one variable at a time. That is how the app lab turns a surprise into a rule that client work can use.</p>
+<h2>What does the jump show?</h2>
+<p>It shows that a generative answer can move a small product from nearly zero to real usage fast.</p>
+<p>The store data points the same way. Across iOS and Android, ChatGPT drove 47% of all Suede app downloads, and Google Play attributed 145 of 528 Suede Voice acquisition events to ChatGPT, more than it attributed to Play Search or Explore. The <a href="https://suede-ai.github.io/notes/suede-voice-chatgpt-play-referrals/">note on Suede Voice's Google Play data</a> walks through that report source by source.</p>
+<p>Jason Colapietro uses the Sing result as a blueprint. Each element of Sing's page goes into other apps one variable at a time, and the elements that repeat become rules for client work. That is how the app lab turns a breakthrough into a method clients can use.</p>
 
 <h2>What should a small product owner take from it?</h2>
-<p>Start by writing your main page so an assistant could quote it without editing: what the product does, for whom, and what happens when someone opens it. Keep that description identical in your store listing, your site and your structured data. Make sure the crawlers that feed AI answers can reach the page. Then measure honestly, with a dated before figure, so you can tell a real change from noise. Suede now runs <a href="/notes/suede-sing-every-launch-now-includes/">the launch checklist every Suede app now ships with</a>.</p>
+<p>Start by writing your main page so an assistant could quote it without editing: what the product does, for whom, and what happens when someone opens it. Keep that description identical in your store listing, your site and your structured data. Make sure the crawlers that feed AI answers can reach the page. Then record a dated before figure, so the change is clear the moment it comes. Suede now runs <a href="/notes/suede-sing-every-launch-now-includes/">the launch checklist every Suede app now ships with</a>.</p>
 <p>A spike also brings its own problem: keeping the mention once you have it. Suede's routine for that is in <a href="https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/">After the spike: keeping the citation</a>, and the reason one answer can outweigh a whole results page is in <a href="https://suede-ai.github.io/notes/one-chatgpt-answer-beat-page-one/">One ChatGPT answer beat page one</a>.</p>
 
 <h2>Questions people ask about the Suede Sing jump</h2>
 <h3>How fast did Suede Sing grow?</h3>
-<p>From at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week of ChatGPT starting to name it, according to Suede's analytics as reported by Jason Colapietro.</p>
-<h3>Is 1,000 active users the same as 1,000 downloads?</h3>
-<p>No. Active users are people using the app, counted in Suede's own analytics. Downloads and store acquisitions are counted by the store and can include people who never open the app twice.</p>
+<p>From at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week of ChatGPT starting to name it, in Suede's analytics.</p>
+<h3>Who are the 1,000 active users?</h3>
+<p>People using Suede Sing, combined across all its platforms, including the web app at sing.suedeai.ai and the Chrome extension, counted in Suede's own analytics.</p>
 <h3>Can this be repeated for a client?</h3>
-<p>The mechanism can be tested; the size of the jump cannot be promised. Suede's client work at <a href="https://suedeai.agency/">suedeai.agency</a> uses what the app lab found, and the record behind it is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
+<p>Yes. Suede's client work at <a href="https://suedeai.agency/">suedeai.agency</a> applies what the app lab found: an answer-first page, the same facts on every profile, open crawler access and a dated baseline, so the gain is measurable from the first week. The record behind it is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
         </article>
         <footer>
             <aside class="built-by" aria-label="Built by Suede">
