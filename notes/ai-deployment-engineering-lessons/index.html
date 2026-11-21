@@ -40,7 +40,7 @@
       "name": "AI Deployment Engineering Lessons From 17 Live Store Apps",
       "description": "Jason Colapietro on what shipping AI features across 17 live store apps taught Suede: pin models, keep prompts off the binary, and test one change at a time.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "AI deployment engineering, shipping AI features, mobile apps, model versioning, feature flags, app store listings, GEO, Jason Colapietro"
@@ -121,7 +132,7 @@
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>An AI feature in a store-listed app has two release schedules. The app binary moves at the speed of store review. The model behind the feature moves whenever its provider decides to ship something, and nobody sends you a changelog that says your app now answers differently. Most deployment trouble in AI apps comes from treating those two schedules as one.</p>
-<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, has shipped AI features across many of the apps Jason Colapietro has built. He has built more than 100, and over 20 are listed in public stores, including the iOS titles on his <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">Apple developer page</a> and <a href="https://play.google.com/store/apps/details?id=ai.suedeai.suedevoice">Suede Voice on Google Play</a>. Many of those apps existed to test what search and AI engines respond to, which is covered in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">why Suede built apps as a GEO lab</a>. This note covers the engineering underneath: what it took to keep AI features working, and testable, once they were in front of real users.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, has shipped AI features across many of the apps Jason Colapietro has built. He has built more than 100, and 17 are listed in public stores, including the iOS titles on his <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">Apple developer page</a> and <a href="https://play.google.com/store/apps/details?id=ai.suedeai.suedevoice">Suede Voice on Google Play</a>. Many of those apps existed to test what search and AI engines respond to, which is covered in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">why Suede built apps as a GEO lab</a>. This note covers the engineering underneath: what it took to keep AI features working, and testable, once they were in front of real users.</p>
 
 <figure>
 <svg viewBox="0 0 720 300" width="100%" role="img" aria-labelledby="dep-t dep-d" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +202,7 @@
             <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
             <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
@@ -199,6 +210,7 @@
             </p>
             <p class="built-by-title">More from Suede</p>
             <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/ai-feature-release-discipline">Agency edition: Two release clocks: how Suede keeps client AI features stable after launch</a> &middot;
                 <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
                 <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
                 <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
