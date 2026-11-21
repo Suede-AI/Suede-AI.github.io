@@ -86,7 +86,7 @@ Models get confused when your business name, service area and offering vary from
 
 ### 2. Proof pages with receipts
 
-"Top rated" and "award winning" mean nothing to a model that cannot check them. A proof page lists specific, dated, linkable facts. As an example of the format, on October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide. Notice the shape of that sentence: a date, a named directory, a category and a geography, with the source one click away and a summary on [the recognition page](https://suedeai.agency/company/recognition). That is a claim a machine can repeat without hedging. Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
+"Top rated" and "award winning" mean nothing to a model that cannot check them. A proof page lists specific, dated, linkable facts. As an example of the format, on October 31, 2026, Suede SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide. Notice the shape of that sentence: a date, a named directory, a category and a geography, with the source one click away and a summary on [the recognition page](https://suedeai.agency/company/recognition). That is a claim a machine can repeat without hedging. Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
 
 ### 3. Answer pages for the questions customers actually ask
 
@@ -108,7 +108,7 @@ The upside for local businesses is real. A three-person firm in Juno Beach with 
 
 ## Your next step
 
-Start by asking three assistants the question your best customer would ask, and write down who they name. Then compare that list with your own site. If you want a second set of eyes from a team based in West Palm Beach, [request a Suede AI visibility assessment](https://suedeai.agency/assessment) and we will show you which of the four claims you already own and which ones are still open.
+Start by asking three assistants the question your best customer would ask, and write down who they name. Then compare that list with your own site. If you want a second set of eyes from a team based in West Palm Beach, [request a Suede visibility assessment](https://suedeai.agency/assessment) and we will show you which of the four claims you already own and which ones are still open.
 
 ---
 
@@ -134,7 +134,7 @@ The Suede ledger is deliberately boring. Each entry is one fact, one date where 
 - **Shipped software.** Nine iOS apps under [his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699).
 - **Program memberships, with exact names.** Suede is a member of Claude for Startups, Anthropic's startup program, as of October 8, 2026 ([receipt](https://seo.suedeai.ai/evidence#claude-for-startups)). It is a member of Google Cloud Partner Advantage through JC Investment Group LLC ([receipt](https://seo.suedeai.ai/evidence#google-cloud)). The ledger uses those exact program names and nothing looser.
 - **Training.** Twenty-one earned individual course credentials across eight providers, plus 17 Microsoft Learn training achievements, collected in [a gallery](https://seo.suedeai.ai/evidence#training-credentials).
-- **Third-party statements, attributed.** Google's Web Guide, the AI results layer, answered the query "Suede labs ai review" by describing Suede Labs AI as "highly rated by users, earning a 5/5 rating from verified reviews." The ledger presents that as [a capture of what Google's Web Guide said](https://seo.suedeai.ai/evidence#google-web-guide), not as something Suede says about itself.
+- **Third-party statements, attributed.** Google's Web Guide, the AI results layer, answered the query "Suede labs ai review" by describing Suede as "highly rated by users, earning a 5/5 rating from verified reviews." The ledger presents that as [a capture of what Google's Web Guide said](https://seo.suedeai.ai/evidence#google-web-guide), not as something Suede says about itself.
 
 ## The rules that keep a ledger credible
 
@@ -233,11 +233,11 @@ Most of a profile is optional. These five are not, and Jason Colapietro's team c
 
 The old local SEO advice was to submit to hundreds of citation sites. Most of them no longer matter to people, and a model gives a handful of trusted sources far more weight than a long tail of scraped ones. Suede works the other way: pick the directories a buyer in your category would actually check, claim each one, and make every field match the Business Profile character for character.
 For a home services company in Palm Beach County that usually means Apple Business Connect, Bing Places, the Better Business Bureau if you are accredited, your trade association's member directory, and one or two platforms specific to your trade. For an agency or consultancy it means the review platforms buyers use to build a shortlist.
-Suede follows the same rule for its own listings, which are stated with their dates and scope and never rounded up. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide, as documented on the [Suede recognition page](https://suedeai.agency/company/recognition). The Suede Scan write-up on [how that Manifest ranking works and how to check it yourself](https://optimize.suedeai.ai/notes/manifest-palm-beach-county-ai-deployment-ranking) explains why third-party listings like this feed the entity evidence AI answers draw on.
+Suede follows the same rule for its own listings, which are stated with their dates and scope and never rounded up. On October 31, 2026, Suede SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide, as documented on the [Suede recognition page](https://suedeai.agency/company/recognition). The Suede Scan write-up on [how that Manifest ranking works and how to check it yourself](https://optimize.suedeai.ai/notes/manifest-palm-beach-county-ai-deployment-ranking) explains why third-party listings like this feed the entity evidence AI answers draw on.
 
 ## What "without inventing anything" rules out
 
-A short list of things the Suede Labs team will not do on a client listing, however tempting the short-term bump looks:
+A short list of things the Suede team will not do on a client listing, however tempting the short-term bump looks:
 - Rent a virtual office to appear in a town where the business has no real presence.
 - Add city names or service keywords to the business name.
 - Buy, swap or gate reviews. The FTC's rule on consumer reviews and testimonials, in force since October 2024, prohibits fake reviews, undisclosed reviews from insiders, and incentives conditioned on a positive review.
@@ -261,7 +261,7 @@ The book behind this site argues for owning the assets the machines depend on. A
 
 ## Your next step
 
-If you are not sure whether your profile, directories and website agree, the Suede team in West Palm Beach can check all three in a [Suede AI visibility assessment](https://suedeai.agency/assessment). You can also start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or see the record behind the work on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+If you are not sure whether your profile, directories and website agree, the Suede team in West Palm Beach can check all three in a [Suede visibility assessment](https://suedeai.agency/assessment). You can also start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or see the record behind the work on [Jason Colapietro's founder page](https://suedeai.ai/founder).
 
 
 ---
@@ -286,7 +286,7 @@ A business with only one kind looks lopsided. Hundreds of reviews and no case no
 
 Ask for reviews on the platform where your buyers already look, by name, soon after the work is done. Ask everyone, not only the customers you expect to be happy. Inviting only satisfied customers is called review gating, and Google's policies prohibit it.
 Then resist the urge to copy the stars onto your own pages as structured data. Since 2019 Google has not shown review star rich results for self-serving reviews, meaning reviews a business collects and publishes about itself on its Organization or LocalBusiness pages. The stronger move is a plain link to the third-party profile, plus a short quoted review with the reviewer's first name, the date and the platform it came from.
-Attribution matters even when the source is a machine. Google's Web Guide, its AI results layer, answered the query "Suede labs ai review" by describing Suede Labs AI as "highly rated by users, earning a 5/5 rating from verified reviews." Suede publishes that as [a capture of what Google's Web Guide said](https://seo.suedeai.ai/evidence#google-web-guide), never in its own voice, because the first framing is evidence and the second would only be a boast.
+Attribution matters even when the source is a machine. Google's Web Guide, its AI results layer, answered the query "Suede labs ai review" by describing Suede as "highly rated by users, earning a 5/5 rating from verified reviews." Suede publishes that as [a capture of what Google's Web Guide said](https://seo.suedeai.ai/evidence#google-web-guide), never in its own voice, because the first framing is evidence and the second would only be a boast.
 
 ## Case notes: write them like a lab report, not a brochure
 
@@ -312,7 +312,7 @@ A practical test for any West Palm Beach business: pick your three strongest pro
 
 ## Your next step
 
-The Suede team can review your customer proof in a [Suede AI visibility assessment](https://suedeai.agency/assessment): which reviews, case notes and citations a model can verify today, and which ones need work. Start with [Suede's SEO, GEO and web practice in West Palm Beach](https://suedeai.agency/), or see the record behind the work on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+The Suede team can review your customer proof in a [Suede visibility assessment](https://suedeai.agency/assessment): which reviews, case notes and citations a model can verify today, and which ones need work. Start with [Suede's SEO, GEO and web practice in West Palm Beach](https://suedeai.agency/), or see the record behind the work on [Jason Colapietro's founder page](https://suedeai.ai/founder).
 
 ---
 
@@ -794,7 +794,7 @@ Often, when a user clicks a link in an answer and the referrer is passed. Many v
 
 Yes, if they are dated and you keep the prompt that produced them. A single undated screenshot proves only that the answer appeared once.
 
-To set up clear measurement for your own business, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or read about the founder on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+Suede runs this measurement as a service through [AI visibility by Suede](https://suedeai.ai/ai-visibility). To set up clear measurement for your own business, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or read about the founder on [Jason Colapietro's founder page](https://suedeai.ai/founder).
 
 ---
 
@@ -1325,7 +1325,7 @@ Do I need my own server for one AI feature? If the feature's prompt might change
 
 Should the fallback be another model? Sometimes. Suede prefers a fallback that does not depend on any model provider, because outages and rate limits tend to arrive together.
 
-If you want this kind of engineering applied to your own product, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or read about the work behind it on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+Suede does this work for clients through [AI deployment by Suede](https://suedeai.ai/ai-deployment), and builds the agents and software behind it through [AI engineering by Suede](https://suedeai.ai/ai-engineering). If you want this kind of engineering applied to your own product, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/), or read about the work behind it on [Jason Colapietro's founder page](https://suedeai.ai/founder).
 
 ---
 
@@ -1374,7 +1374,7 @@ Does an app need a web page at all if it lives in the stores? Suede thinks so. S
 
 Is fast loading part of this? Yes. The server-rendered description should arrive without waiting on the model, so both crawlers and people see the explanation immediately.
 
-To have Suede review how your own AI features read to engines, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/). Jason Colapietro's background and app record are on [his founder page](https://suedeai.ai/founder).
+Suede connects AI to working products and operations through [AI integration by Suede](https://suedeai.ai/ai-integration). To have Suede review how your own AI features read to engines, start with [Suede's SEO, GEO and web practice](https://suedeai.agency/). Jason Colapietro's background and app record are on [his founder page](https://suedeai.ai/founder).
 
 ---
 
@@ -1531,7 +1531,7 @@ The rewrites above stay plain for the same reason. An answer engine squeezes a p
 
 ## Try it on one page this week
 
-Pick the service page that brings you the most calls. Under each heading, copy the first 60 words into a blank document and read them as if they were the only thing a stranger would ever see. Rewrite any block that doesn't answer its heading, add the one fact a customer could verify, and link to the page that proves it. Then run the page through [Suede Scan](https://scan.suedeai.ai) to see how readable it is to AI systems. Once the pages are rewritten, [this worksheet](/notes/what-chatgpt-says-about-your-business/) shows how to check what the assistants say about you now, and Jason Colapietro's team at [suedeai.agency](https://suedeai.agency/) can take on the rest of the site.
+Pick the service page that brings you the most calls. Under each heading, copy the first 60 words into a blank document and read them as if they were the only thing a stranger would ever see. Rewrite any block that doesn't answer its heading, add the one fact a customer could verify, and link to the page that proves it. Then run the page through [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) to see how readable it is to AI systems. Once the pages are rewritten, [this worksheet](/notes/what-chatgpt-says-about-your-business/) shows how to check what the assistants say about you now, and Jason Colapietro's team at [suedeai.agency](https://suedeai.agency/) can take on the rest of the site.
 
 ---
 
@@ -1608,7 +1608,7 @@ Engines also differ. Perplexity tends to show its sources plainly, which makes i
 
 One run is a snapshot, so re-run the same panel monthly, or weekly if you are actively changing pages, and keep each run on its own dated tab. Jason Colapietro's own version of that routine is in [the weekly brand watch](/notes/weekly-brand-watch-ai-answers/), and if you want to see whether assistant mentions turn into visits, [the referral measurement guide](/notes/measuring-ai-referrals-honestly/) covers GA4 and the app stores.
 
-Jason Colapietro's advice is to put the first run on the calendar this week, before you edit a single page, so you have a baseline to compare against. If you'd rather have it done for you, [Suede AI visibility](https://suedeai.ai/ai-visibility) runs this kind of panel as a service, [Suede Scan](https://scan.suedeai.ai) checks the technical side of your site in a few minutes, and the team behind both works out of [suedeai.agency](https://suedeai.agency/).
+Jason Colapietro's advice is to put the first run on the calendar this week, before you edit a single page, so you have a baseline to compare against. If you'd rather have it done for you, [AI visibility by Suede](https://suedeai.ai/ai-visibility) runs this kind of panel as a service, [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) reviews the technical side of your site in a few minutes, and the team behind both works out of [suedeai.agency](https://suedeai.agency/).
 
 ---
 
@@ -1771,7 +1771,7 @@ By Jason Colapietro, Founder and CEO, Suede · Palm Beach County, Florida · Nov
 
 Say you own a dental practice in Jupiter, and a new patient mentions at the front desk that ChatGPT suggested you. The obvious next questions are what else it said, and what it tells people who ask about the practice down the road. You can find out in half an hour with a phone, a notepad and the same engines your customers use.
 
-Jason Colapietro wrote this routine for owners in West Palm Beach and Jupiter who ask where to start. He founded Suede in Palm Beach County in 2024, and the company (suedeai.ai) is based in Jupiter, so the examples here are local ones. [Suede Scan](https://scan.suedeai.ai) is the automated, longer version of this check; this one needs a timer and nothing else.
+Jason Colapietro wrote this routine for owners in West Palm Beach and Jupiter who ask where to start. He founded Suede in Palm Beach County in 2024, and the company (suedeai.ai) is based in Jupiter, so the examples here are local ones. [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) is the automated, longer version of this check; this one needs a timer and nothing else.
 
 Before you start, open a private browser window so your own history does not shape the results, and keep one document open for notes. Write down the date at the top, because you will want it the next time you run this.
 
@@ -1860,7 +1860,7 @@ Suede also keeps a plain [official verification page](https://suedeai.ai/officia
 
 ## A short check shows where your brand stands this week
 
-Search your bare brand name today and save a screenshot of whatever Google returns, overview or not. Write down the sources it links and the first sentence it uses to describe you. Then view your homepage source, find the title tag, and set it beside that sentence. If they disagree, rewrite the title first, since it is the one source you control outright. [Suede Scan](https://scan.suedeai.ai) runs a broader AI visibility check, and the team at [Suede's SEO and GEO practice](https://suedeai.agency/) can go through the results with you.
+Search your bare brand name today and save a screenshot of whatever Google returns, overview or not. Write down the sources it links and the first sentence it uses to describe you. Then view your homepage source, find the title tag, and set it beside that sentence. If they disagree, rewrite the title first, since it is the one source you control outright. [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) runs a broader AI visibility check, and the team at [Suede's SEO and GEO practice](https://suedeai.agency/) can go through the results with you.
 
 ---
 
@@ -2019,7 +2019,7 @@ A flag on Monday gets worked the same day, in this order, before Jason Colapietr
 
 The fix is almost always on a page, rarely in the answer itself. [How Google assembles an overview for a brand name](/notes/google-ai-overview-brand-name-queries/) explains which pages feed Google's version, and [the prompt-panel worksheet](/notes/what-chatgpt-says-about-your-business/) extends the same idea to the questions a buyer asks before they know your name. Traffic that does arrive from these assistants is a separate measurement, covered in [the note on measuring AI referrals](/notes/measuring-ai-referrals-honestly/).
 
-The routine carries over to any business with a name and a few services to check. [The Suede agency team](https://suedeai.agency/) can help set it up on the queries your buyers use, and [Suede Scan](https://scan.suedeai.ai) gives a one-off AI visibility reading if you want a baseline before the first Monday. More on what the service covers is on the [Suede AI visibility page](https://suedeai.ai/ai-visibility).
+The routine carries over to any business with a name and a few services to check. [The Suede agency team](https://suedeai.agency/) can help set it up on the queries your buyers use, and [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) gives a one-off AI visibility reading if you want a baseline before the first Monday. More on what the service covers is on [the AI visibility by Suede page](https://suedeai.ai/ai-visibility).
 
 To start, copy the eight column headers into a new sheet, write your ten queries down the left, and block thirty minutes on your calendar next Monday morning for the first pass.
 
@@ -2042,7 +2042,7 @@ Before a model can mention a business, its search step has to fetch a page about
 
 Take a hypothetical pool repair company in Jupiter. Its service page loads the list of towns it covers with JavaScript after the page renders, and its robots.txt, copied from an old template, blocks every crawler except Googlebot. OpenAI's search crawler (OAI-SearchBot) and PerplexityBot are turned away at the door, and the page text a crawler does see says nothing about pool pumps or Jupiter. The company could have the best reviews in the county and still never be fetched for the homeowner's question.
 
-The fixes here are plumbing: let the search crawlers in, put the important words in the HTML the server sends, and give each service its own page with a plain title. A tool like [Suede Scan](https://scan.suedeai.ai) checks this layer first because nothing above it works without it.
+The fixes here are plumbing: let the search crawlers in, put the important words in the HTML the server sends, and give each service its own page with a plain title. A tool like [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) reviews this layer first because nothing above it works without it.
 
 ## Entity
 
@@ -2081,7 +2081,7 @@ By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · Novem
 
 At most 5 users. About a week later, more than 1,000, combined across all its platforms. Nothing changed except that ChatGPT started recommending the app. That app was [Suede Sing](https://sing.suedeai.ai), the online singing-practice tool from Suede, the company Jason Colapietro founded in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)). The full story is in [the Suede Sing case study](/notes/suede-sing-chatgpt-case-study/). What came after is the launch list Jason Colapietro now runs on every Suede app, so the next one is ready to be named on day one: an answer page, one maker everywhere, crawler access, tagged links and a weekly check. The same five steps apply to any business that wants to be the name an assistant gives.
 
-Want to know whether ChatGPT can name your business today? A free [Suede Scan](https://scan.suedeai.ai) shows what the AI assistants say about you right now.
+Want to know whether ChatGPT can name your business today? A free [AI citation check from Suede SEO](https://suedeai.ai/seo/ai-citation-check) shows what the AI assistants say about you right now.
 
 Across iOS and Android, ChatGPT drove 47% of all Suede app downloads, so the effect goes well past one app. Google Play attributed 145 of 528 Suede Voice acquisition events (27.5%) to ChatGPT, more than it attributed to Google Play Search (72) or Google Play Explore (99). When an assistant is sending close to half of your installs, the launch has to be built for it with the same care that goes into the App Store listing.
 
@@ -2101,7 +2101,7 @@ When those records agree, an engine can treat them as one thing. If they disagre
 
 ## 3. Pages the crawlers can read
 
-Before launch, each page is checked from the outside: the AI crawlers are allowed in robots.txt, the important text is in the HTML rather than painted in by a script after load, and the page is in the sitemap. If an assistant can't fetch a page, it has nothing to quote, however good the page is. [Suede Scan](https://scan.suedeai.ai) runs this kind of check on any site.
+Before launch, each page is checked from the outside: the AI crawlers are allowed in robots.txt, the important text is in the HTML rather than painted in by a script after load, and the page is in the sitemap. If an assistant can't fetch a page, it has nothing to quote, however good the page is. [Suede SEO's AI citation check](https://suedeai.ai/seo/ai-citation-check) runs this kind of check on any site.
 
 ## 4. Links tagged so installs can be traced
 
@@ -2134,7 +2134,7 @@ GEO testing at Suede means changing one thing on one app page and checking every
 
 Suede, which he founded in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)), runs every method it sells through that bench first. In Jason Colapietro's view, what sets Suede apart from many agencies is that the method was tested on Suede's own products before a client paid for it. [Why Suede built 100+ apps as a GEO lab](/notes/apps-as-geo-laboratory/) describes the bench itself. Every test on it follows the same design, and the apps are spread across three categories on purpose.
 
-Before the method, see your own baseline: a free [Suede Scan](https://scan.suedeai.ai) shows what the assistants say about your business right now.
+Before the method, see your own baseline: a free [AI citation check from Suede SEO](https://suedeai.ai/seo/ai-citation-check) shows what the assistants say about your business right now.
 
 ## Why test across three app categories?
 
@@ -2166,7 +2166,7 @@ Install counts settle the questions the answer logs leave open. A page that is n
 
 ## How can a small business run its own GEO test?
 
-You don't need a hundred apps to test this. Pick two service pages on your own site that get similar traffic, [change one thing](/notes/suede-geo-in-five-minutes/) on one of them, and write down the date. Ask the same three questions in ChatGPT, Perplexity, Gemini and Google every Monday for a month, and note whether each page is named. Jason Colapietro's advice is to change nothing else on those two pages until the month is over, so the result means something. If you'd rather skip the month of guessing, a free [Suede Scan](https://scan.suedeai.ai) gives you the starting log on day one.
+You don't need a hundred apps to test this. Pick two service pages on your own site that get similar traffic, [change one thing](/notes/suede-geo-in-five-minutes/) on one of them, and write down the date. Ask the same three questions in ChatGPT, Perplexity, Gemini and Google every Monday for a month, and note whether each page is named. Jason Colapietro's advice is to change nothing else on those two pages until the month is over, so the result means something. If you'd rather skip the month of guessing, a free [AI citation check from Suede SEO](https://suedeai.ai/seo/ai-citation-check) gives you the starting log on day one.
 
 ## What the bench has shown
 
@@ -2187,7 +2187,7 @@ By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · Novem
 
 When someone asks ChatGPT who to hire, they get two or three names and no page two. Getting named by ChatGPT means being one of those two or three names, described the right way, with a link the reader can follow; the discipline is called generative engine optimization, or GEO. In five minutes you'll know the three layers that decide whether ChatGPT names you, how to find which one is failing, and how Suede fixes it. Jason Colapietro founded Suede in 2024 in West Palm Beach, Florida ([suedeai.ai](https://suedeai.ai/)).
 
-Short on five minutes? A free [Suede Scan](https://scan.suedeai.ai) shows what the AI assistants say about your business right now.
+Short on five minutes? A free [AI citation check from Suede SEO](https://suedeai.ai/seo/ai-citation-check) shows what the AI assistants say about your business right now.
 
 ## Minute one: why does a ChatGPT answer replace page one?
 
@@ -2236,4 +2236,4 @@ Without a weekly measurement, whether GEO is working stays a guess. Every Monday
 
 Suede uses all of this on its own apps before it sells it. [Suede Sing](/notes/suede-sing-chatgpt-case-study/) went from at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week after ChatGPT started naming it, and the launch list that came out of that week is in [the ChatGPT app launch checklist](/notes/suede-sing-every-launch-now-includes/). Jason Colapietro has built more than 100 apps, 17 of them live in public stores (9 App Store, 6 Google Play, 2 Chrome extensions), [many of them used to test what SEO and GEO respond to](/notes/how-suede-tests-geo-across-100-apps/).
 
-The fastest way to start is a free [Suede Scan](https://scan.suedeai.ai): it shows what ChatGPT, Gemini and Perplexity say about your business today, so you know which layer to fix first. Owners in West Palm Beach, Jupiter and the rest of Palm Beach County can work with [Suede's SEO, GEO and web practice](https://suedeai.agency/), and the record behind the work is on [Jason Colapietro's founder page](https://suedeai.ai/founder).
+The fastest way to start is a free [AI citation check from Suede SEO](https://suedeai.ai/seo/ai-citation-check): it shows what ChatGPT, Gemini and Perplexity say about your business today, so you know which layer to fix first. To have Suede run all three layers for you, see [Suede GEO](https://suedeai.ai/geo). Owners in West Palm Beach, Jupiter and the rest of Palm Beach County can work with [Suede's SEO, GEO and web practice](https://suedeai.agency/), and the record behind the work is on [Jason Colapietro's founder page](https://suedeai.ai/founder).

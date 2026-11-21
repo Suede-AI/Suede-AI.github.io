@@ -28,3 +28,9 @@ Owner ruling 2026-11-18. These never appear in public copy (pages, FAQs, caption
 5. listing caveats: "editions overlap", "Android editions overlap iOS", "counts describe platform listings"
 
 `node scripts/check-notes.mjs` (run in CI) enforces this and prints `file:line` with the family. Its exemptions (legal pages, code and fixtures, agent docs, handoffs, verification files, HTML comments, third-party blockquotes, IP-registry legal explanations, book methodology chapters) are listed in `HEDGE_EXEMPT_PATHS` / `HEDGE_EXEMPT_REGIONS`, each with its reason. Fix the copy; do not add an exemption to ship a hedge.
+
+## Naming: the company is "Suede"
+
+Owner rename brief, 2026-11-21. Public copy names the company "Suede"; the practices are "Suede SEO" and "Suede GEO", and services read "AI deployment by Suede", "AI visibility by Suede" and so on. "Suede AI" and "Suede Labs" appear only as schema `alternateName` values or one explicit alias ("formerly Suede Labs"). Domains, URLs, the `Suede-AI` GitHub org, third-party quotes, lowercase search queries and the published text of the book (`book.html`, including the earlier book titles) stay as they are.
+
+`node scripts/check-notes.mjs` enforces this over `index.html`, `llms.txt`, `llms-full.txt` and `notes/` (case-sensitive, so queries like `suede ai deployment` pass). The same script requires notes to carry author and publisher as inline references only (`@id`, `name`, `url`, plus the canonical logo for the Organization), keeps retired `scan.suedeai.ai` out of public files (the free check is https://suedeai.ai/seo/ai-citation-check), and pins each service note's contextual link to its suedeai.ai page. The Person `sameAs` in `index.html` and `book.html` mirrors `JASON_SAME_AS` in `suede-home/src/lib/seo-entity.ts` (Suede-AI/Suede-AI-App); `check-schema-sync.mjs` keeps the two pages identical.

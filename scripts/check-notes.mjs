@@ -9,7 +9,20 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'
 const SITE = 'https://suede-ai.github.io';
 const PERSON = 'https://suedeai.ai/founder#person';
 const ORG = 'https://suedeai.ai/#organization';
-const ALLOWED_IDS_OUTSIDE_SITE = new Set([PERSON, ORG]);
+const LOGO = 'https://suedeai.ai/#logo';
+const ALLOWED_IDS_OUTSIDE_SITE = new Set([PERSON, ORG, LOGO]);
+
+// Person and Organization nodes are owned by suedeai.ai. A note may carry them
+// only as inline references (2026-11-21): the canonical @id plus the name, url
+// and, for the Organization, the canonical logo, so a reader of one page alone
+// still gets a named author and publisher. Anything more (sameAs, jobTitle,
+// description, address) is a second definition of the entity and stays on
+// suedeai.ai, where it cannot drift.
+const ENTITY_REFS = {
+  Person: { id: PERSON, name: 'Jason Colapietro', url: 'https://suedeai.ai/founder', keys: ['@type', '@id', 'name', 'url'] },
+  Organization: { id: ORG, name: 'Suede', url: 'https://suedeai.ai/', keys: ['@type', '@id', 'name', 'url', 'logo'] },
+};
+const LOGO_URL = 'https://suedeai.ai/suede-ai-logo-transparent.png';
 
 const FORBIDDEN = [
   /velvet sundown/i,
@@ -80,6 +93,54 @@ const HEDGE_EXEMPT_PATHS = [
   { re: /^(google[0-9a-f]+\.html|[0-9a-f]{64}\.txt)$/, why: 'search-engine verification tokens carry no copy' },
   { re: /^site\/book\/.*(method|measur)/i, why: 'book methodology chapters teach readers measurement; not claims about Suede' },
 ];
+
+// Naming rule (owner rename brief, 2026-11-21): the company is "Suede"; its
+// practices are "Suede SEO" and "Suede GEO". "Suede AI" and "Suede Labs" are
+// old names and appear in public copy only as schema alternateName values or
+// an explicit alias ("formerly Suede Labs"). The match is case-sensitive on
+// purpose: lowercase search queries such as `suede ai deployment` are queries
+// people type, not the company's name, and domains (suedeai.ai), the GitHub
+// org (Suede-AI) and Clutch slugs (suede-ai-seo) never match.
+const OLD_NAME = /\bSuede ?AI\b(?![.-])|\bSuede Labs\b/;
+const NAMING_SCOPE = /^(index\.html|llms(-full)?\.txt|notes\/.*\.html)$/;
+const NAMING_EXEMPT_REGIONS = [
+  { re: /<!--[\s\S]*?-->/g, why: 'HTML comments are never rendered' },
+  { re: /<blockquote[\s\S]*?<\/blockquote>/gi, why: 'third-party quotes stay verbatim' },
+  { re: /"alternateName":\s*(\[[^\]]*\]|"[^"]*")/g, why: 'schema aliases merge the old names into the entity' },
+  { re: /\b(?:formerly|also known as|previously)(?: known as)? Suede (?:AI|Labs)\b(?: and Suede (?:AI|Labs)\b)?/g, why: 'the one alias statement' },
+];
+
+function scanNaming(rel, text) {
+  if (!NAMING_SCOPE.test(rel)) return [];
+  let scrubbed = text;
+  for (const { re } of NAMING_EXEMPT_REGIONS) scrubbed = scrubbed.replace(re, (m) => m.replace(/[^\n]/g, ' '));
+  const hits = [];
+  scrubbed.split('\n').forEach((line, i) => {
+    const m = line.match(OLD_NAME);
+    if (m) hits.push(`${rel}:${i + 1}: old company name "${m[0]}"; the name is "Suede" (rename brief 2026-11-21)`);
+  });
+  return hits;
+}
+
+function namingSelfTest() {
+  const problems = [];
+  const caught = [
+    ['notes/x/index.html', '<a href="https://suedeai.agency/">Suede AI SEO and GEO agency in West Palm Beach</a>'],
+    ['llms-full.txt', 'request a Suede AI visibility assessment'],
+    ['index.html', '<p>the Suede Labs team</p>'],
+  ];
+  for (const [rel, text] of caught) if (!scanNaming(rel, text).length) problems.push(`naming self-test: not caught in ${rel}: ${text}`);
+  const allowed = [
+    ['notes/x/index.html', '"alternateName": ["Suede AI", "Suede Labs"]'],
+    ['notes/x/index.html', 'founded Suede (formerly Suede Labs) in 2024'],
+    ['llms.txt', 'Suede was formerly known as Suede AI and Suede Labs.'],
+    ['notes/x/index.html', '<pre><code>suede ai deployment</code></pre> https://suedeai.ai/ https://github.com/Suede-AI'],
+    ['notes/x/index.html', 'the query "Suede labs ai review"'],
+    ['book.html', 'Suede Labs: The Human Authenticity Layer'],
+  ];
+  for (const [rel, text] of allowed) if (scanNaming(rel, text).length) problems.push(`naming self-test: false hit in ${rel}: ${text}`);
+  return problems;
+}
 
 // Regions inside a scanned file that the hedge scan blanks out (newlines are
 // kept so reported line numbers stay true).
@@ -163,7 +224,12 @@ function walkPublic(dir = repoRoot, out = []) {
 }
 
 hedgeSelfTest().forEach(fail);
-for (const rel of walkPublic()) scanHedges(rel, read(rel)).forEach(fail);
+namingSelfTest().forEach(fail);
+for (const rel of walkPublic()) {
+  const text = read(rel);
+  scanHedges(rel, text).forEach(fail);
+  scanNaming(rel, text).forEach(fail);
+}
 
 const notesDir = path.join(repoRoot, 'notes');
 const slugs = readdirSync(notesDir, { withFileTypes: true })
@@ -186,7 +252,7 @@ for (const slug of REQUIRED_SLUGS) {
 }
 
 // Depth articles (2026-11-15): published that day, 900-1300 words, deep links
-// to at least two articles on other Suede AI satellite sites, and the Clutch
+// to at least two articles on other Suede satellite sites, and the Clutch
 // ranking stated once in its exact wording, apart from The Manifest.
 const DEPTH_SLUGS = new Set([
   'google-business-profile-directories-without-inventing',
@@ -220,7 +286,25 @@ function checkIds(file, graph) {
     }
   }
   const minted = graph.filter((n) => ['Person', 'Organization'].includes(n['@type']));
-  if (minted.length) fail(`${file}: must not define Person/Organization nodes; reference canonical @ids.`);
+  if (minted.length) fail(`${file}: must not define top-level Person/Organization nodes; reference canonical @ids.`);
+  checkEntityRefs(file, graph);
+}
+
+function checkEntityRefs(file, node) {
+  if (Array.isArray(node)) return node.forEach((n) => checkEntityRefs(file, n));
+  if (!node || typeof node !== 'object') return;
+  const spec = ENTITY_REFS[node['@type']];
+  if (spec) {
+    if (node['@id'] !== spec.id) fail(`${file}: inline ${node['@type']} must use @id ${spec.id}`);
+    if (node.name !== spec.name) fail(`${file}: inline ${node['@type']} name must be "${spec.name}"`);
+    if (node.url !== undefined && node.url !== spec.url) fail(`${file}: inline ${node['@type']} url must be ${spec.url}`);
+    const extra = Object.keys(node).filter((k) => !spec.keys.includes(k));
+    if (extra.length) fail(`${file}: inline ${node['@type']} may carry only ${spec.keys.join(', ')}; found ${extra.join(', ')}`);
+    if (node.logo !== undefined && (node.logo['@id'] !== LOGO || node.logo.url !== LOGO_URL)) {
+      fail(`${file}: inline Organization logo must be ${LOGO} (${LOGO_URL})`);
+    }
+  }
+  Object.values(node).forEach((v) => checkEntityRefs(file, v));
 }
 
 for (const slug of slugs) {
@@ -247,7 +331,11 @@ for (const slug of slugs) {
     if (!post) fail(`${file}: missing BlogPosting.`);
     else {
       if (post.author?.['@id'] !== PERSON) fail(`${file}: BlogPosting author must reference ${PERSON}`);
+      if (post.author?.['@type'] !== 'Person' || !post.author?.name) fail(`${file}: BlogPosting author must be an inline Person reference with a name`);
       if (post.publisher?.['@id'] !== ORG) fail(`${file}: BlogPosting publisher must reference ${ORG}`);
+      if (post.publisher?.['@type'] !== 'Organization' || !post.publisher?.name || !post.publisher?.logo) {
+        fail(`${file}: BlogPosting publisher must be an inline Organization reference with a name and logo`);
+      }
       if (post.mainEntityOfPage?.['@id'] !== url) fail(`${file}: mainEntityOfPage must be ${url}`);
       if (!post.datePublished) fail(`${file}: missing datePublished.`);
     }
@@ -296,6 +384,33 @@ for (const file of ['notes/index.html', 'llms.txt', 'llms-full.txt']) {
 }
 if (!sitemap.includes(`<loc>${SITE}/notes/</loc>`)) fail('sitemap.xml: missing notes index.');
 if (!read('index.html').includes('href="/notes/"')) fail('index.html: missing link to /notes/.');
+
+// scan.suedeai.ai is retired (it 308s to suedeai.ai/seo, which has no scan);
+// the free check lives at suedeai.ai/seo/ai-citation-check.
+for (const rel of walkPublic()) {
+  if (hedgeExemptPath(rel)) continue;
+  if (read(rel).includes('scan.suedeai.ai')) fail(`${rel}: links retired scan.suedeai.ai; use https://suedeai.ai/seo/ai-citation-check`);
+}
+
+// Contextual links from the notes to the service page each one is about
+// (2026-11-21), so links between the notes and suedeai.ai run both ways.
+const SERVICE_LINKS = {
+  'suede-geo-in-five-minutes': [['https://suedeai.ai/geo', 'Suede GEO']],
+  'ai-deployment-engineering-lessons': [
+    ['https://suedeai.ai/ai-deployment', 'AI deployment by Suede'],
+    ['https://suedeai.ai/ai-engineering', 'AI engineering by Suede'],
+  ],
+  'ai-integration-engineering-for-geo': [['https://suedeai.ai/ai-integration', 'AI integration by Suede']],
+  'measuring-ai-referrals-honestly': [['https://suedeai.ai/ai-visibility', 'AI visibility by Suede']],
+  'weekly-brand-watch-ai-answers': [['https://suedeai.ai/ai-visibility', 'the AI visibility by Suede page']],
+  'what-chatgpt-says-about-your-business': [['https://suedeai.ai/ai-visibility', 'AI visibility by Suede']],
+};
+for (const [slug, links] of Object.entries(SERVICE_LINKS)) {
+  const article = read(`notes/${slug}/index.html`).match(/<article>([\s\S]*?)<\/article>/)?.[1] ?? '';
+  for (const [href, anchor] of links) {
+    if (!article.includes(`<a href="${href}">${anchor}</a>`)) fail(`notes/${slug}: article must link ${href} with anchor "${anchor}"`);
+  }
+}
 
 if (errors.length) {
   console.error(errors.join('\n'));
