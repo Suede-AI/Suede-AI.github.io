@@ -40,7 +40,7 @@
       "name": "After the Spike: How Suede Keeps an AI Citation Alive",
       "description": "After ChatGPT named Suede Sing, Suede froze the cited page, checked crawler access, aligned facts and re-asked prompts. The routine for keeping a citation.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "AI citations, ChatGPT, Suede Sing, robots.txt, OAI-SearchBot, SoftwareApplication schema, GEO"
@@ -128,7 +139,7 @@
 <p>So the cited URL stays where it is. The name stays the same, and so does the opening description. Jason Colapietro treats the cited version as a control. Changes come later, one at a time, where they can be measured against it.</p>
 
 <h2>What gets checked in the first days?</h2>
-<p>Access comes first. OpenAI lists the crawlers behind ChatGPT's search and browsing in its <a href="https://platform.openai.com/docs/bots">bots documentation</a>: OAI-SearchBot for search, ChatGPT-User for fetches a user triggers, and GPTBot for training. Perplexity documents its own in its <a href="https://docs.perplexity.ai/guides/bots">bots guide</a>. Suede reads the live robots.txt, following Google's <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt introduction</a> for syntax, and confirms none of the search crawlers is blocked. A traffic spike is also when someone is tempted to add rate limits or a firewall rule, and that rule can shut out the same bots that sent the traffic.</p>
+<p>Access comes first. OpenAI lists the crawlers behind ChatGPT's search and browsing in its <a href="https://developers.openai.com/api/docs/bots">bots documentation</a>: OAI-SearchBot for search, ChatGPT-User for fetches a user triggers, and GPTBot for training. Perplexity documents its own in its <a href="https://docs.perplexity.ai/guides/bots">bots guide</a>. Suede reads the live robots.txt, following Google's <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt introduction</a> for syntax, and confirms none of the search crawlers is blocked. A traffic spike is also when someone is tempted to add rate limits or a firewall rule, and that rule can shut out the same bots that sent the traffic.</p>
 <p>Next is availability. A recommendation that leads to an error page teaches users, and eventually the assistant, that the tool is unreliable. The page needs to load fast and work under the new load.</p>
 
 <h2>How do you make the facts agree everywhere?</h2>
@@ -180,10 +191,14 @@
             <p class="built-by-title">Built by Suede in Palm Beach County, Florida</p>
             <p>Suede is the GEO and AI deployment studio founded by Jason Colapietro, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a>
+            </p>
+            <p class="built-by-title">Agency edition</p>
+            <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/protect-ai-recommendation">When an AI assistant starts recommending you: the first moves that protect the mention</a>
             </p>
             </aside>
             <p>&copy; 2026 Jason "Johnny Suede" Colapietro &middot; <a href="/">Stake Your Claim</a> &middot; <a href="/notes/">Notes</a> &middot; <a href="https://www.amazon.com/dp/B0GRG8LGQQ">Stake Your Claim on Amazon</a></p>

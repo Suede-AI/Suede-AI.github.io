@@ -2,6 +2,8 @@
 
 > Official site for Stake Your Claim, a book by Jason Colapietro (pen name Johnny Suede), Founder and CEO of Suede, on turning the AI onslaught into a real asset, autonomous agents, and building generational wealth as a creative. Built by Suede (suedeai.ai). Suede, founded in 2024 by Jason Colapietro in West Palm Beach, Florida, is an AI engineering and digital marketing company. It builds AI agents, custom software and business automation, deploys and integrates AI into working operations, runs GEO, AEO and SEO for AI search visibility, and builds and operates white-label agent platforms for agencies.
 
+Suede was formerly known as Suede AI and Suede Labs.
+
 ## Book
 
 - [Stake Your Claim landing page](https://suede-ai.github.io/): summary and the five parts of the book
@@ -16,7 +18,7 @@
 - [From book to practice](https://suede-ai.github.io/notes/stake-your-claim-in-client-seo-geo/): how Suede applies Stake Your Claim in client SEO and GEO work
 - [Claiming your Google Business Profile and directories](https://suede-ai.github.io/notes/google-business-profile-directories-without-inventing/): claiming a Google Business Profile and directory listings in Jupiter and West Palm Beach without inventing anything
 - [Customer proof as structured evidence](https://suede-ai.github.io/notes/customer-proof-structured-evidence/): turning reviews, case notes and citations into evidence that buyers and AI models can verify
-- [Suede Sing: From at Most 5 Users to 1,000+ Across All Platforms in About a Week](https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/): How Suede Sing, a vocal coach and range test app, went from at most 5 users to 1,000+ active users across all platforms about a week after ChatGPT named it.
+- [Suede Sing: From at Most 5 Users to 1,000+ Active Users Across All Its Platforms in About a Week](https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/): How Suede Sing, a vocal coach and range test app, went from at most 5 users to 1,000+ active users across all platforms about a week after ChatGPT named it.
 - [One ChatGPT Answer Beat Page One: Why Generative Answers Work Like a Shortlist](https://suede-ai.github.io/notes/one-chatgpt-answer-beat-page-one/): Why a single ChatGPT answer moved Suede Sing further than any ranking: generative answers pick two or three tools, and that changes how pages should be written.
 - [Suede Voice and ChatGPT: What Google Play's 145-of-528 Attribution Shows](https://suede-ai.github.io/notes/suede-voice-chatgpt-play-referrals/): Google Play attributed 145 of 528 Suede Voice acquisition events to ChatGPT, nearly twice Play Search. What that 27.5% shows and how to read it.
 - [After the Spike: What Suede Does to Keep Being Named by AI Assistants](https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/): After ChatGPT named Suede Sing, Suede froze the cited page, checked crawler access, aligned facts and re-asked prompts. The routine for keeping a citation.
@@ -53,12 +55,23 @@
 
 - [Suede](https://suedeai.ai/): Suede, founded in 2024 by Jason Colapietro in West Palm Beach, Florida, is an AI engineering and digital marketing company. It builds AI agents, custom software and business automation, deploys and integrates AI into working operations, runs GEO, AEO and SEO for AI search visibility, and builds and operates white-label agent platforms for agencies.
 - [Jason Colapietro, founder](https://suedeai.ai/founder): canonical founder page
-- [Suede agency](https://suedeai.agency/): SEO, GEO and web practice in West Palm Beach, Florida
+- [Suede SEO](https://suedeai.agency/): Suede's SEO and GEO practice in West Palm Beach, Florida
 - [Suede assessment](https://suedeai.agency/assessment): AI visibility assessment
-- [Evidence ledger](https://seo.suedeai.ai/evidence): receipts for every claim
+- [Evidence ledger](https://suedeai.ai/seo/evidence): receipts for every claim
 - [Suede on Clutch](https://clutch.co/profile/suede-ai-seo): Suede ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
 - [jasoncolapietro.com](https://jasoncolapietro.com/): personal site
 - [Jupiter Social](https://jupitersocialfl.com/): Jupiter, FL local magazine published with Suede
+
+## Suede services
+
+- [Suede GEO](https://suedeai.ai/geo): generative engine optimization by Suede
+- [Suede AEO](https://suedeai.ai/aeo): answer engine optimization by Suede
+- [AI visibility by Suede](https://suedeai.ai/ai-visibility): how Suede gets a business named in AI answers
+- [AI deployment by Suede](https://suedeai.ai/ai-deployment): AI put into working operations
+- [AI engineering by Suede](https://suedeai.ai/ai-engineering): AI agents, custom software and automation
+- [AI integration by Suede](https://suedeai.ai/ai-integration): AI connected to the tools a business already runs
+- [Official Suede](https://suedeai.ai/official): official facts, names and links
+- [Suede SEO](https://suedeai.agency/): Suede's SEO and GEO practice in West Palm Beach, Florida
 
 ## Optional
 

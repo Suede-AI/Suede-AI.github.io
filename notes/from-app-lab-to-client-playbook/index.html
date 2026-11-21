@@ -40,7 +40,7 @@
       "name": "From App Lab to Client Playbook: How Suede Transfers GEO",
       "description": "Jason Colapietro on how Suede filters findings from 100+ test apps before they reach client GEO work, and why clients get a test protocol before a template.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/from-app-lab-to-client-playbook/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "client GEO playbook, generative engine optimization agency, app lab findings, GEO testing, Suede iteration loop, Palm Beach County, Jason Colapietro"
@@ -121,7 +132,7 @@
                 <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>A finding from one app is an anecdote. A finding that held across apps in different categories, survived a reversal test and still made sense on a website is something you can charge a client for. Most of the work between an app lab and a client practice is that filtering, and most findings do not make it through.</p>
-<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, runs two things that look separate from outside. One is the lab: more than 100 apps Jason Colapietro has built, over 20 of them listed in public stores, many created purely to test what search engines and AI engines respond to. <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">Why Suede built apps as a GEO lab</a> explains that choice. The other is <a href="https://suedeai.agency/">Suede's SEO, GEO and web practice</a> for clients. This note describes how material moves from the first to the second.</p>
+<p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, runs two things that look separate from outside. One is the lab: more than 100 apps Jason Colapietro has built, 17 of them listed in public stores, many created purely to test what search engines and AI engines respond to. <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">Why Suede built apps as a GEO lab</a> explains that choice. The other is <a href="https://suedeai.agency/">Suede's SEO, GEO and web practice</a> for clients. This note describes how material moves from the first to the second.</p>
 
 <figure>
 <svg viewBox="0 0 720 380" width="100%" role="img" aria-labelledby="pb-t pb-d" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +165,7 @@
 <p>Other findings have no client equivalent. Apple's <a href="https://developer.apple.com/app-store/product-page-optimization/">product page optimization</a> lets an app owner split real store traffic between listing variants. A local service business has nothing like that on its Google profile. Findings that depend on store mechanics stay in the lab.</p>
 
 <h2>What a client actually receives</h2>
-<p>The first thing is a baseline. Suede writes a fixed set of prompts a real customer would ask, runs them in the engines that matter for that business, and records who gets named and which sources are cited. Then come the access checks: whether robots rules or a firewall block the search crawlers OpenAI and Perplexity <a href="https://platform.openai.com/docs/bots">document</a> <a href="https://docs.perplexity.ai/guides/bots">publicly</a>, and whether the pages render without scripts.</p>
+<p>The first thing is a baseline. Suede writes a fixed set of prompts a real customer would ask, runs them in the engines that matter for that business, and records who gets named and which sources are cited. Then come the access checks: whether robots rules or a firewall block the search crawlers OpenAI and Perplexity <a href="https://developers.openai.com/api/docs/bots">document</a> <a href="https://docs.perplexity.ai/guides/bots">publicly</a>, and whether the pages render without scripts.</p>
 <p>After that, changes go in one at a time, starting with the ones that passed all three checks most often in the lab. Typical early changes are adding a source behind a claim, rewriting a service description as specific statements, and fixing how the business is named across profiles. Those follow the direction of the <a href="https://arxiv.org/abs/2311.09735">GEO paper by Aggarwal and colleagues</a>, where adding citations, quotations and statistics raised visibility in generative answers by up to about 40 percent on their benchmark.</p>
 <p>Jason Colapietro draws a firm line here. The lab tells Suede what to try first. Each client's market, competitors and history get their own test, and Suede shows the client the same dated before-and-after captures it uses internally.</p>
 
@@ -170,7 +181,7 @@
             <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
             <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
@@ -178,6 +189,7 @@
             </p>
             <p class="built-by-title">More from Suede</p>
             <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/lab-findings-to-client-work">Agency edition: Three filters between Suede's app lab and your website</a> &middot;
                 <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
                 <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
                 <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;
