@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: check-notes.mjs compares each note's last commit date
+          # with its dateModified, which a shallow clone cannot answer.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22

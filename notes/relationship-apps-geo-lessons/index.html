@@ -40,7 +40,7 @@
       "name": "What Relationship Apps Taught Suede About How People Ask",
       "description": "Jason Colapietro on what relationship apps taught Suede about GEO: people ask AI in situations and stories, and the pages that match them get named.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/relationship-apps-geo-lessons/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "relationship apps, conversational queries, GEO, AI search, query fan-out, Suede iteration loop, Jason Colapietro"
@@ -174,7 +185,7 @@
 <p>In Suede's tests, copy that overpromised ("save your relationship") was skipped. Copy that sounded clinical was skipped as well, because it matched nothing in how people asked. The versions engines described were warm and specific about what the app does, with a short statement of its limits. Jason Colapietro treats tone in these apps as one of the variables under test.</p>
 
 <h2>Does crawler access matter here?</h2>
-<p>In any vertical, an engine can only quote a page it is allowed to fetch. OpenAI's <a href="https://platform.openai.com/docs/bots">crawler documentation</a> describes OAI-SearchBot as the agent behind ChatGPT search results and GPTBot as the one used for training, and each reads its own rules in robots.txt. Check those rules before deciding your situation pages are being passed over on their merits.</p>
+<p>In any vertical, an engine can only quote a page it is allowed to fetch. OpenAI's <a href="https://developers.openai.com/api/docs/bots">crawler documentation</a> describes OAI-SearchBot as the agent behind ChatGPT search results and GPTBot as the one used for training, and each reads its own rules in robots.txt. Check those rules before deciding your situation pages are being passed over on their merits.</p>
 
 <h2>How does this compare with health and money apps?</h2>
 <p>Health and money apps were judged mostly on accuracy: scope and sources in <a href="/notes/health-apps-geo-lessons/">health</a>, exact numbers in <a href="/notes/wealth-apps-geo-lessons/">wealth</a>. Relationship apps were judged first on how well they fit the question. All three still came back to one shared rule, laid out in <a href="/notes/health-wealth-relationships-one-pattern/">the cross-vertical note</a>.</p>
@@ -191,7 +202,7 @@
             <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
             <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
@@ -199,6 +210,7 @@
             </p>
             <p class="built-by-title">More from Suede</p>
             <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/conversational-ai-queries">Agency edition: When buyers describe a situation to ChatGPT, does your page match it?</a> &middot;
                 <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
                 <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
                 <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;

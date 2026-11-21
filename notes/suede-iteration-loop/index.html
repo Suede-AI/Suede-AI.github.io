@@ -40,7 +40,7 @@
       "name": "The Suede Iteration Loop: How to Design a GEO Experiment",
       "description": "The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/suede-iteration-loop/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "GEO experiment design, Suede iteration loop, A/B testing, AI search, prompt testing, Jason Colapietro"
@@ -169,7 +180,7 @@
 <p>Store pages give you tools for the human side of this. Apple's <a href="https://developer.apple.com/app-store/product-page-optimization/">product page optimization</a> and Google Play's <a href="https://support.google.com/googleplay/android-developer/answer/6227309">store listing experiments</a> split real traffic between listing variants. Suede uses them to check that a change written for engines does not hurt conversion with people.</p>
 
 <h2>Step 4: confirm the engines saw the change</h2>
-<p>An engine cannot cite a version of a page it has not fetched. Check your server logs for the crawlers that matter. OpenAI documents <a href="https://platform.openai.com/docs/bots">OAI-SearchBot, GPTBot and ChatGPT-User</a> and what each one does. Perplexity lists <a href="https://docs.perplexity.ai/guides/bots">its own crawlers</a>. If your <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt</a> blocks the search crawler, nothing you change on the page will show up in that engine's answers. Suede does not start the after-capture until there is a fetch of the changed page in the logs, or a reasonable wait has passed for pages it cannot see logs for, like store listings.</p>
+<p>An engine cannot cite a version of a page it has not fetched. Check your server logs for the crawlers that matter. OpenAI documents <a href="https://developers.openai.com/api/docs/bots">OAI-SearchBot, GPTBot and ChatGPT-User</a> and what each one does. Perplexity lists <a href="https://docs.perplexity.ai/guides/bots">its own crawlers</a>. If your <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt</a> blocks the search crawler, nothing you change on the page will show up in that engine's answers. Suede does not start the after-capture until there is a fetch of the changed page in the logs, or a reasonable wait has passed for pages it cannot see logs for, like store listings.</p>
 
 <h2>Step 5: capture again with the same prompts</h2>
 <p>Use the frozen prompt set, in the same engines, with the same number of runs. Compare row by row. Did you appear where you did not before? Did the description of you get more accurate? Did a different source start getting cited for you? Write down what moved and what did not, including the prompts where nothing changed.</p>
@@ -194,7 +205,7 @@
             <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
             <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
@@ -202,6 +213,7 @@
             </p>
             <p class="built-by-title">More from Suede</p>
             <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/one-change-geo-tests">Agency edition: Why Suede tests one change at a time before it touches your site</a> &middot;
                 <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
                 <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
                 <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;

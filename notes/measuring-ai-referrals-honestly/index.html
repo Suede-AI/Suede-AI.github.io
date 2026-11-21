@@ -40,7 +40,7 @@
       "name": "Measuring AI Referrals: Prompts, Store Data and Counts",
       "description": "How Suede measures GEO with precision: dated prompt captures, Google Play attribution by source, and a denominator beside every AI referral count.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-18",
+      "dateModified": "2026-11-21",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/measuring-ai-referrals-honestly/",
       "mainEntityOfPage": {
@@ -52,7 +52,10 @@
         "@type": "Person",
         "@id": "https://suedeai.ai/founder#person",
         "name": "Jason Colapietro",
-        "url": "https://suedeai.ai/founder"
+        "url": "https://suedeai.ai/founder",
+        "worksFor": {
+          "@id": "https://suedeai.ai/#organization"
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -70,11 +73,19 @@
       },
       "about": [
         {
-          "@id": "https://suede-ai.github.io/#book"
+          "@id": "https://suedeai.ai/founder#book-stake-your-claim"
         },
         {
           "@type": "Place",
           "name": "Palm Beach County, Florida"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://suedeai.agency/#suede-seo",
+          "name": "Suede SEO",
+          "url": "https://suedeai.agency/"
         }
       ],
       "keywords": "AI referral measurement, GEO metrics, ChatGPT attribution, Google Play acquisition, denominators, Suede Voice, Jason Colapietro"
@@ -160,7 +171,7 @@
 <p>Suede uses several sources, because each one sees a different part of the picture and none of them sees all of it.</p>
 <p>Dated prompt captures come first. Following the <a href="https://suede-ai.github.io/notes/suede-iteration-loop/">Suede iteration loop</a>, Suede keeps a frozen set of prompts, runs each one several times per engine, and saves the answer with its date. A capture shows whether you were named and how you were described. It does not show how many people saw that answer.</p>
 <p>Store attribution is second. Google Play reports acquisition by source, as in the Suede Voice report above. Apple's <a href="https://developer.apple.com/app-store/search/">App Store search documentation</a> describes how App Store search works, and store consoles report their own traffic sources. These numbers come from the platform and are worth more than anything you estimate yourself, as long as you report them in the platform's own terms.</p>
-<p>Server logs are third. OpenAI documents <a href="https://platform.openai.com/docs/bots">three user agents</a>: OAI-SearchBot for search indexing, GPTBot for training, and ChatGPT-User for fetches made on behalf of a user. Perplexity documents <a href="https://docs.perplexity.ai/guides/bots">its own crawlers</a>. A ChatGPT-User hit tells you someone's conversation caused a fetch of your page. It is a different signal from a person clicking through, and the two should be counted separately.</p>
+<p>Server logs are third. OpenAI documents <a href="https://developers.openai.com/api/docs/bots">three user agents</a>: OAI-SearchBot for search indexing, GPTBot for training, and ChatGPT-User for fetches made on behalf of a user. Perplexity documents <a href="https://docs.perplexity.ai/guides/bots">its own crawlers</a>. A ChatGPT-User hit tells you someone's conversation caused a fetch of your page. It is a different signal from a person clicking through, and the two should be counted separately.</p>
 <p>Search Console is fourth, and it needs one adjustment. Google states in its guide to <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and your website</a> that sites appearing in AI features such as AI Overviews and AI Mode are included in the overall search traffic in Search Console, under the Web search type. You cannot separate it out there, so a claim of "traffic from AI Overviews" built on Search Console alone is a guess.</p>
 
 <h2>Which mistakes inflate AI referral numbers?</h2>
@@ -181,7 +192,7 @@
             <p class="built-by-title">Built by Suede in West Palm Beach, Florida</p>
             <p>Suede is a GEO and AI deployment studio founded in 2024 by Jason Colapietro, Founder and CEO, with an SEO, GEO and web practice serving West Palm Beach, Jupiter and Palm Beach County.</p>
             <p class="built-by-links">
-                <a href="https://suedeai.agency/">Suede SEO and GEO agency in West Palm Beach</a> &middot;
+                <a href="https://suedeai.agency/">Suede SEO, the SEO and GEO agency in West Palm Beach</a> &middot;
                 <a href="https://suedeai.ai/">Suede</a> &middot;
                 <a href="https://suedeai.ai/founder">Jason Colapietro, founder</a> &middot;
                 <a href="https://jasoncolapietro.com/">jasoncolapietro.com</a> &middot;
@@ -189,6 +200,7 @@
             </p>
             <p class="built-by-title">More from Suede</p>
             <p class="built-by-links">
+                <a href="https://suedeai.agency/field-notes/ai-referral-reporting">Agency edition: How Suede reports AI referrals to clients: every count gets its total</a> &middot;
                 <a href="https://optimize.suedeai.ai/notes">Suede Scan notes on AI readiness</a> &middot;
                 <a href="https://agentix.suedeai.ai/notes">Agentix agent grading notes</a> &middot;
                 <a href="https://docs.suedeai.ai/notes">Suede developer docs notes</a> &middot;

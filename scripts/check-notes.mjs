@@ -2,6 +2,7 @@
 // Guard for the /notes/ article section: canonical @ids, metadata, sitemap and
 // llms.txt coverage, and forbidden claims or copy.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -10,7 +11,13 @@ const SITE = 'https://suede-ai.github.io';
 const PERSON = 'https://suedeai.ai/founder#person';
 const ORG = 'https://suedeai.ai/#organization';
 const LOGO = 'https://suedeai.ai/#logo';
-const ALLOWED_IDS_OUTSIDE_SITE = new Set([PERSON, ORG, LOGO]);
+// The book's canonical Book node lives on suedeai.ai (jasonBookId in
+// suede-home/src/lib/seo-entity.ts); this site describes the same book.
+const BOOK = 'https://suedeai.ai/founder#book-stake-your-claim';
+// Owner ruling 2026-11-21: suedeai.agency owns the Suede SEO practice entity.
+// Every other site references this one @id and never mints its own.
+const PRACTICE = 'https://suedeai.agency/#suede-seo';
+const ALLOWED_IDS_OUTSIDE_SITE = new Set([PERSON, ORG, LOGO, BOOK, PRACTICE]);
 
 // Person and Organization nodes are owned by suedeai.ai. A note may carry them
 // only as inline references (2026-11-21): the canonical @id plus the name, url
@@ -18,9 +25,13 @@ const ALLOWED_IDS_OUTSIDE_SITE = new Set([PERSON, ORG, LOGO]);
 // still gets a named author and publisher. Anything more (sameAs, jobTitle,
 // description, address) is a second definition of the entity and stays on
 // suedeai.ai, where it cannot drift.
+// The Person reference also carries worksFor, as a bare @id reference to the
+// Organization (2026-11-21), so a note alone states the founder-to-Suede edge.
+// The Suede SEO practice is referenced the same way, by the agency's @id.
 const ENTITY_REFS = {
-  Person: { id: PERSON, name: 'Jason Colapietro', url: 'https://suedeai.ai/founder', keys: ['@type', '@id', 'name', 'url'] },
+  Person: { id: PERSON, name: 'Jason Colapietro', url: 'https://suedeai.ai/founder', keys: ['@type', '@id', 'name', 'url', 'worksFor'] },
   Organization: { id: ORG, name: 'Suede', url: 'https://suedeai.ai/', keys: ['@type', '@id', 'name', 'url', 'logo'] },
+  ProfessionalService: { id: PRACTICE, name: 'Suede SEO', url: 'https://suedeai.agency/', keys: ['@type', '@id', 'name', 'url'] },
 };
 const LOGO_URL = 'https://suedeai.ai/suede-ai-logo-transparent.png';
 
@@ -270,6 +281,39 @@ const llms = read('llms.txt');
 const llmsFull = read('llms-full.txt');
 const notesIndex = read('notes/index.html');
 
+function sitemapLastmod(url) {
+  const esc = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return sitemap.match(new RegExp(`<loc>${esc}</loc>\\s*<lastmod>([^<]+)</lastmod>`))?.[1];
+}
+
+// Freshness (2026-11-21): a note whose file was committed after its
+// dateModified tells crawlers nothing changed when it did. Compare each note's
+// last commit date with its dateModified. A shallow clone (actions/checkout's
+// default depth of 1) reports every file as last changed in the tip commit, so
+// the check is skipped there with a notice rather than failing every note; CI
+// checks out full history so the rule runs.
+const GIT_DATES = (() => {
+  const git = (...args) => execFileSync('git', ['-C', repoRoot, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+  try {
+    if (git('rev-parse', '--is-shallow-repository') === 'true') {
+      console.warn('Notes freshness check skipped: shallow clone (fetch full history to run it).');
+      return null;
+    }
+    return (rel) => git('log', '-1', '--format=%cs', '--', rel) || null;
+  } catch {
+    console.warn('Notes freshness check skipped: git history unavailable.');
+    return null;
+  }
+})();
+
+function checkFreshness(file, dateModified) {
+  if (!GIT_DATES) return;
+  const committed = GIT_DATES(file);
+  if (committed && committed > dateModified) {
+    fail(`${file}: last committed ${committed}, after its dateModified ${dateModified}; update dateModified and the sitemap lastmod.`);
+  }
+}
+
 function collectIds(node, out = []) {
   if (Array.isArray(node)) node.forEach((n) => collectIds(n, out));
   else if (node && typeof node === 'object') {
@@ -300,6 +344,9 @@ function checkEntityRefs(file, node) {
     if (node.url !== undefined && node.url !== spec.url) fail(`${file}: inline ${node['@type']} url must be ${spec.url}`);
     const extra = Object.keys(node).filter((k) => !spec.keys.includes(k));
     if (extra.length) fail(`${file}: inline ${node['@type']} may carry only ${spec.keys.join(', ')}; found ${extra.join(', ')}`);
+    if (node['@type'] === 'Person' && JSON.stringify(node.worksFor) !== JSON.stringify({ '@id': ORG })) {
+      fail(`${file}: inline Person must carry worksFor {"@id": "${ORG}"}`);
+    }
     if (node.logo !== undefined && (node.logo['@id'] !== LOGO || node.logo.url !== LOGO_URL)) {
       fail(`${file}: inline Organization logo must be ${LOGO} (${LOGO_URL})`);
     }
@@ -338,6 +385,13 @@ for (const slug of slugs) {
       }
       if (post.mainEntityOfPage?.['@id'] !== url) fail(`${file}: mainEntityOfPage must be ${url}`);
       if (!post.datePublished) fail(`${file}: missing datePublished.`);
+      if (!post.dateModified) fail(`${file}: missing dateModified.`);
+      else {
+        if (post.dateModified < post.datePublished) fail(`${file}: dateModified ${post.dateModified} is before datePublished.`);
+        const lastmod = sitemapLastmod(url);
+        if (lastmod !== post.dateModified) fail(`sitemap.xml: ${url} lastmod ${lastmod} must equal the note's dateModified ${post.dateModified}.`);
+        checkFreshness(file, post.dateModified);
+      }
     }
     if (!crumbs || crumbs.itemListElement?.at(-1)?.item !== url) fail(`${file}: BreadcrumbList must end at ${url}`);
     checkIds(file, graph);
@@ -367,8 +421,6 @@ for (const slug of slugs) {
     }
     if (!articleHtml.includes('https://suedeai.agency/"')) fail(`${file}: must link the suedeai.agency home page in the body.`);
     if (!articleHtml.includes('href="https://suedeai.ai/founder"')) fail(`${file}: must link the founder page in the body.`);
-    const entry = sitemap.match(new RegExp(`<loc>${url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>([^<]+)</lastmod>`));
-    if (entry?.[1] !== '2026-11-15') fail(`sitemap.xml: ${url} lastmod must be 2026-11-15.`);
     if (!notesIndex.includes(`"@id": "${url}#article"`)) fail(`notes/index.html: CollectionPage hasPart must include ${url}#article`);
   }
 
@@ -383,6 +435,16 @@ for (const file of ['notes/index.html', 'llms.txt', 'llms-full.txt']) {
   for (const re of FORBIDDEN) if (re.test(text)) fail(`${file}: forbidden term ${re}`);
 }
 if (!sitemap.includes(`<loc>${SITE}/notes/</loc>`)) fail('sitemap.xml: missing notes index.');
+{
+  const ld = notesIndex.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  const page = ld && (JSON.parse(ld[1])['@graph'] || []).find((n) => n['@type'] === 'CollectionPage');
+  if (!page?.dateModified) fail('notes/index.html: CollectionPage must carry dateModified.');
+  else {
+    if (sitemapLastmod(`${SITE}/notes/`) !== page.dateModified) fail(`sitemap.xml: ${SITE}/notes/ lastmod must equal the notes index dateModified ${page.dateModified}.`);
+    checkFreshness('notes/index.html', page.dateModified);
+  }
+  if (page) checkIds('notes/index.html', [page]);
+}
 if (!read('index.html').includes('href="/notes/"')) fail('index.html: missing link to /notes/.');
 
 // scan.suedeai.ai is retired (it 308s to suedeai.ai/seo, which has no scan);
