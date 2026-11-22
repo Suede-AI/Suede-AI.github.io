@@ -8,15 +8,15 @@
     <meta name="author" content="Jason Colapietro">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#667eea">
-    <link rel="canonical" href="https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/">
+    <link rel="canonical" href="https://suedeai.agency/field-notes/ai-feature-release-discipline">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/notes/notes.css">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:site_name" content="Suede notes">
     <meta property="og:title" content="AI Deployment Engineering Lessons From 17 Live Store Apps">
     <meta property="og:description" content="Jason Colapietro on what shipping AI features across 17 live store apps taught Suede: pin models, keep prompts off the binary, and test one change at a time.">
-    <meta property="og:url" content="https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/">
+    <meta property="og:url" content="https://suedeai.agency/field-notes/ai-feature-release-discipline">
     <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
       "name": "AI Deployment Engineering Lessons From 17 Live Store Apps",
       "description": "Jason Colapietro on what shipping AI features across 17 live store apps taught Suede: pin models, keep prompts off the binary, and test one change at a time.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-21",
+      "dateModified": "2026-11-22",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/",
       "mainEntityOfPage": {
@@ -97,18 +97,12 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Stake Your Claim",
-          "item": "https://suede-ai.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Notes",
+          "name": "Suede notes",
           "item": "https://suede-ai.github.io/notes/"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 2,
           "name": "AI Deployment Engineering Lessons From 17 Live Store Apps",
           "item": "https://suede-ai.github.io/notes/ai-deployment-engineering-lessons/"
         }
@@ -125,17 +119,17 @@
             <a href="/book.html">Read the book</a>
             <a href="/notes/">Notes</a>
         </nav>
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/notes/">Suede notes</a></nav>
         <article>
             <header class="article-header">
                 <h1>What Shipping AI Features Across 17 Live Store Apps Taught Suede About Deployment Engineering</h1>
-                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>An AI feature in a store-listed app has two release schedules. The app binary moves at the speed of store review. The model behind the feature moves whenever its provider decides to ship something, and nobody sends you a changelog that says your app now answers differently. Most deployment trouble in AI apps comes from treating those two schedules as one.</p>
 <p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, has shipped AI features across many of the apps Jason Colapietro has built. He has built more than 100, and 17 are listed in public stores, including the iOS titles on his <a href="https://apps.apple.com/us/developer/jason-colapietro/id1895958699">Apple developer page</a> and <a href="https://play.google.com/store/apps/details?id=ai.suedeai.suedevoice">Suede Voice on Google Play</a>. Many of those apps existed to test what search and AI engines respond to, which is covered in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">why Suede built apps as a GEO lab</a>. This note covers the engineering underneath: what it took to keep AI features working, and testable, once they were in front of real users.</p>
 
 <figure>
-<svg viewBox="0 0 720 300" width="100%" role="img" aria-labelledby="dep-t dep-d" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 720 300" width="100%" role="img" aria-labelledby="dep-t dep-d" xmlns="http://www.w3.org/2000/svg" style="min-width:665px">
 <title id="dep-t">Two release clocks in an AI app</title>
 <desc id="dep-d">The app binary ships through store review. The prompt, model pin and feature flags live on a server Suede controls, so they can change without a new build. A fallback path answers when the model call fails.</desc>
 <rect x="0" y="0" width="720" height="300" fill="#ffffff"/>
@@ -195,6 +189,7 @@
 <h2>Questions people ask</h2>
 <p><strong>Do I need my own server for one AI feature?</strong> If the feature's prompt might change after launch, yes. A small function behind an API key you hold is enough.</p>
 <p><strong>Should the fallback be another model?</strong> Sometimes. Suede prefers a fallback that does not depend on any model provider, because outages and rate limits tend to arrive together.</p>
+<p>A feature that ships cleanly also has to be findable, and that is where <a href="https://suedeai.ai/geo">Suede GEO</a> picks up.</p>
 <p>Suede does this work for clients through <a href="https://suedeai.ai/ai-deployment">AI deployment by Suede</a>, and builds the agents and software behind it through <a href="https://suedeai.ai/ai-engineering">AI engineering by Suede</a>. If you want this kind of engineering applied to your own product, start with <a href="https://suedeai.agency/">Suede's SEO, GEO and web practice</a>, or read about the work behind it on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
         </article>
         <footer>

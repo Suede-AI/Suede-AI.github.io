@@ -8,15 +8,15 @@
     <meta name="author" content="Jason Colapietro">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#667eea">
-    <link rel="canonical" href="https://suede-ai.github.io/notes/suede-iteration-loop/">
+    <link rel="canonical" href="https://suedeai.agency/field-notes/one-change-geo-tests">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/notes/notes.css">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:site_name" content="Suede notes">
     <meta property="og:title" content="The Suede Iteration Loop: How to Design a GEO Experiment">
     <meta property="og:description" content="The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.">
-    <meta property="og:url" content="https://suede-ai.github.io/notes/suede-iteration-loop/">
+    <meta property="og:url" content="https://suedeai.agency/field-notes/one-change-geo-tests">
     <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
       "name": "The Suede Iteration Loop: How to Design a GEO Experiment",
       "description": "The Suede iteration loop step by step: one variable, a fixed prompt set, dated captures and a keep-or-revert rule, as Jason Colapietro runs it on apps.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-21",
+      "dateModified": "2026-11-22",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/suede-iteration-loop/",
       "mainEntityOfPage": {
@@ -97,18 +97,12 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Stake Your Claim",
-          "item": "https://suede-ai.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Notes",
+          "name": "Suede notes",
           "item": "https://suede-ai.github.io/notes/"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 2,
           "name": "The Suede Iteration Loop: How to Design a GEO Experiment",
           "item": "https://suede-ai.github.io/notes/suede-iteration-loop/"
         }
@@ -125,17 +119,17 @@
             <a href="/book.html">Read the book</a>
             <a href="/notes/">Notes</a>
         </nav>
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/notes/">Suede notes</a></nav>
         <article>
             <header class="article-header">
                 <h1>The Suede Iteration Loop: How to Design a GEO Experiment That Tells You Something</h1>
-                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>Most GEO advice comes with no experiment behind it. Someone added an FAQ, saw their brand in a ChatGPT answer a week later, and wrote a thread about it. They may be right. They have no way to know, because they changed several things, asked the question once, and had no record of what the answer said before.</p>
 <p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, uses a stricter method. Inside the company it is called the Suede iteration loop. Jason Colapietro ran it across thousands of app iterations in health, wealth and relationship apps, and it is the reason Suede can tell a client which changes it has seen work more than once. This note describes the loop so you can run it yourself.</p>
 
 <figure>
-<svg viewBox="0 0 720 360" width="100%" role="img" aria-labelledby="loop-t loop-d" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 720 360" width="100%" role="img" aria-labelledby="loop-t loop-d" xmlns="http://www.w3.org/2000/svg" style="min-width:618px">
 <title id="loop-t">The Suede iteration loop</title>
 <desc id="loop-d">Six steps in a cycle: fix the prompt set, capture a baseline, change one variable, wait for recrawl, capture again, then keep or revert and log the result before starting the next round.</desc>
 <rect x="0" y="0" width="720" height="360" fill="#ffffff"/>
@@ -191,13 +185,14 @@
 
 <h2>Why run the loop on apps?</h2>
 <p>Because the loop needs many cheap rounds, and apps provide them. The case for that is in <a href="https://suede-ai.github.io/notes/apps-as-geo-laboratory/">why Suede built 100+ apps as a GEO laboratory</a>. Jason Colapietro has built more than 100 apps, 17 of them live in public stores (9 App Store, 6 Google Play, 2 Chrome extensions), and many of them existed to give the loop something to work on.</p>
-<p>The loop also paid off when something big happened. When ChatGPT began naming Suede Sing and it went from at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week, the first question was what had changed on the app and when. A dated log of every round is what makes that question answerable.</p>
+<p>The loop also paid off when something big happened. Suede Sing went from at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week of ChatGPT naming it. The first question was what had changed on the app and when. A dated log of every round is what makes that question answerable.</p>
 
 <h2>Common questions about the Suede iteration loop</h2>
 <h3>How long should one round take?</h3>
 <p>Long enough for the engines to fetch the change. That varies by engine and by page type, so check logs instead of picking a fixed number of days.</p>
 <h3>What if the engine's answers change even when I did nothing?</h3>
 <p>They will. That is why the prompt set includes control prompts and why each prompt runs more than once. A shift that also shows up in the control prompts came from the engine.</p>
+<p>Client changes in <a href="https://suedeai.ai/geo">Suede GEO</a> run through this same loop.</p>
 <p>For help running the loop on your own site, see <a href="https://suedeai.agency/">Suede's SEO and GEO practice</a> or <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
         </article>
         <footer>
