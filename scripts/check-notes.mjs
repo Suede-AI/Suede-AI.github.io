@@ -276,6 +276,62 @@ const CLUTCH_SENTENCE =
   '<a href="https://clutch.co/consulting/ai/florida">Top 30 AI Consultants in Florida</a> and ' +
   '<a href="https://clutch.co/us/consulting/ai">Top 50 AI Consultants nationwide</a> (November 2026).';
 
+// Agency twins (2026-11-21, review round 5 F5): twenty notes have an
+// adapted edition among the suedeai.agency field notes. Each one names its
+// agency edition as canonical (link rel=canonical and og:url), stays out of
+// sitemap.xml and the llms note lists (the agency edition is listed there
+// instead), and stays linked from the notes index. Every other note is
+// self-canonical and listed everywhere. Keep this map in step with
+// content/lab-notes-*.mjs in suedeai-agency.
+const AGENCY = 'https://suedeai.agency/field-notes/';
+const TWINS = {
+  'suede-sing-chatgpt-case-study': 'chatgpt-named-suede-sing',
+  'one-chatgpt-answer-beat-page-one': 'ai-answer-shortlist',
+  'suede-voice-chatgpt-play-referrals': 'chatgpt-play-attribution',
+  'after-the-spike-keeping-the-citation': 'protect-ai-recommendation',
+  'apps-as-geo-laboratory': 'tested-on-suede-apps-first',
+  'suede-iteration-loop': 'one-change-geo-tests',
+  'geo-experiments-that-failed': 'geo-tactics-we-retired',
+  'measuring-ai-referrals-honestly': 'ai-referral-reporting',
+  'health-apps-geo-lessons': 'health-brands-in-ai-answers',
+  'wealth-apps-geo-lessons': 'finance-brands-in-ai-answers',
+  'relationship-apps-geo-lessons': 'conversational-ai-queries',
+  'health-wealth-relationships-one-pattern': 'safe-to-repeat-claims',
+  'app-store-listing-is-a-source': 'store-listing-ai-source',
+  'crawler-access-what-mattered': 'ai-crawler-gates',
+  'structured-data-for-apps': 'app-schema-identity',
+  'why-suede-is-just-suede': 'one-name-for-ai-engines',
+  'ai-deployment-engineering-lessons': 'ai-feature-release-discipline',
+  'ai-integration-engineering-for-geo': 'citable-ai-product-pages',
+  'geo-is-not-seo-with-a-new-name': 'where-geo-and-seo-split',
+  'from-app-lab-to-client-playbook': 'lab-findings-to-client-work',
+};
+
+// Site identity on the notes (2026-11-21, F10): the notes are "Suede notes"
+// (og:site_name and the breadcrumb root), every byline reads the same, and
+// every note links in its body to one of the Suede GEO, Suede AEO or AI
+// visibility pages.
+const SITE_NAME = 'Suede notes';
+const BYLINE = /class="byline">By <a href="https:\/\/suedeai\.ai\/founder">Jason Colapietro<\/a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time /;
+const SERVICE_PAGE_LINK = /<a href="https:\/\/suedeai\.ai\/(?:geo|aeo|ai-visibility)">/;
+// Infographic text must render at 12px or more on a 390px phone: each SVG
+// with text carries a min-width at least viewBox width x 12 / smallest
+// font-size, and the figure scrolls sideways instead of shrinking it.
+const MIN_SVG_TEXT_PX = 12;
+function checkSvgText(file, html) {
+  for (const svg of html.match(/<svg\b[\s\S]*?<\/svg>/g) || []) {
+    if (!svg.includes('<text')) continue;
+    const open = svg.match(/<svg[^>]*>/)[0];
+    const vb = Number(open.match(/viewBox="0 0 ([0-9.]+) /)?.[1]);
+    const fonts = [...svg.matchAll(/font-size="([0-9.]+)"/g)].map((m) => Number(m[1]));
+    const smallest = fonts.length ? Math.min(...fonts) : 16;
+    const minWidth = Number(open.match(/min-width:\s*([0-9.]+)px/)?.[1] || 0);
+    if (!vb || (minWidth * smallest) / vb < MIN_SVG_TEXT_PX) {
+      fail(`${file}: infographic text renders under ${MIN_SVG_TEXT_PX}px on phones; give the <svg> style="min-width:${Math.ceil((vb * MIN_SVG_TEXT_PX) / smallest)}px"`);
+    }
+  }
+}
+
 const sitemap = read('sitemap.xml');
 const llms = read('llms.txt');
 const llmsFull = read('llms-full.txt');
@@ -357,6 +413,8 @@ function checkEntityRefs(file, node) {
 for (const slug of slugs) {
   const file = `notes/${slug}/index.html`;
   const url = `${SITE}/notes/${slug}/`;
+  const twin = TWINS[slug] ? `${AGENCY}${TWINS[slug]}` : null;
+  const canonical = twin || url;
   const html = read(file);
 
   const title = html.match(/<title>(.*?)<\/title>/)?.[1] ?? '';
@@ -364,8 +422,14 @@ for (const slug of slugs) {
   const plainLen = (s) => s.replace(/&[#\w]+;/g, 'x').length;
   if (plainLen(title) < 50 || plainLen(title) > 60) fail(`${file}: title length ${plainLen(title)} not in 50-60.`);
   if (plainLen(desc) < 120 || plainLen(desc) > 160) fail(`${file}: description length ${plainLen(desc)} not in 120-160.`);
-  if (!html.includes(`<link rel="canonical" href="${url}">`)) fail(`${file}: canonical must be ${url}`);
-  if (!html.includes(`<meta property="og:url" content="${url}">`)) fail(`${file}: og:url must be ${url}`);
+  if (!html.includes(`<link rel="canonical" href="${canonical}">`)) fail(`${file}: canonical must be ${canonical}`);
+  if (!html.includes(`<meta property="og:url" content="${canonical}">`)) fail(`${file}: og:url must be ${canonical}`);
+  if (!html.includes(`<meta property="og:site_name" content="${SITE_NAME}">`)) fail(`${file}: og:site_name must be "${SITE_NAME}"`);
+  if (!BYLINE.test(html)) fail(`${file}: byline must read "By Jason Colapietro, Founder and CEO, Suede · West Palm Beach, Florida · <date>"`);
+  if (!SERVICE_PAGE_LINK.test(html.match(/<article>([\s\S]*?)<\/article>/)?.[1] ?? '')) {
+    fail(`${file}: article must link https://suedeai.ai/geo, /aeo or /ai-visibility in its body`);
+  }
+  checkSvgText(file, html);
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) fail(`${file}: must have exactly one h1.`);
 
   const ld = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
@@ -388,12 +452,16 @@ for (const slug of slugs) {
       if (!post.dateModified) fail(`${file}: missing dateModified.`);
       else {
         if (post.dateModified < post.datePublished) fail(`${file}: dateModified ${post.dateModified} is before datePublished.`);
-        const lastmod = sitemapLastmod(url);
-        if (lastmod !== post.dateModified) fail(`sitemap.xml: ${url} lastmod ${lastmod} must equal the note's dateModified ${post.dateModified}.`);
+        if (!twin) {
+          const lastmod = sitemapLastmod(url);
+          if (lastmod !== post.dateModified) fail(`sitemap.xml: ${url} lastmod ${lastmod} must equal the note's dateModified ${post.dateModified}.`);
+        }
         checkFreshness(file, post.dateModified);
       }
     }
     if (!crumbs || crumbs.itemListElement?.at(-1)?.item !== url) fail(`${file}: BreadcrumbList must end at ${url}`);
+    const root = crumbs?.itemListElement?.[0];
+    if (root?.name !== SITE_NAME || root?.item !== `${SITE}/notes/`) fail(`${file}: BreadcrumbList root must be "${SITE_NAME}" at ${SITE}/notes/`);
     checkIds(file, graph);
   }
 
@@ -424,9 +492,17 @@ for (const slug of slugs) {
     if (!notesIndex.includes(`"@id": "${url}#article"`)) fail(`notes/index.html: CollectionPage hasPart must include ${url}#article`);
   }
 
-  if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: missing ${url}`);
-  if (!llms.includes(url)) fail(`llms.txt: missing ${url}`);
-  if (!llmsFull.includes(url)) fail(`llms-full.txt: missing ${url}`);
+  if (twin) {
+    if (sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: ${url} is canonicalized to ${twin}; leave it out of the sitemap`);
+    for (const [name, text] of [['llms.txt', llms], ['llms-full.txt', llmsFull]]) {
+      if (text.includes(url)) fail(`${name}: ${url} is canonicalized to ${twin}; list the agency edition instead`);
+      if (!text.includes(`(${twin})`)) fail(`${name}: missing the agency edition ${twin}`);
+    }
+  } else {
+    if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: missing ${url}`);
+    if (!llms.includes(url)) fail(`llms.txt: missing ${url}`);
+    if (!llmsFull.includes(url)) fail(`llms-full.txt: missing ${url}`);
+  }
   if (!notesIndex.includes(`href="/notes/${slug}/"`)) fail(`notes/index.html: missing link to ${slug}`);
 }
 

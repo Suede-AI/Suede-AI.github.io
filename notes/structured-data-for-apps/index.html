@@ -8,15 +8,15 @@
     <meta name="author" content="Jason Colapietro">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#667eea">
-    <link rel="canonical" href="https://suede-ai.github.io/notes/structured-data-for-apps/">
+    <link rel="canonical" href="https://suedeai.agency/field-notes/app-schema-identity">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/notes/notes.css">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:site_name" content="Suede notes">
     <meta property="og:title" content="Structured Data for Apps: Schema That Names You Right">
     <meta property="og:description" content="Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.">
-    <meta property="og:url" content="https://suede-ai.github.io/notes/structured-data-for-apps/">
+    <meta property="og:url" content="https://suedeai.agency/field-notes/app-schema-identity">
     <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
       "name": "Structured Data for Apps: Schema That Names You Right",
       "description": "Jason Colapietro on SoftwareApplication schema for apps: why its main job is identity, and how Suede links each app to its developer and store listings.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-21",
+      "dateModified": "2026-11-22",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/structured-data-for-apps/",
       "mainEntityOfPage": {
@@ -97,18 +97,12 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Stake Your Claim",
-          "item": "https://suede-ai.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Notes",
+          "name": "Suede notes",
           "item": "https://suede-ai.github.io/notes/"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 2,
           "name": "Structured Data for Apps: Schema That Names You Right",
           "item": "https://suede-ai.github.io/notes/structured-data-for-apps/"
         }
@@ -125,11 +119,11 @@
             <a href="/book.html">Read the book</a>
             <a href="/notes/">Notes</a>
         </nav>
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/notes/">Suede notes</a></nav>
         <article>
             <header class="article-header">
                 <h1>Structured Data for Apps: Using SoftwareApplication Schema to Pin Down Identity</h1>
-                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
 <p>Most advice about app schema is about stars. Add SoftwareApplication markup, the thinking goes, and Google may show a rating and a price under your result. That can happen, but it is the smaller reason to do the work. For an app that wants to be named in AI answers, structured data matters because it says, in a form a machine does not have to guess at, which app this is, who made it, and where the official listings live.</p>
 <p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, ships a lot of apps with similar names. Suede Sing, Suede Voice, Suede Studio Guitar, Strumly, Suede Social and Suede Scan all come from the same developer, and several of them deal with sound or the voice. An engine that blurs two of them will describe the wrong product to someone who asked a clear question. The markup is how Suede keeps them apart.</p>
@@ -140,7 +134,7 @@
 
 <h2>What an app's graph looks like</h2>
 <figure>
-<svg viewBox="0 0 720 340" width="100%" role="img" aria-labelledby="graph-t graph-d" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 720 340" width="100%" role="img" aria-labelledby="graph-t graph-d" xmlns="http://www.w3.org/2000/svg" style="min-width:576px">
 <title id="graph-t">Entity graph for one Suede app</title>
 <desc id="graph-d">The app page's MobileApplication node links by author to the founder, by publisher to the company, and by sameAs to its Google Play and App Store listings.</desc>
 <rect x="0" y="0" width="720" height="340" fill="#ffffff"/>
@@ -198,6 +192,7 @@
 <h3>Do I need ratings in my schema?</h3>
 <p>Only for Google's rich result. For identity, leave ratings out until they exist on the page with a source.</p>
 
+<p>App schema is part of the entity layer in <a href="https://suedeai.ai/geo">Suede GEO</a>.</p>
 <p>Suede reviews app and product schema as part of its client work at <a href="https://suedeai.agency/">Suede's SEO and GEO practice</a>. The founder's record is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
         </article>
         <footer>

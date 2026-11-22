@@ -8,15 +8,15 @@
     <meta name="author" content="Jason Colapietro">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#667eea">
-    <link rel="canonical" href="https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/">
+    <link rel="canonical" href="https://suedeai.agency/field-notes/protect-ai-recommendation">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/notes/notes.css">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Stake Your Claim">
+    <meta property="og:site_name" content="Suede notes">
     <meta property="og:title" content="After the Spike: How Suede Keeps an AI Citation Alive">
     <meta property="og:description" content="After ChatGPT named Suede Sing, Suede froze the cited page, checked crawler access, aligned facts and re-asked prompts. The routine for keeping a citation.">
-    <meta property="og:url" content="https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/">
+    <meta property="og:url" content="https://suedeai.agency/field-notes/protect-ai-recommendation">
     <meta property="og:image" content="https://suede-ai.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
       "name": "After the Spike: How Suede Keeps an AI Citation Alive",
       "description": "After ChatGPT named Suede Sing, Suede froze the cited page, checked crawler access, aligned facts and re-asked prompts. The routine for keeping a citation.",
       "datePublished": "2026-11-16",
-      "dateModified": "2026-11-21",
+      "dateModified": "2026-11-22",
       "inLanguage": "en",
       "url": "https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/",
       "mainEntityOfPage": {
@@ -97,18 +97,12 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Stake Your Claim",
-          "item": "https://suede-ai.github.io/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Notes",
+          "name": "Suede notes",
           "item": "https://suede-ai.github.io/notes/"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 2,
           "name": "After the Spike: How Suede Keeps an AI Citation Alive",
           "item": "https://suede-ai.github.io/notes/after-the-spike-keeping-the-citation/"
         }
@@ -125,13 +119,13 @@
             <a href="/book.html">Read the book</a>
             <a href="/notes/">Notes</a>
         </nav>
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Stake Your Claim</a> / <a href="/notes/">Notes</a></nav>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/notes/">Suede notes</a></nav>
         <article>
             <header class="article-header">
                 <h1>After the Spike: What Suede Does to Keep Being Named by AI Assistants</h1>
-                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder, Suede &middot; Palm Beach County, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
+                <p class="byline">By <a href="https://suedeai.ai/founder">Jason Colapietro</a>, Founder and CEO, Suede &middot; West Palm Beach, Florida &middot; <time datetime="2026-11-16">November 16, 2026</time></p>
             </header>
-<p>Getting named by ChatGPT takes a page an assistant can quote. Staying named takes maintenance, and much of that maintenance is leaving the cited page alone. When <a href="https://sing.suedeai.ai/">Suede Sing</a> went from at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week of ChatGPT naming it, the first instinct was to start changing things. The routine below starts by leaving the page alone.</p>
+<p>Getting named by ChatGPT takes a page an assistant can quote. Staying named takes maintenance, and much of that maintenance is leaving the cited page alone. <a href="https://sing.suedeai.ai/">Suede Sing</a> went from at most 5 users to more than 1,000 active users, combined across all its platforms, within about a week of ChatGPT naming it. The first instinct was to start changing things. The routine below starts by leaving the page alone.</p>
 <p>Suede, the GEO and AI deployment studio Jason Colapietro founded in Palm Beach County, Florida, runs the same post-spike routine on every app in its lab. This note lays it out in the order it happens. The <a href="https://suede-ai.github.io/notes/suede-sing-chatgpt-case-study/">Suede Sing case study</a> covers the spike itself.</p>
 
 <h2>Why is the first move to change nothing?</h2>
@@ -151,7 +145,7 @@
 <p>What never gets added is a pile of near-copies. After a spike it is tempting to spin up a page for every phrasing of the query that worked. Google calls that pattern scaled content abuse in its <a href="https://developers.google.com/search/docs/essentials/spam-policies">spam policies</a>, and it splits the signal the original page had built up.</p>
 
 <figure style="margin:30px 0">
-<svg viewBox="0 0 640 300" width="100%" role="img" aria-labelledby="ks-t ks-d" style="background:#fff;border:1px solid #e3e3ef;border-radius:6px">
+<svg viewBox="0 0 640 300" width="100%" role="img" aria-labelledby="ks-t ks-d" style="min-width:640px;background:#fff;border:1px solid #e3e3ef;border-radius:6px">
 <title id="ks-t">Suede's routine after a citation spike</title>
 <desc id="ks-d">A loop of five steps: freeze the cited page, check crawler access and uptime, align facts and markup, re-ask the prompts and log answers, change one thing, then return to re-asking.</desc>
 <g font-size="14" fill="#1a1a2e" text-anchor="middle">
@@ -184,6 +178,7 @@
 <h3>Does llms.txt help keep the citation?</h3>
 <p>The <a href="https://llmstxt.org/">llms.txt proposal</a> is cheap to add, but treat it as optional. Crawler access, a stable page and consistent facts come first.</p>
 <h3>Can Suede run this routine for my business?</h3>
+<p>Keeping a citation once you have it is the ongoing work behind <a href="https://suedeai.ai/ai-visibility">AI visibility by Suede</a>.</p>
 <p>Yes. Suede's client practice is at <a href="https://suedeai.agency/">suedeai.agency</a>, and the founder's record is on <a href="https://suedeai.ai/founder">Jason Colapietro's founder page</a>.</p>
         </article>
         <footer>

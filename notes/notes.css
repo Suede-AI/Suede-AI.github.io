@@ -117,11 +117,13 @@ a:focus-visible { outline: 3px solid #764ba2; outline-offset: 2px; }
     article h2 { font-size: 1.35em; }
 }
 
-/* Infographics: scale each SVG to the column so every bar label, including the end-of-bar values, stays in view on phones. */
+/* Infographics: each SVG fills the column, and its inline min-width keeps the
+   smallest label at 12px or more (viewBox width x 12 / smallest font-size). On
+   a phone the figure scrolls sideways instead of shrinking the text; the page
+   itself never scrolls sideways. scripts/check-notes.mjs enforces the rule. */
 article figure { margin: 1.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-article figure svg { display: block; max-width: 100%; height: auto; }
+article figure svg { display: block; width: 100%; max-width: none; height: auto; }
 article figcaption { font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem; }
-@media (max-width: 600px) { article figure svg { min-width: 0; max-width: 100%; } }
 article pre { overflow-x: auto; max-width: 100%; }
 article code { overflow-wrap: anywhere; }
 
