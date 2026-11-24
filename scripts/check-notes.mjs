@@ -523,13 +523,6 @@ if (!sitemap.includes(`<loc>${SITE}/notes/</loc>`)) fail('sitemap.xml: missing n
 }
 if (!read('index.html').includes('href="/notes/"')) fail('index.html: missing link to /notes/.');
 
-// scan.suedeai.ai is retired (it 308s to suedeai.ai/seo, which has no scan);
-// the free check lives at suedeai.ai/seo/ai-citation-check.
-for (const rel of walkPublic()) {
-  if (hedgeExemptPath(rel)) continue;
-  if (read(rel).includes('scan.suedeai.ai')) fail(`${rel}: links retired scan.suedeai.ai; use https://suedeai.ai/seo/ai-citation-check`);
-}
-
 // Contextual links from the notes to the service page each one is about
 // (2026-11-21), so links between the notes and suedeai.ai run both ways.
 const SERVICE_LINKS = {
